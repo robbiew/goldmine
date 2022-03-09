@@ -4,6 +4,8 @@ Gold Mine (named after a mall-based, [coin-op arcade chain](https://arcadepreser
 
 Gold Mine runs on Synchronet (Linux 64) on port ``513`` at ``165.232.153.209``.
 
+It is not a BBS, despite using BBS software. There are no message baords or file areas, and you can't "login" to it. It does one thing, and one thing only: launch games for users from other BBSs.
+
 ## WHAT'S A 'DOOR SERVER'?
 
 If you run an old-school, terminal-based BBS (probably using new-school BBS software like Mystic, Synchronet, Talisman or Enigma) you know that setting up door game programs can be time consuming and a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS (or Win32) and were pretty finicky. Hunting down regitration keys or cracks can be daunting (much is abandonware these days). 
