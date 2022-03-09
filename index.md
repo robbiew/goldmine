@@ -49,9 +49,9 @@ Where ```TAG``` = a 1-3 character BBS name tag, so your users are uniquely ident
 
 Below is a list of direct door codes. Use these if you want to launch a game directly from your BBS, bypassing the Gold Mine menu.
 
-To do this, add "xtrn=DOORCODE" directly after ```/user``` (Mystic) or ```"..un,"``` (Talisman). 
+To do this, add ``"xtrn=DOORCODE"`` directly after ```/user``` (Mystic) or ```"..un,"``` (Talisman). 
 
-Replace ```DOORCODE``` with the game code you want to launch directly.
+Replace ```DOORCODE``` with an xtrn code below that you want to launch directly.
 
 
 # GoldMine Game Code List
