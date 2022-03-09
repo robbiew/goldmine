@@ -33,11 +33,11 @@ bbs_rlogin_ip4("165.232.153.209","513","","[YOUR BBS TAG] "..un,"")
  
 Where ```TAG``` = a 1-3 character BBS name tag, so your users are uniquely identified. For instance, Alpha Complex BBS is ```[AC]```
                                                                       
-- Replace YOUR BBS TAG with your unique 1-3 char tag,e.g [ABC]        
+- Replace YOUR BBS TAG with your unique 1-3 character BBS tag, e.g ``[ABC]``.        
 
 
 ### MYSTIC BBS
-IR - Outbound RLOGIN Connection
+Add to your menu as ``IR - Outbound RLOGIN Connection``
 
 ```
 /addr=3.17.231.162 /port=513 /user=[TAG]@USER@ /PROMPT
