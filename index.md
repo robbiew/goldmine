@@ -17,7 +17,7 @@ Setup an outbound RLOGIN connection from a menu item on your BBS. Note, you *mus
 - If you're a Talisman sysop, add to a menu (e.g. /bbs/menus/main.toml)
 
 ```
-[[menuitem]]
+\[\[menuitem\]\]
 command = "RUNSCRIPT"
 hotkey = "D"
 data = "goldmine"
