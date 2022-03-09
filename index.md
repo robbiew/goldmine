@@ -30,7 +30,7 @@
 | Concentration | CONCENTR |
 | Sea Battle | SEABATTL |
 
-## CARDS, DIVE & CASINO
+## CARDS, DICE & CASINO
 
 
 | NAME | CODE |
