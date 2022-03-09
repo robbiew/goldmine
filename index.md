@@ -2,17 +2,17 @@
 
 ![gOLD mINE screen shot](docs/assets/images/screenshot.png)
 
-gOLD mINE (named after a mall-based, [coin-op arcade chain](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where aLPHA grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like SyncTerm or MagiTerm.
+gOLD mINE (named after a mall-based, [coin-op arcade chain](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where aLPHA grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/) or [MagiTerm](https://gitlab.com/magickabbs/MagiTerm).
 
-gOLD mINE runs on Synchronet (Linux 64) on port ``513`` at ``165.232.153.209``.
+gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Linux 64) under the hood, and runs on port ``513`` at ``165.232.153.209``.
 
 It is not a BBS, despite using BBS software. There are no message boards or file download areas, and you can't "login" to it like a traditional BBS. It does one thing, and one thing only: launch games remotely for users from other BBSs.
 
 ## WHAT'S A 'DOOR SERVER'?
 
-If you run an old-school, terminal-based BBS (probably using new-school BBS software like Mystic, Synchronet, Talisman or Enigma) you know that setting up door game programs can be time consuming and a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS (or Win32) and were pretty finicky. Hunting down regitration keys or cracks can be daunting (much is abandonware these days). 
+If you run an old-school, terminal-based BBS (probably using new-school BBS software like [Mystic](http://www.mysticbbs.com/), [Synchronet](http://wiki.synchro.net/), [Talisman](talismanbbs.com) or [ENiGMA½](https://enigma-bbs.github.io/)) you know that setting up door game programs can be time consuming and a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS (or Win32) and were pretty finicky. Hunting down regitration keys or cracks can be daunting (much is abandonware these days). 
 
-Oh, and if your BBS runs on Windows 64, well, unless you can figure out experimental NTVDMx64 and legacy FOSSIL drivers to run native 16-Bit DOS programs, your options are limited. And ARM-based systems like rPI can't run dosemu, so you'd need to use programs like QEMU (powerful, but a complex setup) or Dos Box (no multi-node abilities).
+Oh, and if your BBS runs on Windows 64, well, unless you can figure out experimental [NTVDMx64](https://github.com/leecher1337/ntvdmx64) and legacy [FOSSIL drivers](http://pcmicro.com/netfoss/) to run native 16-Bit DOS programs, your options are limited. And ARM-based systems like rPI can't run dosemu, so you'd need to use programs like [QEMU](https://www.sunrisedoors.com/linuxsetup.php) (powerful, but a complex setup) or [DOSBox](https://www.dosbox.com/) (with no multi-node abilities).
 
 Phew.
 
