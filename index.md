@@ -9,7 +9,7 @@
 | Bordello             | BORDELLO |
 | Rancho Nevada        | RN       |
 | Piss-o-Rama          | PISSORAM |
-|                      |          |
+|----------------------|----------|
 | ACTION               | CODE     |
 |----------------------|----------|
 | Gooble Gooble        | GOOBLE   |
