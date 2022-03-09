@@ -6,7 +6,7 @@ gOLD mINE (named after a mall-based, [coin-op arcade chain](https://arcadepreser
 
 gOLD mINE runs on Synchronet (Linux 64) on port ``513`` at ``165.232.153.209``.
 
-It is not a BBS, despite using BBS software. There are no message baords or file areas, and you can't "login" to it. It does one thing, and one thing only: launch games for users from other BBSs.
+It is not a BBS, despite using BBS software. There are no message boards or file download areas, and you can't "login" to it like a traditional BBS. It does one thing, and one thing only: launch games remotely for users from other BBSs.
 
 ## WHAT'S A 'DOOR SERVER'?
 
