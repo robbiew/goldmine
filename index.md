@@ -2,6 +2,7 @@
 
 ## ADULT, SEX, DRUGS & CRIME (MATURE)
 | NAME | CODE |
+
 | --- | --- |
 | DrugLord | DRUGLORD |
 | Bordello | BORDELLO |
