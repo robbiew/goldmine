@@ -1,7 +1,7 @@
 # GoldMine Game Code List
 
 
-| ADULT                | CODE     |
+| DOOR NAME            | CODE     |
 |----------------------|----------|
 | DrugLord             | DRUGLORD |
 | Bordello             | BORDELLO |
@@ -9,22 +9,13 @@
 | Bordello             | BORDELLO |
 | Rancho Nevada        | RN       |
 | Piss-o-Rama          | PISSORAM |
-|                      |          |
-| ACTION               | CODE     |
-|----------------------|----------|
 | Gooble Gooble        | GOOBLE   |
 | Lemons               | LEMONS   |
 | Chicken Delivery     | CHICKEN  |
-|                      |          |
-| BOARD                | CODE     |
-|----------------------|----------|
 | 4 Coner Checkers     | 4CORNERC |
 | Bubble Boggle        | BOGGLE   |
 | Concentration        | CONCENTR |
 | Sea Battle           | SEABATTL |
-|                      |          |
-| CARDS/DICE/CASINO    | CODE     |
-|----------------------|----------|
 | 3- Pair Poker        | 3PAIRPOK |
 | Acey Deucy           | ACEYDEUC |
 | Baseball Dice        | BBDICE   |
