@@ -80,7 +80,7 @@
 | Dungeon Master                        | RPGs: Medieval & Fantasy    | DM       |
 | Kannons and Katapults                 | RPGs: Medieval & Fantasy    | KNK      | 
 | Arrowbridge I                         | RPGs: Medieval & Fantasy    | AB1      |
-| Arrowbridge II                        | RPGs: War, Present & Future | AB2      |
+| Arrowbridge II                        | RPGs: Medieval & Fantasy    | AB2      |
 | LEGION RPG                            | RPGs: Medieval & Fantasy    | LEGION   |
 | Colonies                              | RPGs: War, Present & Future | COLONIES |
 | Atlantis                              | RPGs: War, Present & Future | ATLANTIS |
