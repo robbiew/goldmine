@@ -16,14 +16,16 @@ Setup an outbound RLOGIN connection from a menu item on your BBS. Note, you *mus
 ### TALISMAN BBS
 - If you're a Talisman sysop, add to a menu (e.g. /bbs/menus/main.toml)
 
-```[[menuitem]]
+```
+[[menuitem]]
 command = "RUNSCRIPT"
 hotkey = "D"
 data = "goldmine"
 ```
 - Create goldmine.lua in your /bbs/scripts directory:
 
-```local un = bbs_get_username()
+```
+local un = bbs_get_username()
 bbs_clear_screen()
 bbs_write_string("Loading GOLD MINE arcade...")
 bbs_rlogin_ip4("165.232.153.209","513","","[YOUR BBS TAG] "..un,"")
@@ -37,7 +39,9 @@ Where ```TAG``` = a 1-3 character BBS name tag, so your users are uniquely ident
 ### MYSTIC BBS
 IR - Outbound RLOGIN Connection
 
-```/addr=3.17.231.162 /port=513 /user=[TAG]@USER@ /PROMPT```
+```
+/addr=3.17.231.162 /port=513 /user=[TAG]@USER@ /PROMPT
+```
 
 Where ```TAG``` = a 1-3 character BBS name tag, so your users are uniquely identified. For instance, Alpha Complex BBS is ```[AC]```
 
