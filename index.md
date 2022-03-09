@@ -1,8 +1,8 @@
 # GoldMine Game Code List
 
 
-| DOOR NAME            | GENRE | CODE     | 
-|----------------------|-------|----------|
+| DOOR NAME            | GENRE                | CODE     | 
+|----------------------|----------------------|----------|
 | DrugLord             | Adult                | DRUGLORD |
 | Bordello             | Adult                | BORDELLO |
 | Pimp Wars            | Adult                | PIMPWARS |
