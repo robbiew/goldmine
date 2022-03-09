@@ -3,7 +3,7 @@
 ## ADULT, SEX, DRUGS & CRIME (MATURE)
 
 | NAME | CODE |
-|-|-|
+|-----|-----|-----|
 | DrugLord | DRUGLORD |
 | Bordello | BORDELLO |
 | Pimp Wars | PIMPWARS |
@@ -15,7 +15,7 @@
 ## ARCADE & ACTION
 
 | NAME | CODE |
-|-|-|
+|-----|-----|-----|
 | Gooble Gooble | GOOBLE |
 | Lemons | LEMONS |
 | Chicken Delivery | CHICKEN |
@@ -24,7 +24,7 @@
 
 
 | NAME | CODE |
-| --- | --- |
+|-----|-----|-----|
 | 4 Coner Checkers| 4CORNERC |
 | Bubble Boggle | BOGGLE |
 | Concentration | CONCENTR |
@@ -34,7 +34,7 @@
 
 
 | NAME | CODE |
-| --- | --- |
+|-----|-----|-----|
 | 3- Pair Poker| 3PAIRPOK |
 | Acey Deucy | ACEYDEUC |
 | Baseball Dice | BBDICE |
