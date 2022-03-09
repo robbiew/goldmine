@@ -1,7 +1,7 @@
 # GoldMine Game Code List
 
 
-| DOOR NAME                             | GENRE                | CODE     | 
+| DOOR NAME                             | GENRE                | XTRN CODE| 
 |---------------------------------------|----------------------|----------|
 | DrugLord                              | Adult                | DRUGLORD |
 | Bordello                              | Adult                | BORDELLO |
