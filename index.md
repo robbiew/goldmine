@@ -88,5 +88,18 @@
 | Darkness 2                            | RPGs: War, Present & Future | DARK2    |
 | Jedi Knight                           | RPGs: War, Present & Future | JEDI     |
 | Barren Realms Elite                   | RPGs: War, Present & Future | BRE      |
+| Betsy Ross Solitaire                  | Solitaire Card              | BETSYROS |
+| Galaxy 5                              | Space                       | GALAXY5  |
+| Star Trek                             | Space                       | STARTREK |
+| Trade Wars 2 - 500 Sectors            | Space                       | TW2      |
+| Galactic Dynasty 2                    | Space                       | GD2      |
+| Chain Reaction                        | Word Games                  | CHAINREA |
+| Jeopardized!                          | Word Games                  | JEOPARDY |
+| Wordem                                | Word Games                  | WORDEM   |
+| Sudoku                                | Word Games                  | SUDOKU   |
+|                                       |                             |          |
+|                                       |                             |          |
+
+
 
 
