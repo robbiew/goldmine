@@ -20,7 +20,7 @@ So, a Door Server takes a lot of the work out of setup and lets you add 100's of
 
 The other benefit is a potentially larger player base, aggregating them in a centralized manner. 
 
-Also, please check out other door gamer servers like DoorParty, BBSLink, Combatnet, Quazar, Black Country Rock. They're all good choices. Hell, add them all!
+Also, please check out other door gamer servers like [DoorParty](http://www.throwbackbbs.com/), [BBSLink](https://bbslink.net/), [CombatNet](http://combatnet.us/), and [Black Country Rock](https://www.telnetbbsguide.com/bbs/bcr-games-server/) game servers. They're all good choices. Hell, join them all!
 
 ## JOIN GOLD MINE
 
