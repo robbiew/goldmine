@@ -6,13 +6,17 @@ Gold Mine runs on Synchronet (Linux 64) on port ``513`` at ``165.232.153.209``.
 
 ## WHAT'S A 'DOOR SERVER'?
 
-If you run an old-school, terminal-based BBS (probably using new-school BBS software like Mystic, Synchronet, Talisman or Enigma) you know that setting up door game programs can be time consuming and a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS and were pretty finicky. Plus, hunting down regitration keys or cracks can be daunting. 
+If you run an old-school, terminal-based BBS (probably using new-school BBS software like Mystic, Synchronet, Talisman or Enigma) you know that setting up door game programs can be time consuming and a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS (or Win32) and were pretty finicky. Hunting down regitration keys or cracks can be daunting (much is abandonware these days). 
 
-A Door Server let's you add 100's of these games from a central service, almost immediately, runing them over an RLOGIN connection that's practically seamless for your users. And for you: no DOS/DOSEMU shenanigans, not configuring drop files, etc. In fact, Gold Mine can handle just about any kind of console-based game made for DOS, Linux or Windows. It also suport Synchronet Javascript-based games.
+Oh, and if your BBS runs on Windows 64, well, unless you can figure out experimental NTVDMx64 and legacy FOSSIL drivers to run native 16-Bit DOS programs, your options are limited. And ARM-based systems like rPI can't run dosemu, so you'd need to use programs like QEMU (powerful, but a complex setup) or Dos Box (no multi-node abilities).
+
+Phew.
+
+So, a Door Server takes a lot of the work out of setup and lets you add 100's of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users. And for you: no DOS/DOSEMU shenanigans, no configuring drop files, etc. In fact, Gold Mine can handle just about any kind of console-based game made for DOS, Linux or Windows. It also suport Synchronet Javascript-based games. With direct-door launching, it feels like users never leave yuor BBS!
 
 The other benefit is a potentially larger player base, aggregating them in a centralized manner. 
 
-Check out other door gamer servers like DoorParty, BBSLink, Combatnet, Quazar, Black Country Rock and more. They're all good choices. Hell, add them all!
+Also, please check out other door gamer servers like DoorParty, BBSLink, Combatnet, Quazar, Black Country Rock. They're all good choices. Hell, add them all!
 
 ## JOIN GOLD MINE
 
