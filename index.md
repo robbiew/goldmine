@@ -47,12 +47,10 @@ data = "goldmine"
 local un = bbs_get_username()
 bbs_clear_screen()
 bbs_write_string("Loading GOLD MINE arcade...")
-bbs_rlogin_ip4("165.232.153.209","513","","[YOUR BBS TAG] "..un,"")
+bbs_rlogin_ip4("165.232.153.209","513","","[TAG] "..un,"")
 ``` 
- 
-Where ```TAG``` = a 1-3 character BBS name tag, so your users are uniquely identified. For instance, Alpha Complex BBS is ```[AC]```
                                                                       
-- Replace YOUR BBS TAG with your unique 1-3 character BBS tag, e.g ``[ABC]``.        
+- Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.        
 
 
 ### MYSTIC BBS
@@ -62,7 +60,7 @@ Add to your menu as ``IR - Outbound RLOGIN Connection``
 /addr=3.17.231.162 /port=513 /user=[TAG]@USER@ /PROMPT
 ```
 
-Where ```TAG``` = a 1-3 character BBS name tag, so your users are uniquely identified. For instance, Alpha Complex BBS is ```[AC]```
+- Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.    
 
 ## GAME LIST
 
