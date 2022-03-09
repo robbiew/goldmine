@@ -2,7 +2,7 @@
 
 Gold Mine (named after a mall-based, [coin-op arcade chain](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where aLPHA grew up) is a Community Door Server for BBS-based games. Open to all, easy to access.
 
-GoldMine runs on Synchronet (Linux 64) on port 513 at 165.232.153.209.
+GoldMine runs on Synchronet (Linux 64) on port ``513`` at ``165.232.153.209``.
 
 ## JOIN
 
