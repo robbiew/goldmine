@@ -1,6 +1,7 @@
 # GoldMine Game Code List
 
 ## ADULT, SEX, DRUGS & CRIME (MATURE)
+
 | NAME | CODE |
 | --- | --- |
 | DrugLord | DRUGLORD |
