@@ -2,7 +2,8 @@
 
 ## ADULT, SEX, DRUGS & CRIME (MATURE)
 
-| NAME | CODE |
+| NAME             | CODE     |
+|------------------|----------|
 | DrugLord         | DRUGLORD |
 | Bordello         | BORDELLO |
 | Pimp Wars        | PIMPWARS |
