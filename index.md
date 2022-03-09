@@ -62,9 +62,25 @@
 | Trinity                               | DOS Text-Based       | TRINITY  |
 | Wishbringer                           | DOS Text-Based       | WISHBRIN |
 | Witness                               | DOS Text-Based       | WITNESS  |
+| Baseball Dice                         | Leisure & Sports     | BBDICE   |
+| Fat Fish                              | Leisure & Sports     | FATFISH  |
+| Synkroban                             | Other                | SOKOBAN  |
+| Thirstyville                          | Other                | THIRSTY  |
+| Port Victoria                         | Other                | PORTVIC  |
+| Oregon Trail                          | Other                | OREGONTR |
+| Sim BBS                               | Other                | SIMBBS   |
 |                                       |                      |          |
 |                                       |                      |          |
 |                                       |                      |          |
 |                                       |                      |          |
 |                                       |                      |          |
 |                                       |                      |          |
+|                                       |                      |          |
+|                                       |                      |          |
+|                                       |                      |          |
+|                                       |                      |          |
+|                                       |                      |          |
+|                                       |                      |          |
+|                                       |                      |          |
+|                                       |                      |          |
+
