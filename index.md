@@ -15,7 +15,7 @@
 ## ARCADE & ACTION
 
 | NAME | CODE |
-| --- | --- |
+|-|-|
 | Gooble Gooble | GOOBLE |
 | Lemons | LEMONS |
 | Chicken Delivery | CHICKEN |
