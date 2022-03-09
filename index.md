@@ -1,5 +1,6 @@
 # GoldMine Game Code List
 
+
 | DOOR NAME                             | GENRE                | CODE     | 
 |---------------------------------------|----------------------|----------|
 | DrugLord                              | Adult                | DRUGLORD |
