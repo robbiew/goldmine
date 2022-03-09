@@ -12,6 +12,7 @@
 | Piss-o-Rama | PISSORAM |
 
 ## ARCADE & ACTION
+
 | NAME | CODE |
 | --- | --- |
 | Gooble Gooble | GOOBLE |
@@ -19,6 +20,7 @@
 | Chicken Delivery | CHICKEN |
 
 ## BOARD GAMES
+
 | NAME | CODE |
 | --- | --- |
 | 4 Coner Checkers| 4CORNERC |
@@ -27,6 +29,7 @@
 | Sea Battle | SEABATTL |
 
 ## CARDS, DIVE & CASINO
+
 | NAME | CODE |
 | --- | --- |
 | 3- Pair Poker| 3PAIRPOK |
@@ -41,6 +44,7 @@
 | Synchronet Blackjack | SBJ |
 | Star Stocks | STARSTOX |
 | Tital Slots | TITANSLO |
+
 
 
 
