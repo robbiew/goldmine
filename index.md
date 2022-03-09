@@ -4,7 +4,17 @@ Gold Mine (named after a mall-based, [coin-op arcade chain](https://arcadepreser
 
 Gold Mine runs on Synchronet (Linux 64) on port ``513`` at ``165.232.153.209``.
 
-## JOIN
+## WHAT'S A 'DOOR SERVER' AND WHY WOULD I NEED ONE?'
+
+If you run an old-school, terminal-based BBS (probably using new-school BBS software like Mystic, Synchronet, Talisman or Enigma) you know that setting up door game programs can be time consuming and a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS and were pretty finicky. Plus, hunting down regitration keys or cracks can be daunting. 
+
+A Door Server let's you add 100's of these games from a central service, almost immediately, runing them over an RLOGIN connection that's practically seamless for your users. And for you: no DOS/DOSEMU shenanigans, not configuring drop files, etc. In fact, Gold Mine can handle just about any kind of console-based game made for DOS, Linux or Windows. It also suport Synchronet Javascript-based games.
+
+The other benefit is a potentially larger player base, aggregating them in a centralized manner. 
+
+Check out other door gamer servers like DoorParty, BBSLink, Combatnet, Quazar, Black Country Rock and more. They're all good choices. Hell, add them all!
+
+## JOIN GOLD MINE
 
 BBS SysOps can join by visiting ``alphacomplex.us:2323`` with a terminal program like SyncTerm or MagiTerm. Hit ``[J] JOIN GOLDMINE`` from the main menu. 
 Just fill out the form, and your BBS IP address will be queued for white-listing on the firewall, so you can then connect on port 513 via RLOGIN. 
