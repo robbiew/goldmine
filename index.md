@@ -71,15 +71,22 @@
 | Synchronet Minesweeper                | Puzzle                      | MSWEEPER |
 | Uber Blox                             | Puzzle                      | UBERBLOX |
 | Synchrotetris                         | Puzzle                      | TETRIS   |
-|                                       | RPGs: Medieval & Fantasy    |          |
-|                                       |                             |          |
-|                                       |                             |          |
-|                                       |                             |          |
-|                                       |                             |          |
-|                                       |                             |          |
-|                                       |                             |          |
-|                                       |                             |          |
-|                                       |                             |          |
-|                                       | RPGs: War, Present & Future |          |
-|                                       |                             |          |
+| Legend of the Red Dragon              | RPGs: Medieval & Fantasy    | LORD     |
+| LORD II: New World                    | RPGs: Medieval & Fantasy    | LORD2    |
+| The Beast's Domain                    | RPGs: Medieval & Fantasy    | TBD      |
+| For Honour                            | RPGs: Medieval & Fantasy    | FH       |
+| Death Masters                         | RPGs: Medieval & Fantasy    | DEATHMAS |
+| DoorMUD                               | RPGs: Medieval & Fantasy    | DOORMUD  |
+| Dungeon Master                        | RPGs: Medieval & Fantasy    | DM       |
+| Kannons and Katapults                 | RPGs: Medieval & Fantasy    | KNK      | 
+| Arrowbridge I                         | RPGs: Medieval & Fantasy    | AB1      |
+| Arrowbridge II                        | RPGs: War, Present & Future | AB2      |
+| LEGION RPG                            | RPGs: Medieval & Fantasy    | LEGION   |
+| Colonies                              | RPGs: War, Present & Future | COLONIES |
+| Atlantis                              | RPGs: War, Present & Future | ATLANTIS |
+| Operation Overkill II                 | RPGs: War, Present & Future | OOII     |
+| Darkness 2                            | RPGs: War, Present & Future | DARK2    |
+| Jedi Knight                           | RPGs: War, Present & Future | JEDI     |
+| Barren Realms Elite                   | RPGs: War, Present & Future | BRE      |
+
 
