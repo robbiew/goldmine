@@ -4,20 +4,20 @@
 
 | NAME | CODE |
 |-----|-----|
-| DrugLord | DRUGLORD |
-| Bordello | BORDELLO |
-| Pimp Wars | PIMPWARS |
-| Bordello | BORDELLO |
-| Rancho Nevada | RN |
-| Piss-o-Rama | PISSORAM |
+| DrugLord         | DRUGLORD |
+| Bordello         | BORDELLO |
+| Pimp Wars        | PIMPWARS |
+| Bordello         | BORDELLO |
+| Rancho Nevada    | RN       |
+| Piss-o-Rama      | PISSORAM |
 
 
 ## ARCADE & ACTION
 
 | NAME | CODE |
 |-----|-----|
-| Gooble Gooble | GOOBLE |
-| Lemons | LEMONS |
+| Gooble Gooble    | GOOBLE  |
+| Lemons           | LEMONS  |
 | Chicken Delivery | CHICKEN |
 
 ## BOARD GAMES
