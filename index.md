@@ -12,7 +12,7 @@ It is not a BBS, despite using BBS software. There are no message boards or file
 
 If you run an old-school, terminal-based BBS (probably using new-school BBS software like [Mystic](http://www.mysticbbs.com/), [Synchronet](http://wiki.synchro.net/), [Talisman](talismanbbs.com) or [ENiGMA½](https://enigma-bbs.github.io/)) you know that setting up door game programs can be time consuming and a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS (or Win32) and were pretty finicky. Hunting down registration keys or cracks can be daunting (much is abandonware these days). 
 
-Oh, and if your BBS runs on Windows 64, well, unless you can figure out experimental [NTVDMx64](https://github.com/leecher1337/ntvdmx64) and legacy [FOSSIL drivers](http://pcmicro.com/netfoss/) to run native 16-Bit DOS programs, your options are limited. And ARM-based systems like rPI can't run dosemu, so you'd need to use programs like [QEMU](https://www.sunrisedoors.com/linuxsetup.php) (powerful, but a complex setup) or [DOSBox](https://www.dosbox.com/) (with no multi-node abilities).
+Oh, and if your BBS runs on modern Windows 64-bit, well, unless you can figure out how to use experimental [NTVDMx64](https://github.com/leecher1337/ntvdmx64) and legacy [FOSSIL drivers](http://pcmicro.com/netfoss/) to run native 16-Bit DOS programs, your options are limited. And ARM-based systems like Raspberry Pi can't even run dosemu, so you'd need to use programs like [QEMU](https://www.sunrisedoors.com/linuxsetup.php) (powerful, but a complex setup for a BBS) or [DOSBox](https://www.dosbox.com/) (easier, but with no multi-node capabilities).
 
 Phew.
 
