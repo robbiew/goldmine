@@ -96,7 +96,7 @@ Replace ```DOORCODE``` with an xtrn code below that you want to launch directly.
 | Blackjack                             | Cards, Dice & Casino        | BLACKJAC | 
 | Box Poker                             | Cards, Dice & Casino        | BOXPOKER |
 | Dice Warz                             | Cards, Dice & Casino        | DICEWARZ |
-| Dice Warz \]\[                        | Cards, Dice & Casino        | DICEAR2  |
+| Dice Warz \]\[                        | Cards, Dice & Casino        | DICEWAR2 |
 | Domain Poker                          | Cards, Dice & Casino        | DPOKER   |
 | Milliway's Casino                     | Cards, Dice & Casino        | MILLIWAY |
 | Synchronet Blackjack                  | Cards, Dice & Casino        | SBJ      |
