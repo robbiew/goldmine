@@ -16,7 +16,7 @@ Oh, and if your BBS runs on modern Windows 64-bit, well, unless you can figure o
 
 Phew.
 
-So, a Door Server takes a lot of the work out of setup and lets you add 100's of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users. And for you: no DOS/DOSEMU shenanigans, no configuring drop files, etc. In fact, Gold Mine can handle just about any kind of console-based game made for DOS, Linux or Windows. It also suport Synchronet Javascript-based games. With direct-door launching, it feels like users never leave yuor BBS!
+So, a Door Server takes a lot of the work out of setup and lets you add 100's of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users. And Linux users, no need for [DOSEMU](http://www.dosemu.org/) shenanigans. In fact, gOLD mINE can handle just about any kind of console-based game made for DOS, Linux or Windows. It also suport Synchronet Javascript-based games. With direct-door launching, it feels like users never leave yuor BBS!
 
 The other benefit is a potentially larger player base, aggregating them in a centralized manner. 
 
