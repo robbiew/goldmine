@@ -76,104 +76,103 @@ Replace ```DOORCODE``` with an xtrn code below that you want to launch directly.
 # GoldMine Game Code List
 
 
-| DOOR NAME                             | GENRE                       | XTRN CODE| 
-|---------------------------------------|-----------------------------|----------|
-| DrugLord                              | Adult                       | DRUGLORD |
-| Bordello                              | Adult                       | BORDELLO |
-| Pimp Wars                             | Adult                       | PIMPWARS |
-| Bordello                              | Adult                       | BORDELLO |
-| Rancho Nevada                         | Adult                       | RN       |
-| Piss-o-Rama                           | Action                      | PISSORAM |
-| Gooble Gooble                         | Action                      | GOOBLE   |
-| Lemons                                | Action                      | LEMONS   |
-| Chicken Delivery                      | Action                      | CHICKEN  |
-| 4 Coner Checkers                      | Board Game                  | 4CORNERC |
-| Bubble Boggle                         | Board Game                  | BOGGLE   |
-| Sea Battle                            | Board Game                  | SEABATTL |
-| 3-Pair Poker                          | Cards, Dice & Casino        | 3PAIRPOK |
-| Acey Deucy                            | Cards, Dice & Casino        | ACEYDEUC |
-| Baseball Dice                         | Cards, Dice & Casino        | BBDICE   |
-| Blackjack                             | Cards, Dice & Casino        | BLACKJAC | 
-| Box Poker                             | Cards, Dice & Casino        | BOXPOKER |
-| Dice Warz                             | Cards, Dice & Casino        | DICEWARZ |
-| Dice Warz \]\[                        | Cards, Dice & Casino        | DICEWAR2 |
-| Domain Poker                          | Cards, Dice & Casino        | DPOKER   |
-| Milliway's Casino                     | Cards, Dice & Casino        | MILLIWAY |
-| Synchronet Blackjack                  | Cards, Dice & Casino        | SBJ      |
-| Star Stocks                           | Cards, Dice & Casino        | STARSTOX |
-| Tital Slots                           | Cards, Dice & Casino        | TITANSLO |
-| Zork I                                | DOS Text-Based              | ZORK1    |
-| Zork II                               | DOS Text-Based              | ZORK2    |
-| Zork III                              | DOS Text-Based              | ZORK3    |
-| Beyond Zork                           | DOS Text-Based              | BEYONDZ  |
-| Zork: Undiscovered Underground        | DOS Text-Based              | ZTUU     |
-| Arthur: The Quest for Excalibur       | DOS Text-Based              | ARTHUR   |
-| A Mind Forever Voyaging               | DOS Text-Based              | AMFV     |
-| Ballyhoo                              | DOS Text-Based              | BALLYHOO |
-| Border Zone                           | DOS Text-Based              | BORDERZO |
-| Bureaucracy                           | DOS Text-Based              | BUREAUCR |
-| Cutthroats                            | DOS Text-Based              | CUTTHROA |
-| Enchanter                             | DOS Text-Based              | ENCHANTE |
-| Hitchiker's Guide to the Galaxy       | DOS Text-Based              | HHGTG    |
-| Hollywood Hijinx                      | DOS Text-Based              | HOLLYWOO |
-| Infidel                               | DOS Text-Based              | INFIDEL  |
-| Journey: The Quest Begins             | DOS Text-Based              | JOURNEY  |
-| The Lurkng Horror                     | DOS Text-Based              | LURKING  |
-| Leather Goddesses of Phobos           | DOS Text-Based              | LEATHER  |
-| Sherlock: Riddle of the Crown Jewels  | DOS Text-Based              | SHERLOCK |
-| Sorcerer                              | DOS Text-Based              | SORCERER |
-| Starcross                             | DOS Text-Based              | STARCROS |
-| Stationfall                           | DOS Text-Based              | STATION  |
-| James Calvell's SHOGUN                | DOS Text-Based              | SHOGUN   |
-| Moonmist                              | DOS Text-Based              | MOONMIST |
-| Nord and Bert                         | DOS Text-Based              | NORDANDB |
-| Planetfall                            | DOS Text-Based              | PLANETFA |
-| Plundered                             | DOS Text-Based              | PLUNDERE |
-| Seastalker                            | DOS Text-Based              | SEASTALK |
-| Spellbreaker                          | DOS Text-Based              | SPELLBRE |
-| Suspect                               | DOS Text-Based              | SUSPECT  |
-| Suspended                             | DOS Text-Based              | SUSPENDE |
-| Trinity                               | DOS Text-Based              | TRINITY  |
-| Wishbringer                           | DOS Text-Based              | WISHBRIN |
-| Witness                               | DOS Text-Based              | WITNESS  |
-| Baseball Dice                         | Leisure & Sports            | BBDICE   |
-| Fat Fish                              | Leisure & Sports            | FATFISH  |
-| Synkroban                             | Other                       | SOKOBAN  |
-| Thirstyville                          | Other                       | THIRSTY  |
-| Port Victoria                         | Other                       | PORTVIC  |
-| Oregon Trail                          | Other                       | OREGONTR |
-| Sim BBS                               | Other                       | SIMBBS   |
-| Synchronet Minesweeper                | Puzzle                      | MSWEEPER |
-| Uber Blox                             | Puzzle                      | UBERBLOX |
-| Synchrotetris                         | Puzzle                      | TETRIS   |
-| Legend of the Red Dragon              | RPGs: Medieval & Fantasy    | LORD     |
-| LORD II: New World                    | RPGs: Medieval & Fantasy    | LORD2    |
-| The Beast's Domain                    | RPGs: Medieval & Fantasy    | TBD      |
-| For Honour                            | RPGs: Medieval & Fantasy    | FH       |
-| Death Masters                         | RPGs: Medieval & Fantasy    | DEATHMAS |
-| DoorMUD                               | RPGs: Medieval & Fantasy    | DOORMUD  |
-| Dungeon Master                        | RPGs: Medieval & Fantasy    | DM       |
-| Kannons and Katapults                 | RPGs: Medieval & Fantasy    | KNK      | 
-| Arrowbridge I                         | RPGs: Medieval & Fantasy    | AB1      |
-| Arrowbridge II                        | RPGs: Medieval & Fantasy    | AB2      |
-| LEGION RPG                            | RPGs: Medieval & Fantasy    | LEGION   |
-| Colonies                              | RPGs: War, Present & Future | COLONIES |
-| Atlantis                              | RPGs: War, Present & Future | ATLANTIS |
-| Operation Overkill II                 | RPGs: War, Present & Future | OOII     |
-| Darkness 2                            | RPGs: War, Present & Future | DARK2    |
-| Jedi Knight                           | RPGs: War, Present & Future | JEDI     |
-| Barren Realms Elite                   | RPGs: War, Present & Future | BRE      |
-| Betsy Ross Solitaire                  | Solitaire Card              | BETSYROS |
-| Galaxy 5                              | Space                       | GALAXY5  |
-| Star Trek                             | Space                       | STARTREK |
-| Trade Wars 2 - 500 Sectors            | Space                       | TW2      |
-| Galactic Dynasty 2                    | Space                       | GD2      |
-| Chain Reaction                        | Word Games                  | CHAINREA |
-| Jeopardized!                          | Word Games                  | JEOPARDY |
-| Wordem                                | Word Games                  | WORDEM   |
-| Sudoku                                | Word Games                  | SUDOKU   |
-|                                       |                             |          |
-|                                       |                             |          |
+| DOOR NAME                             | GENRE                       | XTRN CODE| ADDED    |
+|---------------------------------------|-----------------------------|----------|----------|
+| DrugLord                              | Adult                       | DRUGLORD | 03/09/22 |
+| Bordello                              | Adult                       | BORDELLO | 03/09/22 |
+| Pimp Wars                             | Adult                       | PIMPWARS | 03/09/22 |
+| Bordello                              | Adult                       | BORDELLO | 03/09/22 |
+| Rancho Nevada                         | Adult                       | RN       | 03/09/22 |
+| Piss-o-Rama                           | Action                      | PISSORAM | 03/09/22 |
+| Gooble Gooble                         | Action                      | GOOBLE   | 03/09/22 |
+| Lemons                                | Action                      | LEMONS   | 03/09/22 |
+| Chicken Delivery                      | Action                      | CHICKEN  | 03/09/22 |
+| 4 Coner Checkers                      | Board Game                  | 4CORNERC | 03/09/22 |
+| Bubble Boggle                         | Board Game                  | BOGGLE   | 03/09/22 |
+| Sea Battle                            | Board Game                  | SEABATTL | 03/09/22 |
+| 3-Pair Poker                          | Cards, Dice & Casino        | 3PAIRPOK | 03/09/22 |
+| Acey Deucy                            | Cards, Dice & Casino        | ACEYDEUC | 03/09/22 |
+| Baseball Dice                         | Cards, Dice & Casino        | BBDICE   | 03/09/22 |
+| Blackjack                             | Cards, Dice & Casino        | BLACKJAC | 03/09/22 |
+| Box Poker                             | Cards, Dice & Casino        | BOXPOKER | 03/09/22 |
+| Dice Warz                             | Cards, Dice & Casino        | DICEWARZ | 03/09/22 |
+| Dice Warz \]\[                        | Cards, Dice & Casino        | DICEWAR2 | 03/09/22 |
+| Domain Poker                          | Cards, Dice & Casino        | DPOKER   | 03/09/22 |
+| Milliway's Casino                     | Cards, Dice & Casino        | MILLIWAY | 03/09/22 |
+| Synchronet Blackjack                  | Cards, Dice & Casino        | SBJ      | 03/09/22 |
+| Star Stocks                           | Cards, Dice & Casino        | STARSTOX | 03/09/22 |
+| Tital Slots                           | Cards, Dice & Casino        | TITANSLO | 03/09/22 |
+| Zork I                                | DOS Text-Based              | ZORK1    | 03/09/22 |
+| Zork II                               | DOS Text-Based              | ZORK2    | 03/09/22 |
+| Zork III                              | DOS Text-Based              | ZORK3    | 03/09/22 |
+| Beyond Zork                           | DOS Text-Based              | BEYONDZ  | 03/09/22 |
+| Zork: Undiscovered Underground        | DOS Text-Based              | ZTUU     | 03/09/22 |
+| Arthur: The Quest for Excalibur       | DOS Text-Based              | ARTHUR   | 03/09/22 |
+| A Mind Forever Voyaging               | DOS Text-Based              | AMFV     | 03/09/22 |
+| Ballyhoo                              | DOS Text-Based              | BALLYHOO | 03/09/22 |
+| Border Zone                           | DOS Text-Based              | BORDERZO | 03/09/22 |
+| Bureaucracy                           | DOS Text-Based              | BUREAUCR | 03/09/22 |
+| Cutthroats                            | DOS Text-Based              | CUTTHROA | 03/09/22 |
+| Enchanter                             | DOS Text-Based              | ENCHANTE | 03/09/22 |
+| Hitchiker's Guide to the Galaxy       | DOS Text-Based              | HHGTG    | 03/09/22 |
+| Hollywood Hijinx                      | DOS Text-Based              | HOLLYWOO | 03/09/22 |
+| Infidel                               | DOS Text-Based              | INFIDEL  | 03/09/22 |
+| Journey: The Quest Begins             | DOS Text-Based              | JOURNEY  | 03/09/22 |
+| The Lurkng Horror                     | DOS Text-Based              | LURKING  | 03/09/22 |
+| Leather Goddesses of Phobos           | DOS Text-Based              | LEATHER  | 03/09/22 |
+| Sherlock: Riddle of the Crown Jewels  | DOS Text-Based              | SHERLOCK | 03/09/22 |
+| Sorcerer                              | DOS Text-Based              | SORCERER | 03/09/22 |
+| Starcross                             | DOS Text-Based              | STARCROS | 03/09/22 |
+| Stationfall                           | DOS Text-Based              | STATION  | 03/09/22 |
+| James Calvell's SHOGUN                | DOS Text-Based              | SHOGUN   | 03/09/22 |
+| Moonmist                              | DOS Text-Based              | MOONMIST | 03/09/22 |
+| Nord and Bert                         | DOS Text-Based              | NORDANDB | 03/09/22 |
+| Planetfall                            | DOS Text-Based              | PLANETFA | 03/09/22 |
+| Plundered                             | DOS Text-Based              | PLUNDERE | 03/09/22 |
+| Seastalker                            | DOS Text-Based              | SEASTALK | 03/09/22 |
+| Spellbreaker                          | DOS Text-Based              | SPELLBRE | 03/09/22 |
+| Suspect                               | DOS Text-Based              | SUSPECT  | 03/09/22 |
+| Suspended                             | DOS Text-Based              | SUSPENDE | 03/09/22 |
+| Trinity                               | DOS Text-Based              | TRINITY  | 03/09/22 |
+| Wishbringer                           | DOS Text-Based              | WISHBRIN | 03/09/22 |
+| Witness                               | DOS Text-Based              | WITNESS  | 03/09/22 |
+| Baseball Dice                         | Leisure & Sports            | BBDICE   | 03/09/22 |
+| Fat Fish                              | Leisure & Sports            | FATFISH  | 03/09/22 |
+| Synkroban                             | Other                       | SOKOBAN  | 03/09/22 |
+| Thirstyville                          | Other                       | THIRSTY  | 03/09/22 |
+| Port Victoria                         | Other                       | PORTVIC  | 03/09/22 |
+| Oregon Trail                          | Other                       | OREGONTR | 03/09/22 |
+| Sim BBS                               | Other                       | SIMBBS   | 03/09/22 |
+| Synchronet Minesweeper                | Puzzle                      | MSWEEPER | 03/09/22 |
+| Uber Blox                             | Puzzle                      | UBERBLOX | 03/09/22 |
+| Synchrotetris                         | Puzzle                      | TETRIS   | 03/09/22 |
+| Legend of the Red Dragon              | RPGs: Medieval & Fantasy    | LORD     | 03/09/22 |
+| LORD II: New World                    | RPGs: Medieval & Fantasy    | LORD2    | 03/09/22 |
+| The Beast's Domain                    | RPGs: Medieval & Fantasy    | TBD      | 03/09/22 |
+| For Honour                            | RPGs: Medieval & Fantasy    | FH       | 03/09/22 |
+| Death Masters                         | RPGs: Medieval & Fantasy    | DEATHMAS | 03/09/22 |
+| DoorMUD                               | RPGs: Medieval & Fantasy    | DOORMUD  | 03/09/22 |
+| Dungeon Master                        | RPGs: Medieval & Fantasy    | DM       | 03/09/22 |
+| Kannons and Katapults                 | RPGs: Medieval & Fantasy    | KNK      | 03/09/22 |
+| Arrowbridge I                         | RPGs: Medieval & Fantasy    | AB1      | 03/09/22 |
+| Arrowbridge II                        | RPGs: Medieval & Fantasy    | AB2      | 03/09/22 |
+| LEGION RPG                            | RPGs: Medieval & Fantasy    | LEGION   | 03/09/22 |
+| Colonies                              | RPGs: War, Present & Future | COLONIES | 03/09/22 |
+| Atlantis                              | RPGs: War, Present & Future | ATLANTIS | 03/09/22 |
+| Operation Overkill II                 | RPGs: War, Present & Future | OOII     | 03/09/22 |
+| Darkness 2                            | RPGs: War, Present & Future | DARK2    | 03/09/22 |
+| Jedi Knight                           | RPGs: War, Present & Future | JEDI     | 03/09/22 |
+| Barren Realms Elite                   | RPGs: War, Present & Future | BRE      | 03/09/22 |
+| Betsy Ross Solitaire                  | Solitaire Card              | BETSYROS | 03/09/22 |
+| Galaxy 5                              | Space                       | GALAXY5  | 03/09/22 |
+| Star Trek                             | Space                       | STARTREK | 03/09/22 |
+| Trade Wars 2 - 500 Sectors            | Space                       | TW2      | 03/09/22 |
+| Galactic Dynasty 2                    | Space                       | GD2      | 03/09/22 |
+| Chain Reaction                        | Word Games                  | CHAINREA | 03/09/22 |
+| Jeopardized!                          | Word Games                  | JEOPARDY | 03/09/22 |
+| Wordem                                | Word Games                  | WORDEM   | 03/09/22 |
+| Sudoku                                | Word Games                  | SUDOKU   | 03/09/22 |
+|                                       |                             |          |          |
 
 
 
