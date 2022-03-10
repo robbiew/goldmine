@@ -70,10 +70,15 @@ Add to your menu as ``IR - Outbound RLOGIN Connection``
 
 Below is a list of direct door codes. Use these if you want to launch a game directly from your BBS, bypassing the Gold Mine menu.
 
-To do this, add ``"xtrn=DOORCODE"`` directly after ```/user``` (Mystic) or ```"..un,"``` (Talisman). 
+To do this, add ``/term=xtrn=DOORCODE`` directly after ```/user``` (Mystic) or ```"..un,"``` (Talisman). 
 
-Replace ```DOORCODE``` with an xtrn code below that you want to launch directly.
+Replace ```DOORCODE``` with an xtrn code below that you want to launch directly, e.g.:
 
+```
+/addr=3.17.231.162 /port=513 /user=[TUG]@USER@ /term=xtrn=WORDLE /PROMPT
+```
+
+(FYI -- "/PROMPT" hides the connection string from the user)
 
 # GoldMine Game Code List
 
