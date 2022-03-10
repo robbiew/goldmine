@@ -80,6 +80,7 @@ Replace ```DOORCODE``` with an xtrn code below that you want to launch directly.
 
 | DOOR NAME                             | GENRE                       | XTRN CODE| ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| BBS Wordle                            | Word Games                  | WORDLE   | 03/10/22 |
 | DrugLord                              | Adult                       | DRUGLORD | 03/09/22 |
 | Bordello                              | Adult                       | BORDELLO | 03/09/22 |
 | Pimp Wars                             | Adult                       | PIMPWARS | 03/09/22 |
