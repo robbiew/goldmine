@@ -1,4 +1,4 @@
-# Gold Mine Community Door Server
+# ⛏️ Gold Mine Community Door Server
 
 ![gOLD mINE screen shot](docs/assets/images/screenshot.png)
 
@@ -28,6 +28,8 @@ Also, please check out other door gamer servers like [DoorParty](http://www.thro
 
 BBS SysOps can join by visiting ``alphacomplex.us:2323`` with a terminal program like SyncTerm or MagiTerm. Hit ``[J] JOIN GOLDMINE`` from the main menu. 
 Just fill out the form, and your BBS IP address will be queued for white-listing on the firewall, so you can then connect on port 513 via RLOGIN. 
+
+🆕 Try it out/sign up over the web [HERE](https://www.alphacomplex.us/)!
 
 ## SETUP
 
