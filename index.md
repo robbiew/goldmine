@@ -2,7 +2,7 @@
 
 ![gOLD mINE screen shot](docs/assets/images/screenshot.png)
 
-gOLD mINE (named after a mall-based, [coin-op arcade chain](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where aLPHA grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/) or [MagiTerm](https://gitlab.com/magickabbs/MagiTerm).
+gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where aLPHA grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/) or [MagiTerm](https://gitlab.com/magickabbs/MagiTerm).
 
 gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Ubuntu 20.04 x64) under the hood, and runs on port ``513`` at ``165.232.153.209``.
 
