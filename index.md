@@ -2,7 +2,7 @@
 
 ![gOLD mINE screen shot](docs/assets/images/screenshot.png)
 
-gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where aLPHA grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/) or [MagiTerm](https://gitlab.com/magickabbs/MagiTerm).
+gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where aLPHA grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/), [MagiTerm](https://gitlab.com/magickabbs/MagiTerm) or [NetRunner](http://www.mysticbbs.com/downloads.html).
 
 gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Ubuntu 20.04 x64) under the hood, and runs on port ``513`` at ``165.232.153.209``.
 
@@ -26,7 +26,7 @@ Also, please check out other door gamer servers like [DoorParty](http://www.thro
 
 ![aLPHA cOMPLEX Join Link](docs/assets/images/menu.png)
 
-BBS SysOps can join by visiting ``alphacomplex.us:2323`` with a terminal program like SyncTerm or MagiTerm. Hit ``[J] JOIN GOLDMINE`` from the main menu. 
+BBS SysOps can join by visiting ``alphacomplex.us:2323`` with a terminal program like [SyncTerm](https://syncterm.bbsdev.net/), [NetRunner](http://www.mysticbbs.com/downloads.html) or [MagiTerm](https://gitlab.com/magickabbs/MagiTerm). Hit ``[J] JOIN GOLDMINE`` from the main menu. 
 Just fill out the form, and your BBS IP address will be queued for white-listing on the firewall, so you can then connect on port 513 via RLOGIN. 
 
 🆕 Try it out/sign up over the web [HERE](https://www.alphacomplex.us/)!
