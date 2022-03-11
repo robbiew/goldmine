@@ -85,6 +85,8 @@ Replace ```DOORCODE``` with an xtrn code below that you want to launch directly,
 
 | DOOR NAME                             | GENRE                       | XTRN CODE| ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| King's Crown                          | RPGs: Medieval & Fantasy    | KC       | 03/11/22 |
+| Exitilus                              | RPGs: Medieval & Fantasy    | EXIT     | 03/11/22 |
 | Global War                            | RPGs: War, Present & Future | GWAR     | 03/11/22 |
 | Forces of Darkness                    | RPGs: War, Present & Future | FOD      | 03/10/22 |
 | BBS Wordle                            | Word Games                  | WORDLE   | 03/10/22 |
