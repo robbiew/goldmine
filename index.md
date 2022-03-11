@@ -85,6 +85,7 @@ Replace ```DOORCODE``` with an xtrn code below that you want to launch directly,
 
 | DOOR NAME                             | GENRE                       | XTRN CODE| ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| Global War                            | RPGs: War, Present & Future | GWAR     | 03/11/22 |
 | Forces of Darkness                    | RPGs: War, Present & Future | FOD      | 03/10/22 |
 | BBS Wordle                            | Word Games                  | WORDLE   | 03/10/22 |
 | DrugLord                              | Adult                       | DRUGLORD | 03/09/22 |
