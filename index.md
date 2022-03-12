@@ -51,7 +51,7 @@ data = "goldmine"
 local un = bbs_get_username()
 bbs_clear_screen()
 bbs_write_string("Loading GOLD MINE arcade...")
-bbs_rlogin_ip4("165.232.153.209","513","","[TAG] "..un,"")
+bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"")
 ``` 
                                                                       
 - Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.        
