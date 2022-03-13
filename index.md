@@ -83,7 +83,7 @@ For Talisman, you can create a lua file in ``scripts`` that contains:
 
 ```
 local un = bbs_get_username()
-bbs_rlogin_ip4("165.232.153.209","513","","[TUG]"..un,"xtrn=mrc")
+bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"xtrn=mrc")
 ```
 
 # GoldMine Game Code List
