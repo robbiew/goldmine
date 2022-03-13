@@ -94,8 +94,9 @@ bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"xtrn=mrc")
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
 
 
-| DOOR NAME                             | GENRE                       | XTRN CODE| ADDED    |
+| DOOR NAME                             | GENRE                       | CODE     | ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| MystMan                               | Action                      | MYSTMAN  | 03/13/22 |
 | Stellar Quest                         | Space                       | SQUEST   | 03/13/22 |
 | Stacktion                             | Puzzle                      | STACKTIO | 03/12/22 |
 | GuTTeRBoWL                            | Leisure & Sports            | GUTBOWL  | 03/12/22 |
