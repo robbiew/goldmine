@@ -89,7 +89,7 @@ bbs_rlogin_ip4("165.232.153.209","513","","[TUG]"..un,"xtrn=mrc")
 
 # GoldMine Game Code List
 
-## I'm trying to make sure all games on gOLD mINE are fully registered.
+- I'm trying to make sure all games on gOLD mINE are fully registered.
 
 
 | DOOR NAME                             | GENRE                       | XTRN CODE| ADDED    |
