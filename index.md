@@ -68,11 +68,11 @@ Add to your menu as ``IR - Outbound RLOGIN Connection``
 - Make sure there are no spaces between ``[TAG]`` and ``@USER@``
 - FYI: ``/PROMPT`` hides the connection string from the user
 
-# GAME LIST
+# DIRECT DOOR CODES
 
-Below is a list of direct door codes. Use these if you want to launch a game directly from your BBS, bypassing the Gold Mine menu.
+Below is a list of direct door codes. Use these if you want to launch a game directly from your BBS, bypassing the Gold Mine menu. This creates a pretty seamless experience for your users.
 
-To do this, add ``/term=xtrn=DOORCODE`` directly after ```/user``` (Mystic) or ```"..un,"``` (Talisman). 
+To do this, add ``/term=xtrn=DOORCODE`` directly after ```/user``` sequence (on Mystic) or ```"..un,"``` (on Talisman). 
 
 Replace ```DOORCODE``` with an xtrn code below that you want to launch directly, e.g. on a Mystic BBS:
 
