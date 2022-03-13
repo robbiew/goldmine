@@ -61,7 +61,7 @@ bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"")
 Add to your menu as ``IR - Outbound RLOGIN Connection``
 
 ```
-/addr=3.17.231.162 /port=513 /user=[TAG]@USER@ /PROMPT
+/addr=165.232.153.209 /port=513 /user=[TAG]@USER@ /PROMPT
 ```
 
 - Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.    
