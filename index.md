@@ -96,6 +96,8 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 
 | DOOR NAME                             | GENRE                       | CODE     | ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| Forbidden Planet                      | DOS Text-Based              | PLANET   | 03/13/22 |
+| Las Vegas Craps                       | Cards, Dice & Casino        | LVCRAPS  | 03/13/22 |
 | MystMan                               | Action                      | MYSTMAN  | 03/13/22 |
 | Stellar Quest                         | Space                       | SQUEST   | 03/13/22 |
 | Stacktion                             | Puzzle                      | STACKTIO | 03/12/22 |
