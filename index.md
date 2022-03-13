@@ -26,17 +26,19 @@ Also, please check out other door gamer servers like [DoorParty](http://www.thro
 
 ![aLPHA cOMPLEX Join Link](docs/assets/images/menu.png)
 
+## SIGNUP AT ALPHA COMPLEX
+
 BBS SysOps can join by visiting ``alphacomplex.us:2323`` with a terminal program like [SyncTerm](https://syncterm.bbsdev.net/), [NetRunner](http://www.mysticbbs.com/downloads.html) or [MagiTerm](https://gitlab.com/magickabbs/MagiTerm). Hit ``[J] JOIN GOLDMINE`` from the main menu. 
 Just fill out the form, and your BBS IP address will be queued for white-listing on the firewall, so you can then connect on port 513 via RLOGIN. 
 
 🆕 Try it out/sign up over the web [HERE](https://www.alphacomplex.us/)!
 
-## SETUP
+## SETUP ON YOUR BBS
 
 Setup an outbound RLOGIN connection from a menu item on your BBS. Note, you *must* be signed up on Alpha Complex for this to work.
 
 
-### TALISMAN BBS
+### EXAMPLE: TALISMAN BBS
 - If you're a Talisman sysop, add to an existing menu (e.g. ``main.toml`` )
 
 ```
@@ -57,7 +59,7 @@ bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"")
 - Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.        
 
 
-### MYSTIC BBS
+### EXAMPLE: MYSTIC BBS
 Add to your menu as ``IR - Outbound RLOGIN Connection``
 
 ```
@@ -68,13 +70,14 @@ Add to your menu as ``IR - Outbound RLOGIN Connection``
 - Make sure there are no spaces between ``[TAG]`` and ``@USER@``
 - FYI: ``/PROMPT`` hides the connection string from the user
 
-# DIRECT DOOR CODES
+## DIRECT LAUNCH
 
-Below is a list of direct door codes. Use these if you want to launch a game directly from your BBS, bypassing the Gold Mine menu. This creates a pretty seamless experience for your users.
+If you want to launch a door game directly from your BBS, bypassing the Gold Mine main menu:
 
-To do this, add ``/term=xtrn=DOORCODE`` directly after ```/user``` sequence (on Mystic) or ```"..un,"``` (on Talisman). 
+Mystic:
 
-Replace ```DOORCODE``` with an xtrn code below that you want to launch directly, e.g. on a Mystic BBS:
+- add ``/term=xtrn=DOORCODE`` directly after ```/user``` sequence (on Mystic) or ```"..un,"``` (on Talisman). 
+- Replace ```DOORCODE``` with an xtrn code below that you want to launch directly, e.g. on a Mystic BBS:
 
 ```
 /addr=165.232.153.209 /user=[TUG]@USER@ /term=xtrn=WORDLE /PROMPT
@@ -88,7 +91,7 @@ bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"xtrn=mrc")
 
 # GoldMine Game Code List
 
-- I'm trying to make sure all games on gOLD mINE are fully registered.
+- I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
 
 
 | DOOR NAME                             | GENRE                       | XTRN CODE| ADDED    |
