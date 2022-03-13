@@ -96,6 +96,7 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 
 | DOOR NAME                             | GENRE                       | XTRN CODE| ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| Stellar Quest                         | Space                       | SQUEST   | 03/13/22 |
 | Stacktion                             | Puzzle                      | STACKTIO | 03/12/22 |
 | GuTTeRBoWL                            | Leisure & Sports            | GUTBOWL  | 03/12/22 |
 | King's Crown                          | RPGs: Medieval & Fantasy    | KC       | 03/11/22 |
