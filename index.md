@@ -61,12 +61,14 @@ bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"")
 Add to your menu as ``IR - Outbound RLOGIN Connection``
 
 ```
-/addr=165.232.153.209 /port=513 /user=[TAG]@USER@ /PROMPT
+/addr=165.232.153.209 /user=[TAG]@USER@ /PROMPT
 ```
 
 - Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.    
+- Make sure there are no spaces between ``[TAG]`` and ``@USER@``
+- FYI: ``/PROMPT`` hides the connection string from the user
 
-## GAME LIST
+# GAME LIST
 
 Below is a list of direct door codes. Use these if you want to launch a game directly from your BBS, bypassing the Gold Mine menu.
 
@@ -75,11 +77,8 @@ To do this, add ``/term=xtrn=DOORCODE`` directly after ```/user``` (Mystic) or `
 Replace ```DOORCODE``` with an xtrn code below that you want to launch directly, e.g. on a Mystic BBS:
 
 ```
-/addr=165.232.153.209 /port=513 /user=[TUG]@USER@ /term=xtrn=WORDLE /PROMPT
+/addr=165.232.153.209 /user=[TUG]@USER@ /term=xtrn=WORDLE /PROMPT
 ```
-
-(FYI -- ``/PROMPT`` hides the connection string from the user)
-
 For Talisman, you can create a lua file in ``scripts`` that contains:
 
 ```
