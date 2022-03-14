@@ -96,6 +96,8 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 
 | DOOR NAME                             | GENRE                       | CODE     | ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| Godfather of Crime                    | Adult                       | GODFATHE | 03/14/22 |
+| Cmptown Races                         | Leisure & Sports            | CAMPTOWN | 03/14/22 |
 | Iron War                              | RPGs: War, Present & Future | IRONWAR  | 03/14/22 |
 | BBS Tris                              | Action                      | BBSTRIS  | 03/14/22 |
 | Five Card Stud                        | Cards, Dice & Casino        | FIVECARD | 03/14/22 |
