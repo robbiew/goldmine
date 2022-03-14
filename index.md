@@ -98,7 +98,7 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 | Yankee Trader                         | Space                       | YT       | 03/14/22 |
 | Grunt Fest                            | RPGs: War, Present & Future | GRUNTF   | 03/14/22 |
 | Godfather of Crime                    | Adult                       | GODFATHE | 03/14/22 |
-| Cmptown Races                         | Leisure & Sports            | CAMPTOWN | 03/14/22 |
+| Camptown Races                        | Leisure & Sports            | CAMPTOWN | 03/14/22 |
 | Iron War                              | RPGs: War, Present & Future | IRONWAR  | 03/14/22 |
 | Escape Arcade                         | Action                      | ESCAPE   | 03/14/22 |
 | BBS Tris                              | Action                      | BBSTRIS  | 03/14/22 |
