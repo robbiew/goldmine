@@ -96,6 +96,9 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 
 | DOOR NAME                             | GENRE                       | CODE     | ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| Five Card Stud                        | Cards, Dice & Casino        | FIVECARD | 03/14/22 |
+| Accordian Solitaire                   | Cards, Dice & Casino        | AS       | 03/14/22 |
+| Adventurer's Maze II                  | RPGs: Medieval & Fantasy    | AM2      | 03/14/22 |
 | Usurper                               | RPGs: Medieval & Fantasy    | USURPER  | 03/14/22 |
 | Forbidden Planet                      | DOS Text-Based              | PLANET   | 03/13/22 |
 | Showbiz Quiz                          | Trivia                      | SBQUIZ   | 03/13/22 |
