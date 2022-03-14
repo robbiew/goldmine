@@ -74,7 +74,7 @@ Add to your menu as ``IR - Outbound RLOGIN Connection``
 
 If you want to launch a door game directly from your BBS, bypassing the Gold Mine main menu:
 
-Mystic:
+Mystic (make sure you are using the most recent release):
 
 - add ``/term=xtrn=DOORCODE`` directly after ```/user``` sequence (on Mystic) or ```"..un,"``` (on Talisman). 
 - Replace ```DOORCODE``` with an xtrn code below that you want to launch directly, e.g. on a Mystic BBS:
@@ -97,6 +97,12 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 | DOOR NAME                             | GENRE                       | CODE     | ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
 | Forbidden Planet                      | DOS Text-Based              | PLANET   | 03/13/22 |
+| Showbiz Quiz                          | Trivia                      | SBQUIZ   | 03/13/22 |
+| Star Trek Quiz                        | Trivia                      | STQUIZ   | 03/13/22 |
+| Las Vegas Blackjack                   | Cards, Dice & Casino        | LVBJACK  | 03/13/22 |
+| Las Vegas Keno                        | Cards, Dice & Casino        | LVKENO   | 03/13/22 |
+| Las Vegas Video Poker                 | Cards, Dice & Casino        | LVPOKER  | 03/13/22 |
+| Las Vegas Slots                       | Cards, Dice & Casino        | LVSLOTS  | 03/13/22 |
 | Las Vegas Craps                       | Cards, Dice & Casino        | LVCRAPS  | 03/13/22 |
 | MystMan                               | Action                      | MYSTMAN  | 03/13/22 |
 | Stellar Quest                         | Space                       | SQUEST   | 03/13/22 |
