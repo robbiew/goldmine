@@ -91,6 +91,7 @@ bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"xtrn=mrc")
 
 # GoldMine Game Code List
 
+Number of games: 119
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
 
 
