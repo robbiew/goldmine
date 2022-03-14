@@ -96,6 +96,7 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 
 | DOOR NAME                             | GENRE                       | CODE     | ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
+| Usurper                               | RPGs: Medieval & Fantasy    | USURPER  | 03/14/22 |
 | Forbidden Planet                      | DOS Text-Based              | PLANET   | 03/13/22 |
 | Showbiz Quiz                          | Trivia                      | SBQUIZ   | 03/13/22 |
 | Star Trek Quiz                        | Trivia                      | STQUIZ   | 03/13/22 |
