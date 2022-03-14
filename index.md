@@ -104,6 +104,7 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 | BBS Tris                              | Action                      | BBSTRIS  | 03/14/22 |
 | Five Card Stud                        | Cards, Dice & Casino        | FIVECARD | 03/14/22 |
 | Accordian Solitaire                   | Cards, Dice & Casino        | AS       | 03/14/22 |
+| Rise To Power                         | RPGs: Medieval & Fantasy    | RTP      | 03/14/22 |
 | Adventurer's Maze II                  | RPGs: Medieval & Fantasy    | AM2      | 03/14/22 |
 | Entertainment Awards Trivia           | Trivia                      | AWARDS   | 03/14/22 |
 | Usurper                               | RPGs: Medieval & Fantasy    | USURPER  | 03/14/22 |
