@@ -24,19 +24,11 @@ Also, please check out other door gamer servers like [DoorParty](http://www.thro
 
 ## JOIN GOLD MINE
 
-![aLPHA cOMPLEX Join Link](docs/assets/images/menu.png)
-
-## SIGNUP AT ALPHA COMPLEX
-
-BBS SysOps can join by visiting ``alphacomplex.us:2323`` with a terminal program like [SyncTerm](https://syncterm.bbsdev.net/), [NetRunner](http://www.mysticbbs.com/downloads.html) or [MagiTerm](https://gitlab.com/magickabbs/MagiTerm). Hit ``[J] JOIN GOLDMINE`` from the main menu. 
-Just fill out the form, and your BBS IP address will be queued for white-listing on the firewall, so you can then connect on port 513 via RLOGIN. 
-
-🆕 Try it out/sign up over the web [HERE](https://www.alphacomplex.us/)!
+Gold Mine no longer requires signup at Alpha Complex BBS. Just follow the directions below.
 
 ## SETUP ON YOUR BBS
 
-Setup an outbound RLOGIN connection from a menu item on your BBS. Note, you *must* be signed up on Alpha Complex for this to work.
-
+Setup an outbound RLOGIN connection from a menu item on your BBS to 165.232.153.209, port 513, using the settings below for your BBS 'Tag.'
 
 ### EXAMPLE: TALISMAN BBS
 - If you're a Talisman sysop, add to an existing menu (e.g. ``main.toml`` )
