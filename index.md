@@ -1,84 +1,56 @@
-# ⛏️ Gold Mine Community Door Server
+# ⛏️ gOLD mINE Community Door Server
 
 ![gOLD mINE screen shot](docs/assets/images/screenshot.png)
 
-gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where aLPHA grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/), [MagiTerm](https://gitlab.com/magickabbs/MagiTerm) or [NetRunner](http://www.mysticbbs.com/downloads.html).
+gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/), [MagiTerm](https://gitlab.com/magickabbs/MagiTerm) or [NetRunner](http://www.mysticbbs.com/downloads.html).
 
-gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Ubuntu 20.04 x64) under the hood, and runs on port ``513`` at ``165.232.153.209``.
+gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Ubuntu 24.04 x64) under the hood, and runs on port ``2513`` at ``143.198.58.173``.
 
-It is not a BBS, despite using BBS software. There are no message boards or file download areas, and you can't "login" to it like a traditional BBS. It does one thing, and one thing only: launch games remotely for users from other BBSs.
+It'ss not a BBS. There are no message boards or file download areas, and you can't "login" to it like a traditional BBS. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
 
 ## WHAT'S A 'DOOR SERVER'?
 
-If you run an old-school, terminal-based BBS (probably using new-school BBS software like [Mystic](http://www.mysticbbs.com/), [Synchronet](http://wiki.synchro.net/), [Talisman](talismanbbs.com) or [ENiGMA½](https://enigma-bbs.github.io/)) you know that setting up door game programs can be time consuming and a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS (or Win32) and were pretty finicky. Hunting down registration keys or cracks can be daunting (much is abandonware these days). 
-
-Oh, and if your BBS runs on modern Windows 64-bit, well, unless you can figure out how to use experimental [NTVDMx64](https://github.com/leecher1337/ntvdmx64) and legacy [FOSSIL drivers](http://pcmicro.com/netfoss/) to run native 16-Bit DOS programs, your options are limited. And ARM-based systems like Raspberry Pi can't even run dosemu, so you'd need to use programs like [QEMU](https://www.sunrisedoors.com/linuxsetup.php) (powerful, but a complex setup for a BBS) or [DOSBox](https://www.dosbox.com/) (easier, but with no multi-node capabilities).
-
-Phew.
-
-So, a Door Server takes a lot of the work out of setup and lets you add 100's of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users. And Linux users, no need for [DOSEMU](http://www.dosemu.org/) shenanigans. In fact, gOLD mINE can handle just about any kind of console-based game made for DOS, Linux or Windows. It also suport Synchronet Javascript-based games. With direct-door launching, it feels like users never leave yuor BBS!
-
-The other benefit is a potentially larger player base, aggregating them in a centralized manner. 
-
-Also, please check out other door gamer servers like [DoorParty](http://www.throwbackbbs.com/), [BBSLink](https://bbslink.net/), [CombatNet](http://combatnet.us/), and [Black Country Rock](https://www.telnetbbsguide.com/bbs/bcr-games-server/) game servers. They're all good choices. Hell, join them all!
+If you run an old-school, terminal-based BBS (probably using new-school BBS software like [Mystic](http://www.mysticbbs.com/), [Synchronet](http://wiki.synchro.net/), [Talisman](talismanbbs.com) or [ENiGMA½](https://enigma-bbs.github.io/)) you know that setting up door game programs can be time consuming and sometimes, a headache. In their heydey of the 1980's and 90s, these games where designed to run under DOS (or Win32) and were pretty finicky. Hunting down registration keys or cracks can be daunting (much is abandonware these days). So, a Door Server takes work out of setup and lets you add LOTS of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users.  The other benefit is a potentially larger player base, aggregating them in a centralized manner. 
 
 ## JOIN GOLD MINE
 
-Gold Mine no longer requires signup at Alpha Complex BBS. Just follow the directions below.
+gOLD mINE does not require you to apply for membership. Just follow the directions below. Contact ``j0hnny a1pha`` on Space Junk! BBS (spacejunkbbs.com:2323) for more details or to sk a question.
 
 ## SETUP ON YOUR BBS
 
-Setup an outbound RLOGIN connection from a menu item on your BBS to 165.232.153.209, port 513, using the settings below for your BBS 'Tag.'
+Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``spacejunkbbs.com`` port ``2513``, using the settings below.
 
-### EXAMPLE: TALISMAN BBS
-- If you're a Talisman sysop, add to an existing menu (e.g. ``main.toml`` )
+## CREATE A BBS TAG
 
-```
-[[menuitem]]
-command = "RUNSCRIPT"
-hotkey = "D"
-data = "goldmine"
-```
-- Create ``goldmine.lua`` in your /bbs/scripts directory:
+Every gOLD mINE BBS needs a tag that identifies it. You can make it up, just use these guidelines:
+- Format for the tag is: [TAG], replace "TAG" with 3 characters that represent your BBS
+- For instance, Space Junk BBS uses [SJ!]
+- Use exactly 3: no more, no less
+- No profanity, please
 
-```
-local un = bbs_get_username()
-bbs_clear_screen()
-bbs_write_string("Loading GOLD MINE arcade...")
-bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"")
-``` 
-                                                                      
-- Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.        
-
-
-### EXAMPLE: MYSTIC BBS
-Add to your menu as ``IR - Outbound RLOGIN Connection``
+## EXAMPLE: MYSTIC BBS
+OK, now add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 
 ```
-/addr=165.232.153.209 /user=[TAG]@USER@ /PROMPT
+/addr=165.232.153.209 /user=[TAG]@USER@ /pass=@USER@ /PROMPT
 ```
 
 - Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.    
 - Make sure there are no spaces between ``[TAG]`` and ``@USER@``
 - FYI: ``/PROMPT`` hides the connection string from the user
+- You can replace ``/pass=@USER@`` with whatever you want for the ``@USER@`` part
 
-## DIRECT LAUNCH
+## DIRECTLY LAUNCH A DOOR
 
-If you want to launch a door game directly from your BBS, bypassing the Gold Mine main menu:
+If you want to launch a door game directly from your BBS, bypassing the gOLD mINE main menu:
 
 Mystic (make sure you are using the most recent release):
 
-- add ``/term=xtrn=DOORCODE`` directly after ```/user``` sequence (on Mystic) or ```"..un,"``` (on Talisman). 
-- Replace ```DOORCODE``` with an xtrn code below that you want to launch directly, e.g. on a Mystic BBS:
+- add ``/term=xtrn=DOORCODE`` directly after ```/user``` sequence (on Mystic)
+- Replace ```DOORCODE``` with a code below that you want to launch directly, e.g. on a Mystic BBS:
 
 ```
-/addr=165.232.153.209 /user=[TUG]@USER@ /term=xtrn=WORDLE /PROMPT
-```
-For Talisman, you can create a lua file in ``scripts`` that contains:
-
-```
-local un = bbs_get_username()
-bbs_rlogin_ip4("165.232.153.209","513","","[TAG]"..un,"xtrn=mrc")
+/addr=165.232.153.209 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT
 ```
 
 # GoldMine Game Code List
