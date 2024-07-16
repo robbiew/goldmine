@@ -4,7 +4,7 @@
 
 gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/), [MagiTerm](https://gitlab.com/magickabbs/MagiTerm) or [NetRunner](http://www.mysticbbs.com/downloads.html).
 
-gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Ubuntu 24.04 x64) under the hood, and runs on port ``2513`` at ``143.198.58.173``.
+gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Ubuntu 24.04 x64) under the hood, and runs on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
 
 It'ss not a BBS. There are no message boards or file download areas, and you can't "login" to it like a traditional BBS. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
 
@@ -18,7 +18,7 @@ gOLD mINE does not require you to apply for membership. Just follow the directio
 
 ## SETUP ON YOUR BBS
 
-Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``spacejunkbbs.com`` port ``2513``, using the settings below.
+Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``goldminedoors.com`` port ``2513``, using the settings below.
 
 ## CREATE A BBS TAG
 
@@ -32,7 +32,7 @@ Every gOLD mINE BBS needs a tag that identifies it. You can make it up, just use
 OK, now add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 
 ```
-/addr=165.232.153.209 /user=[TAG]@USER@ /pass=@USER@ /PROMPT
+/addr=143.198.58.173 /user=[TAG]@USER@ /pass=@USER@ /PROMPT
 ```
 
 - Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.    
@@ -50,7 +50,7 @@ Mystic (make sure you are using the most recent release):
 - Replace ```DOORCODE``` with a code below that you want to launch directly, e.g. on a Mystic BBS:
 
 ```
-/addr=165.232.153.209 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT
+/addr=143.198.58.173 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT
 ```
 
 # GoldMine Game Code List
