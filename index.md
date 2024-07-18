@@ -36,7 +36,7 @@ Add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 /addr=143.198.58.173 /user=[TAG]@USER@ /pass=@USER@ /PROMPT
 ```
 
-- Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.    
+- Replace ``TAG`` with your *unique* 1-3 character BBS tag, e.g ``[ABC]``.    
 - Make sure there are no spaces between ``[TAG]`` and ``@USER@``
 - FYI: ``/PROMPT`` hides the connection string from the user
 - You can replace ``/pass=@USER@`` with whatever you want for the ``@USER@`` part
