@@ -53,7 +53,7 @@ Mystic (make sure you are using the most recent release):
 /addr=143.198.58.173 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT
 ```
 
-Heer's what I sued for WWIV onm linux (``goldmine.sh``):
+Heer's what I use (WWIV) on linux - ``goldmine.sh``:
 ```
 #!/bin/bash
 
