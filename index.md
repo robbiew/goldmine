@@ -209,7 +209,6 @@ Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite 
 | Barren Realms Elite                   | RPGs: War, Present & Future | BRE      | 03/09/22 |
 | Betsy Ross Solitaire                  | Solitaire Card              | BETSYROS | 03/09/22 |
 | Accordian  Solitaire                  | Solitaire Card              | AS       | 03/09/22 |
-| Yankee Trader                         | Space                       | YT       | 03/14/22 |
 | Galaxy 5                              | Space                       | GALAXY5  | 03/09/22 |
 | Star Trek                             | Space                       | STARTREK | 03/09/22 |
 | Trade Wars 2 - 500 Sectors            | Space                       | TW2      | 03/09/22 |
