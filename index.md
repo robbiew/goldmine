@@ -50,7 +50,7 @@ Use Chain Edit to add a gOLD Mine entry. If you want to load the main menu so yo
 
 ```
 A) Description  : Space Junk! gOLD mINE Game Server
-B) Filename     : doors/goldmine/goldmine.sh %N TAG WORDLE
+B) Filename     : doors/goldmine/goldmine.sh %N WORDLE
 C) ACS          : user.sl >= 10
 D) ANSI         : Optional
 E) Exec Mode    : STDIO
@@ -59,7 +59,7 @@ G) Local only   : No
 H) Multi user   : Yes
 I) Usage        : 0
 J) Registered by: AVAILABLE
-L) Pause after  : Yes
+L) Pause after  : No
 ```
 - Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.
 - Note: we aren't passing the BBS Alias here, we're passing the node number, which the script will then extract from the drop file in case we need to parse out special characters, spaces, etc.
@@ -77,29 +77,21 @@ Mystic (make sure you are using the most recent release):
 /addr=143.198.58.173 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT
 ```
 
-Heer's what I use (WWIV) on linux - ``goldmine.sh``:
+Heer's what I use for WWIV on linux - ``goldmine.sh``:
 ```
 #!/bin/bash
 
-#################################################################################################
-### aLPHA's gOLD mINE login script for Ubuntu 24.04                                           ###
-### Requires rsh-redone-client `sudo apt install rsh-redone-client` if not installed          ###
-#################################################################################################
-
-export TERM=linux
 cd doors/goldmine
 
-# Get the node number, BBS tag and door code from the arguments passed to the script
-# If no door code is present, take the user to the gOLD mINE main menu
+# Get the node number and door code from the arguments passed to the script
 NODE_NUMBER=$1
-BBS=$2
-DOOR_CODE=$3
+BBS="SJ!"       # Change this to your tag
+DOOR_CODE=$2
 
-# Define the path to the DOOR32.SYS file - this is for WWIV
-# I grab directly from the drop file in case I need to handle spaces, special chars, etc.
+# Define the path to the WWIV DOOR32.SYS file
 DOOR32_SYS_PATH=/home/bbs/wwiv/e/${NODE_NUMBER}/temp/door32.sys
 
-# Extract the alias from line 7 of the drop file, replace spaces with underscores
+# Extract the alias from line 7, replace spaces with underscores, and store it in a variable
 USER_ALIAS=$(sed -n '7p' "$DOOR32_SYS_PATH" | tr ' ' '-')
 PREFIX="["$BBS"]"
 
