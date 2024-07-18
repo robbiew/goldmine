@@ -53,6 +53,40 @@ Mystic (make sure you are using the most recent release):
 /addr=143.198.58.173 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT
 ```
 
+Heer's what I sued for WWIV onm linux (``goldmine.sh``):
+```
+#!/bin/bash
+
+export TERM=linux
+cd doors/goldmine
+
+# Get the node number and door code from the arguments passed to the script
+NODE_NUMBER=$1
+BBS=$2
+DOOR_CODE=$3
+
+# Define the path to the DOOR32.SYS file
+DOOR32_SYS_PATH=/home/bbs/wwiv/e/${NODE_NUMBER}/temp/door32.sys
+
+# Extract the alias from line 7, replace spaces with underscores, and store it in a variable
+USER_ALIAS=$(sed -n '7p' "$DOOR32_SYS_PATH" | tr ' ' '-')
+PREFIX="["$BBS"]"
+
+# Print the alias and door code for verification
+echo "BBS: $PREFIX"
+echo "User Alias: $USER_ALIAS"
+echo "Door Code: $DOOR_CODE"
+
+# Run the rsh-redone-client command with the extracted user alias and provided door code
+if [ -n "$DOOR_CODE" ]; then
+    TERM_PARAM="xtrn=$DOOR_CODE"
+    TERM=$TERM_PARAM rlogin -p 2513 -l "$PREFIX$USER_ALIAS" goldminedoors.com
+else
+    rlogin -p 2513 -l "$PREFIX$USER_ALIAS" goldminedoors.com
+fi
+```
+
+
 # GoldMine Game Code List
 
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
