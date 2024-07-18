@@ -28,8 +28,9 @@ Every gOLD mINE BBS needs a tag that identifies it. You can make it up, just use
 - Use exactly 3: no more, no less
 - No profanity, please
 
-## EXAMPLE: MYSTIC BBS
-OK, now add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
+## EXAMPLES
+### Mystic BBS
+Add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 
 ```
 /addr=143.198.58.173 /user=[TAG]@USER@ /pass=@USER@ /PROMPT
@@ -39,6 +40,23 @@ OK, now add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 - Make sure there are no spaces between ``[TAG]`` and ``@USER@``
 - FYI: ``/PROMPT`` hides the connection string from the user
 - You can replace ``/pass=@USER@`` with whatever you want for the ``@USER@`` part
+
+### WWIV BBS
+Use Chain Edit to add a gOLD Mine entry (if you want to load the main menu, otherwise create individual game entries using door codes):
+
+```
+A) Description  : Space Junk! gOLD mINE Game Server
+B) Filename     : doors/goldmine/goldmine.sh %N SJ!
+C) ACS          : user.sl >= 10
+D) ANSI         : Optional
+E) Exec Mode    : STDIO
+F) Launch From  : BBS Root Directory
+G) Local only   : No
+H) Multi user   : Yes
+I) Usage        : 0
+J) Registered by: AVAILABLE
+L) Pause after  : Yes
+```
 
 ## DIRECTLY LAUNCH A DOOR
 
