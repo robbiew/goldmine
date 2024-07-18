@@ -89,52 +89,38 @@ fi
 
 # GoldMine Game Code List
 
+Total Games: 125
+
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
+
+Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite frank -- are extremely out-of-touch with modern/civil norms around sexualty, gender, race and able-ness. They are included for historical reasons only. Seriously, they can be crude. You have been warned!
 
 | DOOR NAME                             | GENRE                       | CODE     | ADDED    |
 |---------------------------------------|-----------------------------|----------|----------|
-| Yankee Trader                         | Space                       | YT       | 03/14/22 |
-| Grunt Fest                            | RPGs: War, Present & Future | GRUNTF   | 03/14/22 |
-| Godfather of Crime                    | Adult                       | GODFATHE | 03/14/22 |
-| Camptown Races                        | Leisure & Sports            | CAMPTOWN | 03/14/22 |
-| Iron War                              | RPGs: War, Present & Future | IRONWAR  | 03/14/22 |
-| Escape Arcade                         | Action                      | ESCAPE   | 03/14/22 |
-| BBS Tris                              | Action                      | BBSTRIS  | 03/14/22 |
-| Five Card Stud                        | Cards, Dice & Casino        | FIVECARD | 03/14/22 |
-| Accordian Solitaire                   | Cards, Dice & Casino        | AS       | 03/14/22 |
-| Rise To Power                         | RPGs: Medieval & Fantasy    | RTP      | 03/14/22 |
-| Adventurer's Maze II                  | RPGs: Medieval & Fantasy    | AM2      | 03/14/22 |
-| Entertainment Awards Trivia           | Trivia                      | AWARDS   | 03/14/22 |
-| Usurper                               | RPGs: Medieval & Fantasy    | USURPER  | 03/14/22 |
-| Forbidden Planet                      | DOS Text-Based              | PLANET   | 03/13/22 |
-| Showbiz Quiz                          | Trivia                      | SBQUIZ   | 03/13/22 |
-| Star Trek Quiz                        | Trivia                      | STQUIZ   | 03/13/22 |
+| Drug Lord                             | Adult, Sex & Crime          | DRUGLORD | 03/09/22 |
+| Bordello                              | Adult, Sex & Crime          | BORDELLO | 03/09/22 |
+| Rancho Nevada                         | Adult, Sex & Crime          | RN       | 03/09/22 |
+| Piss-o-Rama                           | Adult, Sex & Crime          | PISSORAM | 03/09/22 |
+| Pimp Wars                             | Adult, Sex & Crime          | PIMPWARS | 03/09/2  |
+| Godfather of Crime                    | Adult, Sex & Crime          | GODFATHE | 03/09/22 |
+| Escape Arcade                         | Arcade & Action             | ESCAPE   | 03/14/22 |
+| BBS Tris                              | Arcade & Action             | BBSTRIS  | 03/14/22 |
+| MystMan                               | Arcade & Action             | MYSTMAN  | 03/13/22 |
+| Gooble Gooble                         | Arcade & Action             | GOOBLE   | 03/09/22 |
+| Lemons                                | Arcade & Action             | LEMONS   | 03/09/22 |
+| Chicken Delivery                      | Arcade & Action             | CHICKEN  | 03/09/22 |
+| 4 Coner Checkers                      | Board Games                 | 4CORNERC | 03/09/22 |
+| Bubble Boggle                         | Board Games                 | BOGGLE   | 03/09/22 |
+| Sea Battle                            | Board Games                 | SEABATTL | 03/09/22 |
+| Concentration                         | Board Games                 | CONCENTR | 03/09/22 |
 | Las Vegas Blackjack                   | Cards, Dice & Casino        | LVBJACK  | 03/13/22 |
 | Las Vegas Keno                        | Cards, Dice & Casino        | LVKENO   | 03/13/22 |
 | Las Vegas Video Poker                 | Cards, Dice & Casino        | LVPOKER  | 03/13/22 |
+| Las Vegas Casino Manager              | Cards, Dice & Casino        | LVCASINO | 03/13/22 |
 | Las Vegas Slots                       | Cards, Dice & Casino        | LVSLOTS  | 03/13/22 |
 | Las Vegas Craps                       | Cards, Dice & Casino        | LVCRAPS  | 03/13/22 |
-| MystMan                               | Action                      | MYSTMAN  | 03/13/22 |
-| Stellar Quest                         | Space                       | SQUEST   | 03/13/22 |
-| Stacktion                             | Puzzle                      | STACKTIO | 03/12/22 |
-| GuTTeRBoWL                            | Leisure & Sports            | GUTBOWL  | 03/12/22 |
-| King's Crown                          | RPGs: Medieval & Fantasy    | KC       | 03/11/22 |
-| Exitilus                              | RPGs: Medieval & Fantasy    | EXIT     | 03/11/22 |
-| Global War                            | RPGs: War, Present & Future | GWAR     | 03/11/22 |
-| Forces of Darkness                    | RPGs: War, Present & Future | FOD      | 03/10/22 |
-| BBS Wordle                            | Word Games                  | WORDLE   | 03/10/22 |
-| DrugLord                              | Adult                       | DRUGLORD | 03/09/22 |
-| Bordello                              | Adult                       | BORDELLO | 03/09/22 |
-| Pimp Wars                             | Adult                       | PIMPWARS | 03/09/22 |
-| Bordello                              | Adult                       | BORDELLO | 03/09/22 |
-| Rancho Nevada                         | Adult                       | RN       | 03/09/22 |
-| Piss-o-Rama                           | Action                      | PISSORAM | 03/09/22 |
-| Gooble Gooble                         | Action                      | GOOBLE   | 03/09/22 |
-| Lemons                                | Action                      | LEMONS   | 03/09/22 |
-| Chicken Delivery                      | Action                      | CHICKEN  | 03/09/22 |
-| 4 Coner Checkers                      | Board Game                  | 4CORNERC | 03/09/22 |
-| Bubble Boggle                         | Board Game                  | BOGGLE   | 03/09/22 |
-| Sea Battle                            | Board Game                  | SEABATTL | 03/09/22 |
+| Five Card Stud                        | Cards, Dice & Casino        | FIVECARD | 03/14/22 |
+| Accordian Solitaire                   | Cards, Dice & Casino        | AS       | 03/14/22 |
 | 3-Pair Poker                          | Cards, Dice & Casino        | 3PAIRPOK | 03/09/22 |
 | Acey Deucy                            | Cards, Dice & Casino        | ACEYDEUC | 03/09/22 |
 | Baseball Dice                         | Cards, Dice & Casino        | BBDICE   | 03/09/22 |
@@ -181,6 +167,9 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 | Trinity                               | DOS Text-Based              | TRINITY  | 03/09/22 |
 | Wishbringer                           | DOS Text-Based              | WISHBRIN | 03/09/22 |
 | Witness                               | DOS Text-Based              | WITNESS  | 03/09/22 |
+| Forbidden Planet                      | DOS Text-Based              | PLANET   | 03/09/22 |
+| Camptown Races                        | Leisure & Sports            | CAMPTOWN | 03/14/22 |
+| GuTTeRBoWL                            | Leisure & Sports            | GUTBOWL  | 03/12/22 |
 | Baseball Dice                         | Leisure & Sports            | BBDICE   | 03/09/22 |
 | Fat Fish                              | Leisure & Sports            | FATFISH  | 03/09/22 |
 | Synkroban                             | Other                       | SOKOBAN  | 03/09/22 |
@@ -191,6 +180,12 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 | Synchronet Minesweeper                | Puzzle                      | MSWEEPER | 03/09/22 |
 | Uber Blox                             | Puzzle                      | UBERBLOX | 03/09/22 |
 | Synchrotetris                         | Puzzle                      | TETRIS   | 03/09/22 |
+| Stacktion                             | Puzzle                      | STACKTIO | 03/12/22 |
+| King's Crown                          | RPGs: Medieval & Fantasy    | KC       | 03/11/22 |
+| Exitilus                              | RPGs: Medieval & Fantasy    | EXIT     | 03/11/22 |
+| Rise To Power                         | RPGs: Medieval & Fantasy    | RTP      | 03/14/22 |
+| Adventurer's Maze II                  | RPGs: Medieval & Fantasy    | AM2      | 03/14/22 |
+| Usurper                               | RPGs: Medieval & Fantasy    | USURPER  | 03/14/22 |
 | Legend of the Red Dragon              | RPGs: Medieval & Fantasy    | LORD     | 03/09/22 |
 | LORD II: New World                    | RPGs: Medieval & Fantasy    | LORD2    | 03/09/22 |
 | The Beast's Domain                    | RPGs: Medieval & Fantasy    | TBD      | 03/09/22 |
@@ -202,6 +197,10 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 | Arrowbridge I                         | RPGs: Medieval & Fantasy    | AB1      | 03/09/22 |
 | Arrowbridge II                        | RPGs: Medieval & Fantasy    | AB2      | 03/09/22 |
 | LEGION RPG                            | RPGs: Medieval & Fantasy    | LEGION   | 03/09/22 |
+| Grunt Fest                            | RPGs: War, Present & Future | GRUNTF   | 03/14/22 |
+| Iron War                              | RPGs: War, Present & Future | IRONWAR  | 03/14/22 |
+| Global War                            | RPGs: War, Present & Future | GWAR     | 03/11/22 |
+| Forces of Darkness                    | RPGs: War, Present & Future | FOD      | 03/10/22 |
 | Colonies                              | RPGs: War, Present & Future | COLONIES | 03/09/22 |
 | Atlantis                              | RPGs: War, Present & Future | ATLANTIS | 03/09/22 |
 | Operation Overkill II                 | RPGs: War, Present & Future | OOII     | 03/09/22 |
@@ -209,16 +208,20 @@ I'm trying to make sure all games on gOLD mINE are fully registered. If you have
 | Jedi Knight                           | RPGs: War, Present & Future | JEDI     | 03/09/22 |
 | Barren Realms Elite                   | RPGs: War, Present & Future | BRE      | 03/09/22 |
 | Betsy Ross Solitaire                  | Solitaire Card              | BETSYROS | 03/09/22 |
+| Accordian  Solitaire                  | Solitaire Card              | AS       | 03/09/22 |
+| Yankee Trader                         | Space                       | YT       | 03/14/22 |
+| Stellar Quest                         | Space                       | SQUEST   | 03/13/22 |
 | Galaxy 5                              | Space                       | GALAXY5  | 03/09/22 |
 | Star Trek                             | Space                       | STARTREK | 03/09/22 |
 | Trade Wars 2 - 500 Sectors            | Space                       | TW2      | 03/09/22 |
 | Galactic Dynasty 2                    | Space                       | GD2      | 03/09/22 |
+| Entertainment Awards Trivia           | Trivia                      | AWARDS   | 03/14/22 |
+| Showbiz Quiz                          | Trivia                      | SBQUIZ   | 03/13/22 |
+| Star Trek Quiz                        | Trivia                      | STQUIZ   | 03/13/22 |
+| BBS Wordle                            | Word Games                  | WORDLE   | 03/10/22 |
 | Chain Reaction                        | Word Games                  | CHAINREA | 03/09/22 |
 | Jeopardized!                          | Word Games                  | JEOPARDY | 03/09/22 |
 | Wordem                                | Word Games                  | WORDEM   | 03/09/22 |
 | Sudoku                                | Word Games                  | SUDOKU   | 03/09/22 |
 |                                       |                             |          |          |
-
-
-
 
