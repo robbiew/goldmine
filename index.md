@@ -42,7 +42,7 @@ OK, now add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 
 ## DIRECTLY LAUNCH A DOOR
 
-If you want to launch a door game directly from your BBS, bypassing the gOLD mINE main menu, use a Dor Code from the list on this page. If no door code is passed, the user will land at the gOLD mINE main menu,
+If you want to launch a door game directly from your BBS, bypassing the gOLD mINE main menu, use a Door Code from the list on this page. If no door code is passed, the user will land at the gOLD mINE main menu,
 
 Mystic (make sure you are using the most recent release):
 
