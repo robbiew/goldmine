@@ -42,11 +42,11 @@ Add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 - You can replace ``/pass=@USER@`` with whatever you want for the ``@USER@`` part
 
 ### WWIV BBS
-Use Chain Edit to add a gOLD Mine entry (if you want to load the main menu, otherwise create individual game entries using door codes):
+Use Chain Edit to add a gOLD Mine entry that (if you want to load the main menu, and not directly launch a specific door with a door code, leave off the 3rd parameter ("WORDLE"):
 
 ```
 A) Description  : Space Junk! gOLD mINE Game Server
-B) Filename     : doors/goldmine/goldmine.sh %N TAG
+B) Filename     : doors/goldmine/goldmine.sh %N TAG WORDLE
 C) ACS          : user.sl >= 10
 D) ANSI         : Optional
 E) Exec Mode    : STDIO
@@ -57,7 +57,8 @@ I) Usage        : 0
 J) Registered by: AVAILABLE
 L) Pause after  : Yes
 ```
-- Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.  
+- Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.
+- Note: we aren't passing the BBS Alias here, we're passing the node number, which the script will then extract from the drop file in case we need to parse out special characters, spaces, etc.
 
 ## DIRECTLY LAUNCH A DOOR
 
