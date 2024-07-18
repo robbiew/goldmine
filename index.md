@@ -6,7 +6,7 @@ gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/
 
 gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Ubuntu 24.04 x64) under the hood, and runs on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
 
-It'ss not a BBS. There are no message boards or file download areas, and you can't "login" to it like a traditional BBS. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
+It's not a BBS. There are no message boards or file download areas, and you can't "login" to it like a traditional BBS. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
 
 ## WHAT'S A 'DOOR SERVER'?
 
