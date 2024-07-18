@@ -46,7 +46,7 @@ Use Chain Edit to add a gOLD Mine entry (if you want to load the main menu, othe
 
 ```
 A) Description  : Space Junk! gOLD mINE Game Server
-B) Filename     : doors/goldmine/goldmine.sh %N SJ!
+B) Filename     : doors/goldmine/goldmine.sh %N TAG
 C) ACS          : user.sl >= 10
 D) ANSI         : Optional
 E) Exec Mode    : STDIO
@@ -57,6 +57,7 @@ I) Usage        : 0
 J) Registered by: AVAILABLE
 L) Pause after  : Yes
 ```
+- Replace ``TAG`` with your unique 1-3 character BBS tag, e.g ``[ABC]``.  
 
 ## DIRECTLY LAUNCH A DOOR
 
