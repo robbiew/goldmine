@@ -46,7 +46,7 @@ Add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 - You can replace ``/pass=@USER@`` with whatever you want for the ``@USER@`` part
 
 ### WWIV BBS
-Use Chain Edit to add a gOLD Mine entry that (if you want to load the main menu, and not directly launch a specific door with a door code, leave off the 3rd parameter ("WORDLE"):
+Use Chain Edit to add a gOLD Mine entry. If you want to load the main menu so your users can select a game, and not directly launch a specific door with a door code, leave off the door code parameter ("WORDLE"):
 
 ```
 A) Description  : Space Junk! gOLD mINE Game Server
