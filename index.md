@@ -23,7 +23,7 @@ Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58
 ## CREATE A BBS TAG
 
 Every gOLD mINE BBS needs a tag that identifies it. You can make it up, just use these guidelines:
-- Format for the tag is: [TAG], replace "TAG" with 3 characters that represent your BBS
+- Format for the tag is: [TAG], replace "TAG" with your unique 3 characters that represent your BBS
 - For instance, Space Junk BBS uses [SJ!]
 - Use exactly 3: no more, no less
 - No profanity, please
