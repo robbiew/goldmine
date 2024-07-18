@@ -2,30 +2,34 @@
 
 ![gOLD mINE screen shot](docs/assets/images/screenshot.png)
 
-gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS terminal software, like [SyncTerm](https://syncterm.bbsdev.net/), [MagiTerm](https://gitlab.com/magickabbs/MagiTerm) or [NetRunner](http://www.mysticbbs.com/downloads.html).
+gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS software.
 
-gOLD mINE has [Synchronet](http://wiki.synchro.net/) (Ubuntu 24.04 x64) under the hood, and runs on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
+gOLD mINE has the awesome [Synchronet](http://wiki.synchro.net/) v3.20, running on Ubuntu 24.04 x64, under the hood. It's located on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
 
-It's not a BBS. There are no message boards or file download areas, and you can't "login" to it like a traditional BBS. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
+gOLD mINE not a BBS (despite the URL). There are no message boards or file download areas, and you can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
 
 ## WHAT'S A 'DOOR SERVER'?
 
-If you run an old-school, terminal-based BBS (probably using new-school BBS software like [Mystic](http://www.mysticbbs.com/), [Synchronet](http://wiki.synchro.net/), [Talisman](talismanbbs.com) or [ENiGMA½](https://enigma-bbs.github.io/)) you know that setting up door game programs can be time consuming and sometimes, a headache. In their heydey of the 1980's and early 90s, these games where designed to run under DOS (or Win32) and were pretty finicky. Hunting down registration keys or cracks can be daunting (much is abandonware these days, with original authors having sadly passed). So, a Door Server takes work out of setup and lets you add LOTS of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users.  The other benefit is a potentially larger player base, aggregating them in a centralized manner. 
+If you run an old-school style, terminal-based BBS (probably using new-school BBS software like [Mystic](http://www.mysticbbs.com/), [Synchronet](http://wiki.synchro.net/), [Talisman](talismanbbs.com), [WWIV](http://wwivbbs.org) or [ENiGMA½](https://enigma-bbs.github.io/)) you know that setting up door game programs *can* be time consuming and sometimes, a headache. 
+
+In their heydey of the 1980's and early 90s, these door games where designed to run under DOS (or later, Windows 32-bit) and they could be finicky. Hunting down registration keys or cracks can now be daunting (many doors are abandonware these days, with original authors having sadly passed). So, a Door Server takes work out of a setup and lets you add LOTS of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users.  
+
+The other benefit is a potentially larger player base, aggregating them in a centralized manner with other BBSs.
 
 ## JOIN GOLD MINE
 
-gOLD mINE does not require you to apply for membership. Just follow the directions below. Contact ``j0hnny a1pha`` on Space Junk! BBS (spacejunkbbs.com:2323) for more details or to sk a question.
+gOLD mINE does not require you to apply for membership. Just follow the directions below. Contact ``j0hnny a1pha`` on Space Junk! BBS (spacejunkbbs.com:2323), on [fsxNet](https://fsxnet.nz/) or Discord (alpha_64) for more details or to ask a question.
 
 ## SETUP ON YOUR BBS
 
-Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``goldminedoors.com`` port ``2513``, using the settings below.
+Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``goldminedoors.com`` port ``2513``, using the settings below.
 
 ## CREATE A BBS TAG
 
 Every gOLD mINE BBS needs a tag that identifies it. You can make it up, just use these guidelines:
-- Format for the tag is: [TAG], replace "TAG" with your unique 3 characters that represent your BBS
+- Format for the tag is: [TAG], replace "TAG" with your *unique* 3 characters that represent your BBS
 - For instance, Space Junk BBS uses [SJ!]
-- Use exactly 3: no more, no less
+- Use exactly 3 characters: no more, no less
 - No profanity, please
 
 ## EXAMPLES
