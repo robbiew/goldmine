@@ -42,7 +42,7 @@ OK, now add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 
 ## DIRECTLY LAUNCH A DOOR
 
-If you want to launch a door game directly from your BBS, bypassing the gOLD mINE main menu:
+If you want to launch a door game directly from your BBS, bypassing the gOLD mINE main menu, use a Dor Code from the list on this page. If no door code is passed, the user will land at the gOLD mINE main menu,
 
 Mystic (make sure you are using the most recent release):
 
@@ -57,18 +57,25 @@ Heer's what I use (WWIV) on linux - ``goldmine.sh``:
 ```
 #!/bin/bash
 
+#################################################################################################
+### aLPHA's gOLD mINE login script for Ubuntu 24.04                                           ###
+### Requires rsh-redone-client `sudo apt install rsh-redone-client` if not installed          ###
+#################################################################################################
+
 export TERM=linux
 cd doors/goldmine
 
-# Get the node number and door code from the arguments passed to the script
+# Get the node number, BBS tag and door code from the arguments passed to the script
+# If no door code is present, take the user to the gOLD mINE main menu
 NODE_NUMBER=$1
 BBS=$2
 DOOR_CODE=$3
 
-# Define the path to the DOOR32.SYS file
+# Define the path to the DOOR32.SYS file - this is for WWIV
+# I grab directly from the drop file in case I need to handle spaces, special chars, etc.
 DOOR32_SYS_PATH=/home/bbs/wwiv/e/${NODE_NUMBER}/temp/door32.sys
 
-# Extract the alias from line 7, replace spaces with underscores, and store it in a variable
+# Extract the alias from line 7 of the drop file, replace spaces with underscores, and store it in a variable
 USER_ALIAS=$(sed -n '7p' "$DOOR32_SYS_PATH" | tr ' ' '-')
 PREFIX="["$BBS"]"
 
@@ -85,7 +92,6 @@ else
     rlogin -p 2513 -l "$PREFIX$USER_ALIAS" goldminedoors.com
 fi
 ```
-
 
 # GoldMine Game Code List
 
