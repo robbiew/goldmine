@@ -75,7 +75,7 @@ DOOR_CODE=$3
 # I grab directly from the drop file in case I need to handle spaces, special chars, etc.
 DOOR32_SYS_PATH=/home/bbs/wwiv/e/${NODE_NUMBER}/temp/door32.sys
 
-# Extract the alias from line 7 of the drop file, replace spaces with underscores, and store it in a variable
+# Extract the alias from line 7 of the drop file, replace spaces with underscores
 USER_ALIAS=$(sed -n '7p' "$DOOR32_SYS_PATH" | tr ' ' '-')
 PREFIX="["$BBS"]"
 
