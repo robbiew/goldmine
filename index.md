@@ -95,10 +95,10 @@ DOOR32_SYS_PATH=/home/bbs/wwiv/e/${NODE_NUMBER}/temp/door32.sys
 USER_ALIAS=$(sed -n '7p' "$DOOR32_SYS_PATH" | tr ' ' '-')
 PREFIX="["$BBS"]"
 
-# Print the alias and door code for verification
-echo "BBS: $PREFIX"
-echo "User Alias: $USER_ALIAS"
-echo "Door Code: $DOOR_CODE"
+# Uncomment to print the alias and door code for debug 
+# echo "BBS: $PREFIX"
+# echo "User Alias: $USER_ALIAS"
+# echo "Door Code: $DOOR_CODE"
 
 # Run the rsh-redone-client command with the extracted user alias and provided door code
 if [ -n "$DOOR_CODE" ]; then
