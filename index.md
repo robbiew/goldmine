@@ -111,7 +111,7 @@ fi
 
 # GoldMine Game Code List
 
-Total Games: 125
+Total Games: 126
 
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
 
@@ -230,7 +230,8 @@ Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite 
 | Jedi Knight                           | RPGs: War, Present & Future | JEDI     | 03/09/22 |
 | Barren Realms Elite                   | RPGs: War, Present & Future | BRE      | 03/09/22 |
 | Betsy Ross Solitaire                  | Solitaire Card              | BETSYROS | 03/09/22 |
-| Accordian  Solitaire                  | Solitaire Card              | AS       | 03/09/22 |
+| Accordian Solitaire                   | Solitaire Card              | AS       | 03/09/22 |
+| Over Under Solitaire                  | Solitaire Card              | OVERUNDR | 07/28/24 |
 | Galaxy 5                              | Space                       | GALAXY5  | 03/09/22 |
 | Star Trek                             | Space                       | STARTREK | 03/09/22 |
 | Trade Wars 2 - 500 Sectors            | Space                       | TW2      | 03/09/22 |
