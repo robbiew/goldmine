@@ -111,7 +111,7 @@ fi
 
 # GoldMine Game Code List
 
-Total Games: 126
+Total Games: 127
 
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
 
@@ -135,6 +135,7 @@ Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite 
 | Bubble Boggle                         | Board Games                 | BOGGLE   | 03/09/22 |
 | Sea Battle                            | Board Games                 | SEABATTL | 03/09/22 |
 | Concentration                         | Board Games                 | CONCENTR | 03/09/22 |
+| Box Dice                              | Cards, Dice & Casino        | BOXDICE  | 07/28/24 |
 | Las Vegas Blackjack                   | Cards, Dice & Casino        | LVBJACK  | 03/13/22 |
 | Las Vegas Keno                        | Cards, Dice & Casino        | LVKENO   | 03/13/22 |
 | Las Vegas Video Poker                 | Cards, Dice & Casino        | LVPOKER  | 03/13/22 |
