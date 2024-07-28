@@ -246,3 +246,92 @@ Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite 
 | Sudoku                                | Word Games                  | SUDOKU   | 03/09/22 |
 |                                       |                             |          |          |
 
+# Goldmine API
+
+You can access some endpoints to retreive JSON statistics for:
+* Top 10 most launched games.
+* Monthly statistics.
+* Yearly statistics.
+* All-time statistics.
+* list all games with details.
+
+Data automatically reloads and refreshes JSON data every 24 hours.
+
+## Access the API endpoints:
+* Top 10 Games: http://localhost:8080/top10?period=all
+  * Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).
+* Detailed Stats: http://localhost:8080/stats?period=all
+  * Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).
+* Library: http://localhost:8080/library
+ 
+## API Endpoints
+
+### GET /top10
+* Retrieve the top 10 most launched games.
+  
+Query Parameters:
+* period (required): The time period for the statistics. Valid values are month, year, all, or a specific month (e.g., july) or year (e.g., 2024).
+  
+Response:
+* 200 OK: A JSON object containing the top 10 most launched games.
+* 400 Bad Request: If the period parameter is missing or invalid.
+
+```bash
+{
+  "period": "all",
+  "games": [
+    {
+      "game_name": "Adventurer's Maze II",
+      "door_code": "AM2",
+      "category": "RPGs: Medieval & Fantasy",
+      "launch_count": 42
+    },
+    ...
+  ]
+}
+```
+### GET /stats
+* Retrieve detailed statistics.
+  
+Query Parameters:
+* period (required): The time period for the statistics. Valid values are month, year, all, or a specific month (e.g., july) or year (e.g., 2024).
+
+Response:
+* 200 OK: A JSON object containing detailed statistics.
+* 400 Bad Request: If the period parameter is missing or invalid.
+
+```bash
+{
+  "month": {
+    "january": [
+      {
+        "game_name": "Adventurer's Maze II",
+        "door_code": "AM2",
+        "category": "RPGs: Medieval & Fantasy",
+        "launch_count": 42
+      },
+      ...
+    ],
+    ...
+  }
+}
+```
+### GET /library
+* Retrieve a list of all games with details.
+
+Query Parameters:
+* None
+
+Response:
+* 200 OK: A JSON object containing the list of all games.
+
+```bash
+[
+  {
+    "game_name": "Adventurer's Maze II",
+    "door_code": "AM2",
+    "category": "RPGs: Medieval & Fantasy"
+  },
+  ...
+]
+```
