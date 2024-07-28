@@ -258,11 +258,11 @@ You can access some endpoints to retreive JSON statistics for:
 Data automatically reloads and refreshes JSON data every 24 hours.
 
 ## Access the API endpoints:
-* Top 10 Games: http://localhost:8080/top10?period=all
+* Top 10 Games: http://goldminedoors.com:8080/top10?period=all
   * Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).
-* Detailed Stats: http://localhost:8080/stats?period=all
+* Detailed Stats: http://goldminedoors.com:8080/stats?period=all
   * Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).
-* Library: http://localhost:8080/library
+* Library: http://goldminedoors.com:8080/library
  
 ## API Endpoints
 
