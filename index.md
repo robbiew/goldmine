@@ -221,6 +221,7 @@ Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite 
 | Arrowbridge II                        | RPGs: Medieval & Fantasy    | AB2      | 03/09/22 |
 | LEGION RPG                            | RPGs: Medieval & Fantasy    | LEGION   | 03/09/22 |
 | Grunt Fest                            | RPGs: War, Present & Future | GRUNTF   | 03/14/22 |
+| Iron Ox                               | RPGs: War, Present & Future | IRONOX   | 07/31/24 |
 | Iron War                              | RPGs: War, Present & Future | IRONWAR  | 03/14/22 |
 | Global War                            | RPGs: War, Present & Future | GWAR     | 03/11/22 |
 | Forces of Darkness                    | RPGs: War, Present & Future | FOD      | 03/10/22 |
