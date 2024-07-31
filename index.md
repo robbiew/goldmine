@@ -111,7 +111,7 @@ fi
 
 # GoldMine Game Code List
 
-Total Games: 127
+Total Games: 128
 
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
 
