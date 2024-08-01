@@ -111,7 +111,7 @@ fi
 
 # GoldMine Game Code List
 
-Total Games: 128
+Total Games: 131
 
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
 
@@ -215,11 +215,13 @@ Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite 
 | For Honour                            | RPGs: Medieval & Fantasy    | FH       | 03/09/22 |
 | Death Masters                         | RPGs: Medieval & Fantasy    | DEATHMAS | 03/09/22 |
 | DoorMUD                               | RPGs: Medieval & Fantasy    | DOORMUD  | 03/09/22 |
+| MajorMud                              | RPGs: Medieval & Fantasy    | MAJORMUD | 07/31/24 |
 | Dungeon Master                        | RPGs: Medieval & Fantasy    | DM       | 03/09/22 |
 | Kannons and Katapults                 | RPGs: Medieval & Fantasy    | KNK      | 03/09/22 |
 | Arrowbridge I                         | RPGs: Medieval & Fantasy    | AB1      | 03/09/22 |
 | Arrowbridge II                        | RPGs: Medieval & Fantasy    | AB2      | 03/09/22 |
 | LEGION RPG                            | RPGs: Medieval & Fantasy    | LEGION   | 03/09/22 |
+| BladeMaster                           | RPGs: Medieval & Fantasy    | BLADEM   | 03/09/22 |
 | Grunt Fest                            | RPGs: War, Present & Future | GRUNTF   | 03/14/22 |
 | Iron Ox                               | RPGs: War, Present & Future | IRONOX   | 07/31/24 |
 | Iron War                              | RPGs: War, Present & Future | IRONWAR  | 03/14/22 |
@@ -231,6 +233,7 @@ Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite 
 | Darkness 2                            | RPGs: War, Present & Future | DARK2    | 03/09/22 |
 | Jedi Knight                           | RPGs: War, Present & Future | JEDI     | 03/09/22 |
 | Barren Realms Elite                   | RPGs: War, Present & Future | BRE      | 03/09/22 |
+| Infinity Complex                      | RPGs: War, Present & Future | INFCOM   | 07/31/24 |
 | Betsy Ross Solitaire                  | Solitaire Card              | BETSYROS | 03/09/22 |
 | Accordian Solitaire                   | Solitaire Card              | AS       | 03/09/22 |
 | Over Under Solitaire                  | Solitaire Card              | OVERUNDR | 07/28/24 |
