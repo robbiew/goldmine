@@ -7,8 +7,8 @@ gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/
 It's located on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
 
 User the hood:
-- [Synchronet](http://wiki.synchro.net/) v3.20 for DOS and Win32 games (Ubuntu 24.04 x64 and Windows 10 x64)
-- [MBBSEmu](https://www.mbbsemu.com/) for MajorBBS-based games (Windows 10 x64)
+- [Synchronet](http://wiki.synchro.net/) v3.20 for native Linux, DOS and Win32 games (Ubuntu 24.04 x64 and Windows 10 x64)
+- [MBBSEmu](https://www.mbbsemu.com/) for MajorBBS-based game modules (Windows 10 x64)
 
 There are currently 132 door games online.
 
