@@ -30,7 +30,7 @@ Note, the rlogin tool was introduced in BSD Unix in the 1980s. It's considered l
 
 Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``goldminedoors.com`` port ``2513``, using the settings below. Heck, you could even connect directly using RLOGIN and [Syncterm](https://sourceforge.net/projects/syncterm/)!
 
-- If you are running a legacy DOS BBS under Windows, check out [Telnet Door](https://www.randm.ca/bbs/telnetdoor/), it has a RLOGIN mode
+- If you are running a legacy DOS BBS under Windows, check out [Telnet Door](https://www.randm.ca/bbs/telnetdoor/), use the RLOGIN mode
 - For Ubuntu or other Linux flavors, you could ``sudo apt install rsh-redone-client`` -- that program works with the code examples below 
 
 ## CREATE A BBS TAG
