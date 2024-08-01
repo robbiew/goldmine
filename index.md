@@ -111,7 +111,7 @@ fi
 
 # GoldMine Game Code List
 
-Total Games: 131
+Total Games: 132
 
 I'm trying to make sure all games on gOLD mINE are fully registered. If you have a registered game you'd like to donate, please contact me.
 
@@ -125,6 +125,7 @@ Note that games in "Adult, Sex & Crime" genre are mature (18+), and to be quite 
 | Piss-o-Rama                           | Adult, Sex & Crime          | PISSORAM | 03/09/22 |
 | Pimp Wars                             | Adult, Sex & Crime          | PIMPWARS | 03/09/2  |
 | Godfather of Crime                    | Adult, Sex & Crime          | GODFATHE | 03/09/22 |
+| Erotica                               | Adult, Sex & Crime          | EROTICA  | 07/31/24 |
 | Escape Arcade                         | Arcade & Action             | ESCAPE   | 03/14/22 |
 | BBS Tris                              | Arcade & Action             | BBSTRIS  | 03/14/22 |
 | MystMan                               | Arcade & Action             | MYSTMAN  | 03/13/22 |
