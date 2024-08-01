@@ -1,6 +1,6 @@
-# ⛏️ gOLD mINE Community Door Server
-
 ![gOLD mINE screen shot](docs/assets/images/screenshot.png)
+
+# ⛏️ gOLD mINE Community Door Server
 
 gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS software.
 
