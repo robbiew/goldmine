@@ -6,25 +6,23 @@ gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/
 
 gOLD mINE has the awesome [Synchronet](http://wiki.synchro.net/) v3.20, running on Ubuntu 24.04 x64, under the hood. It's located on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
 
-gOLD mINE is not a BBS (despite the URL). There are no message boards or file download areas, and you can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
+There are currently 132 door games online.
 
 ## WHAT'S A 'DOOR SERVER'?
 
+gOLD mINE is not a BBS (despite the URL). There are no message boards or file download areas, and you can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
+
 If you run an old-school style, terminal-based BBS (probably using new-school BBS software like [Mystic](http://www.mysticbbs.com/), [Synchronet](http://wiki.synchro.net/), [Talisman](talismanbbs.com), [WWIV](http://wwivbbs.org) or [ENiGMA½](https://enigma-bbs.github.io/)) you know that setting up door game programs *can* be time consuming and sometimes, a headache. 
 
-In their heydey of the 1980's and early 90s, these door games where designed to run under DOS (or later, Windows 32-bit) and they could be finicky. Hunting down registration keys or cracks can now be daunting (many doors are abandonware these days, with original authors having sadly passed). So, a Door Server takes work out of a setup and lets you add LOTS of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users.  
-
-The other benefit is a potentially larger player base, aggregating them in a centralized manner with other BBSs.
+In their heydey of the 1980's and early 90s, these door games where designed to run under DOS (or later, Windows 32-bit) and they could be finicky. Hunting down registration keys or cracks can now be daunting (many doors are abandonware these days, with original authors having sadly passed). So, a Door Server takes work out of a setup and lets you add LOTS of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users.  The other benefit is a potentially larger player base, aggregating them in a centralized manner with other BBSs.
 
 ## JOIN GOLD MINE
 
-gOLD mINE does not require you to apply for membership. Just follow the directions below. Contact ``j0hnny a1pha`` on Space Junk! BBS (spacejunkbbs.com:2323), on [fsxNet](https://fsxnet.nz/) or Discord (alpha_64) for more details or to ask a question.
-
-Heck, you could even connect directly using RLOGIN and [Syncterm](https://sourceforge.net/projects/syncterm/)!
+gOLD mINE does not require you to apply for membership. Just follow the directions below. 
 
 ## SETUP ON YOUR BBS
 
-Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``goldminedoors.com`` port ``2513``, using the settings below.
+Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``goldminedoors.com`` port ``2513``, using the settings below. Heck, you could even connect directly using RLOGIN and [Syncterm](https://sourceforge.net/projects/syncterm/)!
 
 ## CREATE A BBS TAG
 
@@ -343,3 +341,8 @@ Response:
   ...
 ]
 ```
+
+## Contact
+
+Contact ``j0hnny a1pha`` on [fsxNet](https://fsxnet.nz/) or WWIVNet echos or on [BBS World Discord](https://discord.com/invite/cUp2DtzXjZ) (alpha_64) for more details or to ask a question.
+
