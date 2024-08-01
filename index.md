@@ -22,11 +22,16 @@ In their heydey of the 1980's and early 90s, these door games where designed to 
 
 ## JOIN GOLD MINE
 
-gOLD mINE does not require you to apply for membership. Just follow the directions below. 
+gOLD mINE does not require you to apply for membership. Just follow the directions below using RLOGIN.
+
+Note, the rlogin tool was introduced in BSD Unix in the 1980s. It's considered legacy and insecure, good thing we're only using it for mindless gaming.
 
 ## SETUP ON YOUR BBS
 
 Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to ``143.198.58.173``, or ``goldminedoors.com`` port ``2513``, using the settings below. Heck, you could even connect directly using RLOGIN and [Syncterm](https://sourceforge.net/projects/syncterm/)!
+
+- If you are running a legacy DOS BBS under Windows, check out [Telnet Door](https://www.randm.ca/bbs/telnetdoor/), it has a RLOGIN mode
+- For Ubuntu or other Linux flavors, you could ``sudo apt install rsh-redone-client`` -- that program works with the code examples below 
 
 ## CREATE A BBS TAG
 
