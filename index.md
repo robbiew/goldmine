@@ -4,7 +4,11 @@
 
 gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/wiki/Gold_Mine) near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS software.
 
-gOLD mINE has the awesome [Synchronet](http://wiki.synchro.net/) v3.20, running on Ubuntu 24.04 x64, under the hood. It's located on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
+It's located on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
+
+User the hood:
+- [Synchronet](http://wiki.synchro.net/) v3.20 for DOS and Win32 games (Ubuntu 24.04 x64 and Windows 10 x64)
+- [MBBSEmu](https://www.mbbsemu.com/) for MajorBBS-based games (Windows 10 x64)
 
 There are currently 132 door games online.
 
