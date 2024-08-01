@@ -6,7 +6,7 @@ gOLD mINE (named after a [coin-op arcade](https://arcadepreservation.fandom.com/
 
 gOLD mINE has the awesome [Synchronet](http://wiki.synchro.net/) v3.20, running on Ubuntu 24.04 x64, under the hood. It's located on port ``2513`` at ``143.198.58.173`` (or ``goldminedoors.com``).
 
-gOLD mINE not a BBS (despite the URL). There are no message boards or file download areas, and you can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
+gOLD mINE is not a BBS (despite the URL). There are no message boards or file download areas, and you can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.
 
 ## WHAT'S A 'DOOR SERVER'?
 
@@ -19,6 +19,8 @@ The other benefit is a potentially larger player base, aggregating them in a cen
 ## JOIN GOLD MINE
 
 gOLD mINE does not require you to apply for membership. Just follow the directions below. Contact ``j0hnny a1pha`` on Space Junk! BBS (spacejunkbbs.com:2323), on [fsxNet](https://fsxnet.nz/) or Discord (alpha_64) for more details or to ask a question.
+
+Heck, you could even connect directly using RLOGIN and [Syncterm](https://sourceforge.net/projects/syncterm/)!
 
 ## SETUP ON YOUR BBS
 
