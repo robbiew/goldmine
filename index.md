@@ -46,7 +46,7 @@ Every gOLD mINE BBS needs a tag that identifies it. You can make it up, just use
 Add gOLD mINE to your menu as ``IR - Outbound RLOGIN Connection``
 
 ```
-/addr=143.198.58.173 /user=[TAG]@USER@ /pass=@USER@ /PROMPT
+/addr=143.198.58.173 /port=2513 /user=[TAG]@USER@ /pass=@USER@ /PROMPT
 ```
 
 - Replace ``TAG`` with your *unique* 1-3 character BBS tag, e.g ``[ABC]``.    
@@ -83,7 +83,7 @@ Mystic (make sure you are using the most recent release):
 - Replace ```DOORCODE``` with a code below that you want to launch directly, e.g. on a Mystic BBS:
 
 ```
-/addr=143.198.58.173 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT
+/addr=143.198.58.173 /port=2513 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT
 ```
 
 Heer's what I use for WWIV on linux - ``goldmine.sh``:
