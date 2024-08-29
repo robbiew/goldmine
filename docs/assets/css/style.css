@@ -185,6 +185,16 @@ h2 {
     font-size: 1.2em;
 }
 
+h3 {
+    color: #ceb553;
+    /* Bright retro yellow */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 1em;
+}
+
+
 /* Navigation Menu */
 nav {
     text-align: center;
