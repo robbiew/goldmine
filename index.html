@@ -5,81 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="docs/assets/images/favicon.ico">
     <title>⛏️ gOLD mINE Community Door Server</title>
-<style>
-        /* Base Styles */
+    <style>
+        /* Global Styles */
         body {
-            background-color: #1a1a1a;
-            color: #f0f0f0;
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.6;
+            background-color: #1a1a1a; /* Dark background */
+            color: #e6e6e6; /* Light text color */
+            font-family: 'Courier New', Courier, monospace; /* Retro font */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             min-height: 100vh;
-            overflow-x: hidden;
         }
 
+        /* Container to center content */
         .container {
             max-width: 1000px;
-            width: 90%;
-            margin: 20px auto;
-            background-color: #282828;
+            width: 100%;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            background-color: #333; /* Slightly lighter dark background */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+            border-radius: 8px; /* Rounded corners */
+            margin-top: 20px;
         }
 
+        /* Headers */
         h1, h2, h3 {
-            color: #00ff7f;
+            color: #ffcc00; /* Bright retro yellow */
             text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
         }
 
-        p {
-            font-size: 1.2em;
-            margin: 20px 0;
-            color: #d3d3d3;
+        /* Links */
+        a {
+            color: #ff66ff; /* Retro pink */
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 8px;
+        a:hover {
+            color: #66ff66; /* Retro green on hover */
+            text-decoration: underline;
         }
 
+        /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 1em;
-            color: #f0f0f0;
-            background-color: #333;
-            border-radius: 8px;
-            overflow: hidden;
+            margin-top: 20px;
         }
 
         th, td {
             padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #444;
+            border-bottom: 1px solid #555; /* Subtle border */
         }
 
         th {
-            background-color: #444;
-            color: #00ff7f;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            background-color: #444; /* Dark header background */
+            color: #ffcc00; /* Retro yellow */
         }
 
-        td {
-            background-color: #3a3a3a;
+        tr:nth-child(even) {
+            background-color: #2a2a2a; /* Darker row background */
         }
 
-        tr:hover td {
-            background-color: #505050;
+        tr:hover {
+            background-color: #555; /* Slightly lighter on hover */
+        }
+
+        /* Buttons */
+        button {
+            background-color: #ff66ff; /* Retro pink */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #66ff66; /* Retro green on hover */
+        }
+
+        /* Code blocks */
+        pre {
+            background-color: #272822; /* Dark code block background */
+            color: #f8f8f2; /* Light text */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        /* Images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
         }
 
         /* Responsive Adjustments */
@@ -100,6 +131,11 @@
             th, td {
                 padding: 8px;
             }
+
+            button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -114,8 +150,14 @@
             th, td {
                 padding: 6px;
             }
+
+            button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
         }
     </style>
+ 
 </head>
 <body>
     <container>
