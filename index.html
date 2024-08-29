@@ -6,41 +6,104 @@
     <link rel="shortcut icon" type="image/x-icon" href="docs/assets/images/favicon.ico">
     <title>⛏️ gOLD mINE Community Door Server</title>
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
+            background-color: #1a1a1a; /* Dark background */
+            color: #e6e6e6; /* Light text color */
+            font-family: 'Courier New', Courier, monospace; /* Retro font */
+            margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        /* Container to center content */
+        .container {
             max-width: 1000px;
-            margin: 0 auto;
+            width: 100%;
+            padding: 20px;
+            background-color: #333; /* Slightly lighter dark background */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+            border-radius: 8px; /* Rounded corners */
         }
+        
+        /* Headers */
         h1, h2, h3 {
-            color: #333;
+            color: #ffcc00; /* Bright retro yellow */
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
+        
+        /* Links */
+        a {
+            color: #ff66ff; /* Retro pink */
+            text-decoration: none;
+            font-weight: bold;
         }
+        
+        a:hover {
+            color: #66ff66; /* Retro green on hover */
+            text-decoration: underline;
+        }
+        
+        /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
+        
         th, td {
-            padding: 10px;
+            padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #555; /* Subtle border */
         }
+        
         th {
-            background-color: #f2f2f2;
+            background-color: #444; /* Dark header background */
+            color: #ffcc00; /* Retro yellow */
         }
-        a {
-            color: #007bff;
+        
+        tr:nth-child(even) {
+            background-color: #2a2a2a; /* Darker row background */
+        }
+        
+        tr:hover {
+            background-color: #555; /* Slightly lighter on hover */
+        }
+        
+        /* Buttons */
+        button {
+            background-color: #ff66ff; /* Retro pink */
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
             text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
         }
-        a:hover {
-            text-decoration: underline;
+        
+        button:hover {
+            background-color: #66ff66; /* Retro green on hover */
         }
+        
+        /* Code blocks */
+        pre {
+            background-color: #272822; /* Dark code block background */
+            color: #f8f8f2; /* Light text */
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
     </style>
 </head>
 <body>
