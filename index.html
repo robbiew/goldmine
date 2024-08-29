@@ -27,7 +27,7 @@
             background-color: #333; /* Slightly lighter dark background */
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
             border-radius: 8px; /* Rounded corners */
-            margin-top: 20px;
+            margin: 20px auto; /* Centered with top margin */
         }
 
         /* Headers */
@@ -117,7 +117,7 @@
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
-                margin: 10px;
+                margin: 10px auto; /* Adjusted for smaller screens */
             }
 
             h1, h2, h3 {
@@ -139,6 +139,11 @@
         }
 
         @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+                margin: 5px auto; /* Adjusted further for very small screens */
+            }
+
             h1, h2, h3 {
                 font-size: 1.2em;
             }
@@ -157,7 +162,6 @@
             }
         }
     </style>
- 
 </head>
 <body>
     <container>
