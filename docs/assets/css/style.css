@@ -11,198 +11,257 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-   html {
+html {
     color: #222;
-    font-size: 1em;
     line-height: 1.4;
-  }
+    font-size: 14pt;
+}
 
-  /*
+/*
    * Remove text-shadow in selection highlight:
    * https://twitter.com/miketaylr/status/12228805301
    *
    * Customize the background color to match your design.
    */
-  
-  ::-moz-selection {
+
+::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
-  }
-  
-  ::selection {
+}
+
+::selection {
     background: #b3d4fc;
     text-shadow: none;
-  }
-  
-  /*
+}
+
+/*
    * A better looking default horizontal rule
    */
-  
-  hr {
+
+hr {
     display: block;
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
     margin: 1em 0;
     padding: 0;
-  }
-  
-  /*
+}
+
+/*
    * Remove the gap between audio, canvas, iframes,
    * images, videos and the bottom of their containers:
    * https://github.com/h5bp/html5-boilerplate/issues/440
    */
-  
-  audio,
-  canvas,
-  iframe,
-  img,
-  svg,
-  video {
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
     vertical-align: middle;
-  }
-  
-  /*
+}
+
+/*
    * Remove default fieldset styles.
    */
-  
-  fieldset {
+
+fieldset {
     border: 0;
     margin: 0;
     padding: 0;
-  }
-  
-  /*
+}
+
+/*
    * Allow only vertical resizing of textareas.
    */
-  
-  textarea {
+
+textarea {
     resize: vertical;
-  }
-  
-  /* ==========================================================================
+}
+
+/* ==========================================================================
      Author's custom styles
      ========================================================================== */
 
-    body {
-        background-color: #1a1a1a; /* Dark background */
-        color: #e6e6e6; /* Light text color */
-        font-family: 'Courier New', Courier, monospace; /* Retro font */
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
-    /* Container to center content */
-    .container {
-        max-width: 1000px;
-        width: 100%;
-        padding: 20px;
-        background-color: #333; /* Slightly lighter dark background */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
-        border-radius: 8px; /* Rounded corners */
-        margin: 20px auto; /* Centered with top margin */
+body {
+    background-color: #1a1a1a;
+    /* Dark background */
+    color: #e6e6e6;
+    /* Light text color */
+    font-family: 'Courier New', Courier, monospace;
+    /* Retro font */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-    /* Images */
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
+/* Container to center content */
 
-    /* Headers */
-    h1, h2, h3 {
-        color: #ffcc00; /* Bright retro yellow */
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
-    }
+body>.container {
 
-    /* Navigation Menu */
-    nav {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    nav a {
-        color: #66ff66; /* Retro green */
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    nav a:hover {
-        color: #ffcc00; /* Bright yellow on hover */
-        text-decoration: underline;
-    }
-
-     /* Links */
-     a {
-        color: #ff66ff; /* Retro pink */
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    a:hover {
-        color: #66ff66; /* Retro green on hover */
-        text-decoration: underline;
-    }
-
-    /* Tables */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-
-    th, td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #555; /* Subtle border */
-    }
-
-    th {
-        background-color: #444; /* Dark header background */
-        color: #ffcc00; /* Retro yellow */
-    }
-
-    tr:nth-child(even) {
-        background-color: #2a2a2a; /* Darker row background */
-    }
-
-    tr:hover {
-        background-color: #555; /* Slightly lighter on hover */
-    }
-
-     /* Code blocks */
-     pre {
-        background-color: #272822; /* Dark code block background */
-        color: #f8f8f2; /* Light text */
-        padding: 10px;
-        border-radius: 5px;
-        overflow-x: auto
-     }
+    overflow-x: hidden;
+    position: relative;
+}
+.container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 20px;
+    background-color: #333;
+    /* Slightly lighter dark background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Soft shadow */
+    border-radius: 8px;
+    /* Rounded corners */
+    margin: 20px auto;
+    /* Centered with top margin */
     
-      
-  
-  /* ==========================================================================
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.axe {
+    color: #ffcc00;
+    /* Bright retro yellow */
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+/* Headers */
+
+.title {
+    color: #ffcc00;
+    /* Bright retro yellow */
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 1.3em;
+}
+
+h1 {
+    color: #ffcc00;
+    /* Bright retro yellow */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #ceb553;
+    /* Bright retro yellow */
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+
+/* Navigation Menu */
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #66ff66;
+    /* Retro green */
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    /* Bright yellow on hover */
+    text-decoration: underline;
+}
+
+/* Links */
+a {
+    color: #ff66ff;
+    /* Retro pink */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #66ff66;
+    /* Retro green on hover */
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #555;
+    /* Subtle border */
+}
+
+th {
+    background-color: #444;
+    /* Dark header background */
+    color: #ffcc00;
+    /* Retro yellow */
+}
+
+tr:nth-child(even) {
+    background-color: #2a2a2a;
+    /* Darker row background */
+}
+
+tr:hover {
+    background-color: #555;
+    /* Slightly lighter on hover */
+}
+
+/* Code blocks */
+pre {
+    background-color: #272822;
+    /* Dark code block background */
+    color: #f8f8f2;
+    /* Light text */
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto
+}
+
+
+
+/* ==========================================================================
      Helper classes
      ========================================================================== */
-  
-  /*
+
+/*
    * Hide visually and from screen readers
    */
-  
-  .hidden,
-  [hidden] {
+
+.hidden,
+[hidden] {
     display: none !important;
-  }
-  
-  /*
+}
+
+/*
    * Hide only visually, but have it available for screen readers:
    * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
    *
@@ -210,8 +269,8 @@
    *    causes content to wrap 1 word per line:
    *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
    */
-  
-  .visually-hidden {
+
+.visually-hidden {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
@@ -222,16 +281,16 @@
     white-space: nowrap;
     width: 1px;
     /* 1 */
-  }
-  
-  /*
+}
+
+/*
    * Extends the .visually-hidden class to allow the element
    * to be focusable when navigated to via the keyboard:
    * https://www.drupal.org/node/897638
    */
-  
-  .visually-hidden.focusable:active,
-  .visually-hidden.focusable:focus {
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -239,113 +298,160 @@
     position: static;
     white-space: inherit;
     width: auto;
-  }
-  
-  /*
+}
+
+/*
    * Hide visually and from screen readers, but maintain layout
    */
-  
-  .invisible {
+
+.invisible {
     visibility: hidden;
-  }
-  
-  /*
+}
+
+/*
    * Clearfix: contain floats
    *
    * The use of `table` rather than `block` is only necessary if using
    * `::before` to contain the top-margins of child elements.
    */
-  
-  .clearfix::before,
-  .clearfix::after {
+
+.clearfix::before,
+.clearfix::after {
     content: "";
     display: table;
-  }
-  
-  .clearfix::after {
+}
+
+.clearfix::after {
     clear: both;
-  }
-  
-  /* ==========================================================================
+}
+
+/* ==========================================================================
      EXAMPLE Media Queries for Responsive Design.
      These examples override the primary ('mobile first') styles.
      Modify as content requires.
      ========================================================================== */
-  
-  @media only screen and (min-width: 35em) {
+
+@media (max-width: 580px) {
     /* Style adjustments for viewports that meet the condition */
-  }
-  
-  @media print,
-    (-webkit-min-device-pixel-ratio: 1.25),
-    (min-resolution: 1.25dppx),
-    (min-resolution: 120dpi) {
+
+     .container {
+        max-width: 90%;
+        padding: 10px;
+        background-color: #333;
+        /* Slightly lighter dark background */
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        /* Soft shadow */
+        border-radius: 8px;
+        /* Rounded corners */
+        margin: 10px auto;
+        /* Centered with top margin */
+    }
+
+    .title{
+        font-size: 1.2em;
+        /* Smaller font size for headers */
+    }
+
+    h1 {
+        font-size: 1.2em;
+        /* Smaller font size for headers */
+    }
+
+    h2 {
+        font-size: 1em;
+        /* Smaller font size for headers */
+    }
+
+    table,
+    th,
+    td {
+        font-size: 0.75em;
+        /* Smaller font size for tables */
+    }
+
+    th,
+    td {
+        padding: 4px;
+        /* Smaller padding for table cells */
+    }
+
+    nav a {
+        margin: 0 10px;
+        /* Smaller margins for navigation links */
+    }
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
-  }
-  
-  /* ==========================================================================
+}
+
+/* ==========================================================================
      Print styles.
      Inlined to avoid the additional HTTP request:
      https://www.phpied.com/delay-loading-your-print-css/
      ========================================================================== */
-  
-  @media print {
+
+@media print {
+
     *,
     *::before,
     *::after {
-      background: #fff !important;
-      color: #000 !important;
-      /* Black prints faster */
-      box-shadow: none !important;
-      text-shadow: none !important;
+        background: #fff !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
     }
-  
+
     a,
     a:visited {
-      text-decoration: underline;
+        text-decoration: underline;
     }
-  
+
     a[href]::after {
-      content: " (" attr(href) ")";
+        content: " (" attr(href) ")";
     }
-  
+
     abbr[title]::after {
-      content: " (" attr(title) ")";
+        content: " (" attr(title) ")";
     }
-  
+
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
     a[href^="#"]::after,
     a[href^="javascript:"]::after {
-      content: "";
+        content: "";
     }
-  
+
     pre {
-      white-space: pre-wrap !important;
+        white-space: pre-wrap !important;
     }
-  
+
     pre,
     blockquote {
-      border: 1px solid #999;
-      page-break-inside: avoid;
+        border: 1px solid #999;
+        page-break-inside: avoid;
     }
-  
+
     tr,
     img {
-      page-break-inside: avoid;
+        page-break-inside: avoid;
     }
-  
+
     p,
     h2,
     h3 {
-      orphans: 3;
-      widows: 3;
+        orphans: 3;
+        widows: 3;
     }
-  
+
     h2,
     h3 {
-      page-break-after: avoid;
+        page-break-after: avoid;
     }
-  }
+}

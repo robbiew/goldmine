@@ -13,22 +13,24 @@
 
 
 <body>
-    <container>
         <div class="container">
-            <h1>⛏️ gOLD mINE Community Door Server</h1>
+            <div class="axe">⛏️</div>
+            <img src="docs/assets/images/goldmine.png" alt="gOLD mINE logo">
+            <div class="title">Community Door Server</div>
 
             <!-- Navigation Menu -->
             <nav>
                 <a href="#welcome">Welcome</a>
-                <a href="#setup">Example Setups</a>
-                <a href="#library">Game Library</a>
-                <a href="#api">Gold Mine API</a>
+                <a href="#setup">Setup</a>
+                <a href="#library">Library</a>
+                <a href="#api">API</a>
                 <a href="#contact">Contact</a>
             </nav>
 
             <img src="docs/assets/images/screenshot.png" alt="gOLD mINE screen shot">
 
             <section id="welcome">
+                <h1>Welcome to gOLD mINE</h1>
                 <p>gOLD mINE (named after a <a href="https://arcadepreservation.fandom.com/wiki/Gold_Mine">coin-op
                         arcade</a> near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS
                     games. Open to all, easy to access with modern BBS software.</p>
@@ -63,15 +65,18 @@
                     almost immediately, running them over an RLOGIN connection that's practically seamless for your
                     users. The other benefit is a potentially larger player base, aggregating them in a centralized
                     manner with other BBSs.</p>
+            </section>
+            <section id="setup"></section>
+            <h1>Setup</h1>
 
                 <h2>JOIN GOLD MINE</h2>
                 <p>gOLD mINE does not require you to apply for membership. Just follow the directions below using
                     RLOGIN.</p>
                 <p>Note, the rlogin tool was introduced in BSD Unix in the 1980s. It's considered legacy and insecure,
                     good thing we're only using it for mindless gaming.</p>
-            </section>
+           
 
-            <section id="setup">
+            
                 <h2>SETUP ON YOUR BBS</h2>
                 <p>Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to
                     <code>143.198.58.173</code>, or <code>goldminedoors.com</code> port <code>2513</code>, using the
@@ -177,6 +182,7 @@
             </section>
 
             <section id="library">
+                <h1>Library</h1>
 
                 <h2>GoldMine Game Code List</h2>
 
@@ -211,6 +217,9 @@
                         })
                         .catch(error => console.error('Error fetching library data:', error));
                 </script>
+            </section>
+            <section id="api">
+                <h1>API</h1>
 
                 <h2>Goldmine API</h2>
                 <p>You can access some endpoints to retrieve JSON statistics for:</p>
@@ -317,13 +326,14 @@
     ]</code></pre>
             </section>
             <section id="contact">
+                <h1>Contact</h1>
 
-                <h2>Contact</h2>
+                <h2>Need Help?</h2>
                 <p>Contact <code>j0hnny a1pha</code> on <a href="https://fsxnet.nz/">fsxNet</a> or WWIVNet "gOLD mINE
                     Game Server" sub, or on <a href="https://discord.com/invite/cUp2DtzXjZ">BBS World Discord</a>
                     (alpha_64) for more details or to ask a question.</p>
             </section>
-    </container>
+ 
     <script src="js/app.js"></script>
 </body>
 
