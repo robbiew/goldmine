@@ -150,7 +150,9 @@ img {
     font-size: 1.8em;;
     display: inline-block;
     color: rgb(223, 61, 182);
-    vertical-align: middle;
+    vertical-align: sub;
+    margin-left: -4px;
+    padding-left: 0px;
 }
 
 .title {
@@ -208,7 +210,7 @@ nav a:hover {
 a {
     color: #ff66ff;
     /* Retro pink */
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: bold;
 }
 
@@ -348,6 +350,17 @@ pre {
 
 @media (max-width: 580px) {
     /* Style adjustments for viewports that meet the condition */
+
+    .arrow {
+        padding-bottom: 3px;
+        vertical-align: sub;
+        
+    }
+
+    .return {
+        padding-bottom: 3px;
+        font-size: .8em;
+    }
 
      .container {
         max-width: 90%;
