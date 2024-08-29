@@ -63,6 +63,21 @@
           <code>143.198.58.173</code> (or <code>goldminedoors.com</code>).
         </p>
 
+        <strong><i><p id="total-game-count">Total Games: Loading...</p></i></strong>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Fetch data from the /library endpoint
+                fetch('https://goldminedoors.com/library')
+                    .then(response => response.json())
+                    .then(data => {
+                        const totalGames = data.length; // Count the total number of games
+                        document.getElementById('total-game-count').textContent = `Total Games: ${totalGames}`;
+                    })
+                    .catch(error => console.error('Error fetching library data:', error));
+            });
+        </script>
+
         <h2>Under the hood:</h2>
         <ul>
           <li>
