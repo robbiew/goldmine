@@ -106,7 +106,7 @@ body>.container {
     position: relative;
 }
 .container {
-    max-width: 1000px;
+    max-width: 940px;
     width: 100%;
     padding: 20px;
     background-color: #333;
