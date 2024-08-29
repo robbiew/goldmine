@@ -270,7 +270,8 @@ pre {
     /* Light text */
     padding: 10px;
     border-radius: 5px;
-    overflow-x: auto
+    overflow-x: auto;
+    font-size:.8em;
 }
 
 
