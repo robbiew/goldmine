@@ -167,7 +167,7 @@ fi</code></pre>
 
     <script>
         // Fetch data from the /library endpoint
-        fetch('http://goldminedoors.com:8080/library')
+        fetch('http://goldminedoors.com/library')
             .then(response => response.json())
             .then(data => {
                 const tableBody = document.getElementById('library-table-body');
@@ -197,15 +197,15 @@ fi</code></pre>
 
     <h3>Access the API endpoints:</h3>
     <ul>
-        <li>Top 10 Games: <a href="http://goldminedoors.com:8080/top10?period=all">http://goldminedoors.com:8080/top10?period=all</a></li>
+        <li>Top 10 Games: <a href="http://goldminedoors.com/top10?period=all">http://goldminedoors.com/top10?period=all</a></li>
         <ul>
             <li>Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).</li>
         </ul>
-        <li>Detailed Stats: <a href="http://goldminedoors.com:8080/stats?period=all">http://goldminedoors.com:8080/stats?period=all</a></li>
+        <li>Detailed Stats: <a href="http://goldminedoors.com/stats?period=all">http://goldminedoors.com/stats?period=all</a></li>
         <ul>
             <li>Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).</li>
         </ul>
-        <li>Library: <a href="http://goldminedoors.com:8080/library">http://goldminedoors.com:8080/library</a></li>
+        <li>Library: <a href="http://goldminedoors.com/library">http://goldminedoors.com/library</a></li>
     </ul>
 
     <h3>API Endpoints</h3>
