@@ -138,7 +138,7 @@
             }
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 480px) {
             .container {
                 padding: 10px;
                 margin: 5px auto; /* Adjusted further for very small screens */
@@ -159,6 +159,30 @@
             button {
                 font-size: 12px;
                 padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .container {
+                padding: 8px;
+                margin: 5px auto; /* Minimized margins for very small screens */
+            }
+
+            h1, h2, h3 {
+                font-size: 1em; /* Smaller font size for headers */
+            }
+
+            table, th, td {
+                font-size: 0.75em; /* Smaller font size for tables */
+            }
+
+            th, td {
+                padding: 4px; /* Smaller padding for table cells */
+            }
+
+            button {
+                font-size: 10px;
+                padding: 4px 8px; /* Smaller button size */
             }
         }
     </style>
