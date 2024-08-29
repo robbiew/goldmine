@@ -13,6 +13,7 @@
             font-family: 'Courier New', Courier, monospace; /* Retro font */
             margin: 0;
             padding: 0;
+            display: flex;
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
@@ -38,10 +39,29 @@
             letter-spacing: 2px;
         }
 
+        /* Navigation Menu */
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #66ff66; /* Retro green */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #ffcc00; /* Bright yellow on hover */
+            text-decoration: underline;
+        }
+
         /* Links */
         a {
             color: #ff66ff; /* Retro pink */
-            text-decoration: underline;
+            text-decoration: none;
             font-weight: bold;
         }
 
@@ -83,7 +103,7 @@
             color: white;
             padding: 10px 20px;
             text-align: center;
-            text-decoration: underline;
+            text-decoration: none;
             display: inline-block;
             font-size: 16px;
             margin: 4px 2px;
@@ -117,7 +137,6 @@
             .container {
                 padding: 15px;
                 margin: 10px auto; /* Adjusted for smaller screens */
-                max-width: 95%;
             }
 
             h1, h2, h3 {
@@ -136,13 +155,16 @@
                 font-size: 14px;
                 padding: 8px 16px;
             }
+
+            nav a {
+                margin: 0 10px;
+            }
         }
 
         @media (max-width: 480px) {
             .container {
                 padding: 10px;
                 margin: 5px auto; /* Adjusted further for very small screens */
-                max-width: 95%;
             }
 
             h1, h2, h3 {
@@ -161,13 +183,17 @@
                 font-size: 12px;
                 padding: 6px 12px;
             }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
         }
 
         @media (max-width: 380px) {
             .container {
                 padding: 8px;
                 margin: 5px auto; /* Minimized margins for very small screens */
-                max-width: 95%;
             }
 
             h1, h2, h3 {
@@ -193,29 +219,41 @@
     <container>
         <div class="container">
         <h1>⛏️ gOLD mINE Community Door Server</h1>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="#welcome">Welcome</a>
+            <a href="#setup">Example Setups</a>
+            <a href="#library">Game Library</a>
+            <a href="#api">Gold Mine API</a>
+            <a href="#contact">Contact</a>
+        </nav>
     
         <img src="docs/assets/images/screenshot.png" alt="gOLD mINE screen shot">
-    
-        <p>gOLD mINE (named after a <a href="https://arcadepreservation.fandom.com/wiki/Gold_Mine">coin-op arcade</a> near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS software.</p>
-    
-        <p>It's located on port <code>2513</code> at <code>143.198.58.173</code> (or <code>goldminedoors.com</code>).</p>
-    
-        <h2>Under the hood:</h2>
-        <ul>
-            <li><a href="http://wiki.synchro.net/">Synchronet</a> v3.20 for native Linux, DOS and Win32 games (Ubuntu 24.04 x64 and Windows 10 x64)</li>
-            <li><a href="https://www.mbbsemu.com/">MBBSEmu</a> for MajorBBS-based game modules (Windows 10 x64)</li>
-        </ul>
-        <p>There are currently 132 door games online.</p>
-    
-        <h2>WHAT'S A 'DOOR SERVER'?</h2>
-        <p>gOLD mINE is not a BBS (despite the URL). There are no message boards or file download areas, and you can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.</p>
-        <p>If you run an old-school style, terminal-based BBS (probably using new-school BBS software like <a href="http://www.mysticbbs.com/">Mystic</a>, <a href="http://wiki.synchro.net/">Synchronet</a>, <a href="http://talismanbbs.com">Talisman</a>, <a href="http://wwivbbs.org">WWIV</a> or <a href="https://enigma-bbs.github.io/">ENiGMA½</a>) you know that setting up door game programs can be time consuming and sometimes, a headache.</p>
-        <p>In their heyday of the 1980s and early 90s, these door games were designed to run under DOS (or later, Windows 32-bit) and they could be finicky. Hunting down registration keys or cracks can now be daunting (many doors are abandonware these days, with original authors having sadly passed). So, a Door Server takes work out of setup and lets you add LOTS of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users. The other benefit is a potentially larger player base, aggregating them in a centralized manner with other BBSs.</p>
-    
-        <h2>JOIN GOLD MINE</h2>
-        <p>gOLD mINE does not require you to apply for membership. Just follow the directions below using RLOGIN.</p>
-        <p>Note, the rlogin tool was introduced in BSD Unix in the 1980s. It's considered legacy and insecure, good thing we're only using it for mindless gaming.</p>
-    
+            
+        <section id="welcome">
+            <p>gOLD mINE (named after a <a href="https://arcadepreservation.fandom.com/wiki/Gold_Mine">coin-op arcade</a> near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS software.</p>
+        
+            <p>It's located on port <code>2513</code> at <code>143.198.58.173</code> (or <code>goldminedoors.com</code>).</p>
+        
+            <h2>Under the hood:</h2>
+            <ul>
+                <li><a href="http://wiki.synchro.net/">Synchronet</a> v3.20 for native Linux, DOS and Win32 games (Ubuntu 24.04 x64 and Windows 10 x64)</li>
+                <li><a href="https://www.mbbsemu.com/">MBBSEmu</a> for MajorBBS-based game modules (Windows 10 x64)</li>
+            </ul>
+            <p>There are currently 132 door games online.</p>
+        
+            <h2>WHAT'S A 'DOOR SERVER'?</h2>
+            <p>gOLD mINE is not a BBS (despite the URL). There are no message boards or file download areas, and you can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.</p>
+            <p>If you run an old-school style, terminal-based BBS (probably using new-school BBS software like <a href="http://www.mysticbbs.com/">Mystic</a>, <a href="http://wiki.synchro.net/">Synchronet</a>, <a href="http://talismanbbs.com">Talisman</a>, <a href="http://wwivbbs.org">WWIV</a> or <a href="https://enigma-bbs.github.io/">ENiGMA½</a>) you know that setting up door game programs can be time consuming and sometimes, a headache.</p>
+            <p>In their heyday of the 1980s and early 90s, these door games were designed to run under DOS (or later, Windows 32-bit) and they could be finicky. Hunting down registration keys or cracks can now be daunting (many doors are abandonware these days, with original authors having sadly passed). So, a Door Server takes work out of setup and lets you add LOTS of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users. The other benefit is a potentially larger player base, aggregating them in a centralized manner with other BBSs.</p>
+        
+            <h2>JOIN GOLD MINE</h2>
+            <p>gOLD mINE does not require you to apply for membership. Just follow the directions below using RLOGIN.</p>
+            <p>Note, the rlogin tool was introduced in BSD Unix in the 1980s. It's considered legacy and insecure, good thing we're only using it for mindless gaming.</p>
+        </section>
+            
+        <section id = "setup">
         <h2>SETUP ON YOUR BBS</h2>
         <p>Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to <code>143.198.58.173</code>, or <code>goldminedoors.com</code> port <code>2513</code>, using the settings below. Heck, you could even connect directly using RLOGIN and <a href="https://sourceforge.net/projects/syncterm/">Syncterm</a>!</p>
     
@@ -300,6 +338,9 @@
     else
         rlogin -p 2513 -l "$PREFIX$USER_ALIAS" goldminedoors.com
     fi</code></pre>
+        </section>
+
+        <section id = "library">
     
         <h2>GoldMine Game Code List</h2>
         
@@ -432,9 +473,12 @@
       },
       ...
     ]</code></pre>
+        </section>
+        <section id = "contact">
     
         <h2>Contact</h2>
         <p>Contact <code>j0hnny a1pha</code> on <a href="https://fsxnet.nz/">fsxNet</a> or WWIVNet "gOLD mINE Game Server" sub, or on <a href="https://discord.com/invite/cUp2DtzXjZ">BBS World Discord</a> (alpha_64) for more details or to ask a question.</p>
+        </section>
     </container>
 </body>
 </html>
