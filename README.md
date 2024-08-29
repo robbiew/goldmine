@@ -1,5 +1,5 @@
 # Gold Mine Community Door Server
 
-The [Github Pages Site](https://robbiew.github.io/goldmine/) contains instructions on how to join, setup as well as direct door codes if you want ot bypass the Gold Mine main menu.
+The [Github Pages Site](https://robbiew.github.io/goldmine/) contains instructions on how to join, setup as well as direct door codes.
 
-This repo contains scripts for Alpha Complex BBS. Unless you are planning on running a Game Server on a Talisman BBS, this repo is probably not for you.
+This repo is just the code for the goldmeminebbs.com Github pages.
