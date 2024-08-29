@@ -1,290 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>gOLD mINE Community Game Server by j0hnny a1pha</title>
+    <link rel="stylesheet" href="docs/assets/css/style.css">
+    <meta name="description" content="Instructions for setting up gOLD mINE, a door game server for BBSs.">
     <link rel="shortcut icon" type="image/x-icon" href="docs/assets/images/favicon.ico">
-    <title>⛏️ gOLD mINE Community Door Server</title>
-    <style>
-        /* Global Styles */
-        body {
-            background-color: #1a1a1a; /* Dark background */
-            color: #e6e6e6; /* Light text color */
-            font-family: 'Courier New', Courier, monospace; /* Retro font */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
-
-        /* Container to center content */
-        .container {
-            max-width: 1000px;
-            width: 100%;
-            padding: 20px;
-            background-color: #333; /* Slightly lighter dark background */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
-            border-radius: 8px; /* Rounded corners */
-            margin: 20px auto; /* Centered with top margin */
-        }
-
-        /* Headers */
-        h1, h2, h3 {
-            color: #ffcc00; /* Bright retro yellow */
-            text-align: center;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        /* Navigation Menu */
-        nav {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            color: #66ff66; /* Retro green */
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        nav a:hover {
-            color: #ffcc00; /* Bright yellow on hover */
-            text-decoration: underline;
-        }
-
-        /* Links */
-        a {
-            color: #ff66ff; /* Retro pink */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #66ff66; /* Retro green on hover */
-            text-decoration: underline;
-        }
-
-        /* Tables */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #555; /* Subtle border */
-        }
-
-        th {
-            background-color: #444; /* Dark header background */
-            color: #ffcc00; /* Retro yellow */
-        }
-
-        tr:nth-child(even) {
-            background-color: #2a2a2a; /* Darker row background */
-        }
-
-        tr:hover {
-            background-color: #555; /* Slightly lighter on hover */
-        }
-
-        /* Buttons */
-        button {
-            background-color: #ff66ff; /* Retro pink */
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        button:hover {
-            background-color: #66ff66; /* Retro green on hover */
-        }
-
-        /* Code blocks */
-        pre {
-            background-color: #272822; /* Dark code block background */
-            color: #f8f8f2; /* Light text */
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-
-        /* Images */
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-                margin: 10px auto; /* Adjusted for smaller screens */
-            }
-
-            h1, h2, h3 {
-                font-size: 1.5em;
-            }
-
-            table {
-                font-size: 0.9em;
-            }
-
-            th, td {
-                padding: 8px;
-            }
-
-            button {
-                font-size: 14px;
-                padding: 8px 16px;
-            }
-
-            nav a {
-                margin: 0 10px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 10px;
-                margin: 5px auto; /* Adjusted further for very small screens */
-            }
-
-            h1, h2, h3 {
-                font-size: 1.2em;
-            }
-
-            table, th, td {
-                font-size: 0.8em;
-            }
-
-            th, td {
-                padding: 6px;
-            }
-
-            button {
-                font-size: 12px;
-                padding: 6px 12px;
-            }
-
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-
-        @media (max-width: 380px) {
-            .container {
-                padding: 8px;
-                margin: 5px auto; /* Minimized margins for very small screens */
-            }
-
-            h1, h2, h3 {
-                font-size: 1em; /* Smaller font size for headers */
-            }
-
-            table, th, td {
-                font-size: 0.75em; /* Smaller font size for tables */
-            }
-
-            th, td {
-                padding: 4px; /* Smaller padding for table cells */
-            }
-
-            button {
-                font-size: 10px;
-                padding: 4px 8px; /* Smaller button size */
-            }
-        }
-    </style>
+    <meta name="theme-color" content="#fafafa">
 </head>
+
+
 <body>
     <container>
         <div class="container">
-        <h1>⛏️ gOLD mINE Community Door Server</h1>
+            <h1>⛏️ gOLD mINE Community Door Server</h1>
 
-        <!-- Navigation Menu -->
-        <nav>
-            <a href="#welcome">Welcome</a>
-            <a href="#setup">Example Setups</a>
-            <a href="#library">Game Library</a>
-            <a href="#api">Gold Mine API</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    
-        <img src="docs/assets/images/screenshot.png" alt="gOLD mINE screen shot">
-            
-        <section id="welcome">
-            <p>gOLD mINE (named after a <a href="https://arcadepreservation.fandom.com/wiki/Gold_Mine">coin-op arcade</a> near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS games. Open to all, easy to access with modern BBS software.</p>
-        
-            <p>It's located on port <code>2513</code> at <code>143.198.58.173</code> (or <code>goldminedoors.com</code>).</p>
-        
-            <h2>Under the hood:</h2>
-            <ul>
-                <li><a href="http://wiki.synchro.net/">Synchronet</a> v3.20 for native Linux, DOS and Win32 games (Ubuntu 24.04 x64 and Windows 10 x64)</li>
-                <li><a href="https://www.mbbsemu.com/">MBBSEmu</a> for MajorBBS-based game modules (Windows 10 x64)</li>
-            </ul>
-            <p>There are currently 132 door games online.</p>
-        
-            <h2>WHAT'S A 'DOOR SERVER'?</h2>
-            <p>gOLD mINE is not a BBS (despite the URL). There are no message boards or file download areas, and you can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only: launch games remotely for users from other BBSs using RLOGIN.</p>
-            <p>If you run an old-school style, terminal-based BBS (probably using new-school BBS software like <a href="http://www.mysticbbs.com/">Mystic</a>, <a href="http://wiki.synchro.net/">Synchronet</a>, <a href="http://talismanbbs.com">Talisman</a>, <a href="http://wwivbbs.org">WWIV</a> or <a href="https://enigma-bbs.github.io/">ENiGMA½</a>) you know that setting up door game programs can be time consuming and sometimes, a headache.</p>
-            <p>In their heyday of the 1980s and early 90s, these door games were designed to run under DOS (or later, Windows 32-bit) and they could be finicky. Hunting down registration keys or cracks can now be daunting (many doors are abandonware these days, with original authors having sadly passed). So, a Door Server takes work out of setup and lets you add LOTS of these games from a central service, almost immediately, running them over an RLOGIN connection that's practically seamless for your users. The other benefit is a potentially larger player base, aggregating them in a centralized manner with other BBSs.</p>
-        
-            <h2>JOIN GOLD MINE</h2>
-            <p>gOLD mINE does not require you to apply for membership. Just follow the directions below using RLOGIN.</p>
-            <p>Note, the rlogin tool was introduced in BSD Unix in the 1980s. It's considered legacy and insecure, good thing we're only using it for mindless gaming.</p>
-        </section>
-            
-        <section id = "setup">
-        <h2>SETUP ON YOUR BBS</h2>
-        <p>Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to <code>143.198.58.173</code>, or <code>goldminedoors.com</code> port <code>2513</code>, using the settings below. Heck, you could even connect directly using RLOGIN and <a href="https://sourceforge.net/projects/syncterm/">Syncterm</a>!</p>
-    
-        <ul>
-            <li>If you are running a legacy DOS BBS under Windows, check out <a href="https://www.randm.ca/bbs/telnetdoor/">Telnet Door</a>, use the RLOGIN mode</li>
-            <li>For Ubuntu or other Linux flavors, you could <code>sudo apt install rsh-redone-client</code> -- that program works with the code examples below</li>
-        </ul>
-    
-        <h3>CREATE A BBS TAG</h3>
-        <p>Every gOLD mINE BBS needs a tag that identifies it. You can make it up, just use these guidelines:</p>
-        <ul>
-            <li>Format for the tag is: [TAG], replace "TAG" with your <em>unique</em> 3 characters that represent your BBS</li>
-            <li>For instance, Space Junk BBS uses [SJ!]</li>
-            <li>Use exactly 3 characters: no more, no less</li>
-            <li>No profanity, please</li>
-        </ul>
-    
-        <h3>EXAMPLES</h3>
-        <h4>Mystic BBS</h4>
-        <p>Add gOLD mINE to your menu as <code>IR - Outbound RLOGIN Connection</code></p>
-        <pre><code>/addr=143.198.58.173 /port=2513 /user=[TAG]@USER@ /pass=@USER@ /PROMPT</code></pre>
-        <ul>
-            <li>Replace <code>TAG</code> with your <em>unique</em> 1-3 character BBS tag, e.g <code>[ABC]</code>.</li>
-            <li>Make sure there are no spaces between <code>[TAG]</code> and <code>@USER@</code></li>
-            <li>FYI: <code>/PROMPT</code> hides the connection string from the user</li>
-            <li>You can replace <code>/pass=@USER@</code> with whatever you want for the <code>@USER@</code> part</li>
-        </ul>
-    
-        <h4>WWIV BBS</h4>
-        <p>Use Chain Edit to add a gOLD Mine entry. If you want to load the main menu so your users can select a game, and not directly launch a specific door with a door code, leave off the door code parameter ("WORDLE"):</p>
-        <pre><code>A) Description  : Space Junk! gOLD mINE Game Server
+            <!-- Navigation Menu -->
+            <nav>
+                <a href="#welcome">Welcome</a>
+                <a href="#setup">Example Setups</a>
+                <a href="#library">Game Library</a>
+                <a href="#api">Gold Mine API</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <img src="docs/assets/images/screenshot.png" alt="gOLD mINE screen shot">
+
+            <section id="welcome">
+                <p>gOLD mINE (named after a <a href="https://arcadepreservation.fandom.com/wiki/Gold_Mine">coin-op
+                        arcade</a> near where j0hnny a1pha grew up) is a terminal-based Community Door Server for BBS
+                    games. Open to all, easy to access with modern BBS software.</p>
+
+                <p>It's located on port <code>2513</code> at <code>143.198.58.173</code> (or
+                    <code>goldminedoors.com</code>).
+                </p>
+
+                <h2>Under the hood:</h2>
+                <ul>
+                    <li><a href="http://wiki.synchro.net/">Synchronet</a> v3.20 for native Linux, DOS and Win32 games
+                        (Ubuntu 24.04 x64 and Windows 10 x64)</li>
+                    <li><a href="https://www.mbbsemu.com/">MBBSEmu</a> for MajorBBS-based game modules (Windows 10 x64)
+                    </li>
+                </ul>
+                <p>There are currently 132 door games online.</p>
+
+                <h2>WHAT'S A 'DOOR SERVER'?</h2>
+                <p>gOLD mINE is not a BBS (despite the URL). There are no message boards or file download areas, and you
+                    can't "login" to it like a traditional BBS via Telnet or SSH. It does one thing, and one thing only:
+                    launch games remotely for users from other BBSs using RLOGIN.</p>
+                <p>If you run an old-school style, terminal-based BBS (probably using new-school BBS software like <a
+                        href="http://www.mysticbbs.com/">Mystic</a>, <a href="http://wiki.synchro.net/">Synchronet</a>,
+                    <a href="http://talismanbbs.com">Talisman</a>, <a href="http://wwivbbs.org">WWIV</a> or <a
+                        href="https://enigma-bbs.github.io/">ENiGMA½</a>) you know that setting up door game programs
+                    can be time consuming and sometimes, a headache.
+                </p>
+                <p>In their heyday of the 1980s and early 90s, these door games were designed to run under DOS (or
+                    later, Windows 32-bit) and they could be finicky. Hunting down registration keys or cracks can now
+                    be daunting (many doors are abandonware these days, with original authors having sadly passed). So,
+                    a Door Server takes work out of setup and lets you add LOTS of these games from a central service,
+                    almost immediately, running them over an RLOGIN connection that's practically seamless for your
+                    users. The other benefit is a potentially larger player base, aggregating them in a centralized
+                    manner with other BBSs.</p>
+
+                <h2>JOIN GOLD MINE</h2>
+                <p>gOLD mINE does not require you to apply for membership. Just follow the directions below using
+                    RLOGIN.</p>
+                <p>Note, the rlogin tool was introduced in BSD Unix in the 1980s. It's considered legacy and insecure,
+                    good thing we're only using it for mindless gaming.</p>
+            </section>
+
+            <section id="setup">
+                <h2>SETUP ON YOUR BBS</h2>
+                <p>Ready to go? Setup an outbound RLOGIN connection from a menu item on your BBS to
+                    <code>143.198.58.173</code>, or <code>goldminedoors.com</code> port <code>2513</code>, using the
+                    settings below. Heck, you could even connect directly using RLOGIN and <a
+                        href="https://sourceforge.net/projects/syncterm/">Syncterm</a>!
+                </p>
+
+                <ul>
+                    <li>If you are running a legacy DOS BBS under Windows, check out <a
+                            href="https://www.randm.ca/bbs/telnetdoor/">Telnet Door</a>, use the RLOGIN mode</li>
+                    <li>For Ubuntu or other Linux flavors, you could <code>sudo apt install rsh-redone-client</code> --
+                        that program works with the code examples below</li>
+                </ul>
+
+                <h3>CREATE A BBS TAG</h3>
+                <p>Every gOLD mINE BBS needs a tag that identifies it. You can make it up, just use these guidelines:
+                </p>
+                <ul>
+                    <li>Format for the tag is: [TAG], replace "TAG" with your <em>unique</em> 3 characters that
+                        represent your BBS</li>
+                    <li>For instance, Space Junk BBS uses [SJ!]</li>
+                    <li>Use exactly 3 characters: no more, no less</li>
+                    <li>No profanity, please</li>
+                </ul>
+
+                <h3>EXAMPLES</h3>
+                <h4>Mystic BBS</h4>
+                <p>Add gOLD mINE to your menu as <code>IR - Outbound RLOGIN Connection</code></p>
+                <pre><code>/addr=143.198.58.173 /port=2513 /user=[TAG]@USER@ /pass=@USER@ /PROMPT</code></pre>
+                <ul>
+                    <li>Replace <code>TAG</code> with your <em>unique</em> 1-3 character BBS tag, e.g
+                        <code>[ABC]</code>.
+                    </li>
+                    <li>Make sure there are no spaces between <code>[TAG]</code> and <code>@USER@</code></li>
+                    <li>FYI: <code>/PROMPT</code> hides the connection string from the user</li>
+                    <li>You can replace <code>/pass=@USER@</code> with whatever you want for the <code>@USER@</code>
+                        part</li>
+                </ul>
+
+                <h4>WWIV BBS</h4>
+                <p>Use Chain Edit to add a gOLD Mine entry. If you want to load the main menu so your users can select a
+                    game, and not directly launch a specific door with a door code, leave off the door code parameter
+                    ("WORDLE"):</p>
+                <pre><code>A) Description  : Space Junk! gOLD mINE Game Server
     B) Filename     : doors/goldmine/goldmine.sh %N WORDLE
     C) ACS          : user.sl >= 10
     D) ANSI         : Optional
@@ -295,22 +126,27 @@
     I) Usage        : 0
     J) Registered by: AVAILABLE
     L) Pause after  : No</code></pre>
-        <ul>
-            <li>Replace <code>TAG</code> with your unique 1-3 character BBS tag, e.g <code>[ABC]</code>.</li>
-            <li>Note: we aren't passing the BBS Alias here, we're passing the node number, which the script will then extract from the drop file in case we need to parse out special characters, spaces, etc.</li>
-        </ul>
-    
-        <h3>DIRECTLY LAUNCH A DOOR</h3>
-        <p>If you want to launch a door game directly from your BBS, bypassing the gOLD mINE main menu, use a Door Code from the list on this page. If no door code is passed, the user will land at the gOLD mINE main menu.</p>
-        <p>Mystic (make sure you are using the most recent release):</p>
-        <ul>
-            <li>add <code>/term=xtrn=DOORCODE</code> directly after <code>/user</code> sequence (on Mystic)</li>
-            <li>Replace <code>DOORCODE</code> with a code below that you want to launch directly, e.g. on a Mystic BBS:</li>
-        </ul>
-        <pre><code>/addr=143.198.58.173 /port=2513 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT</code></pre>
-        
-        <h3>Heer's what I use for WWIV on linux - <code>goldmine.sh</code>:</h3>
-        <pre><code>#!/bin/bash
+                <ul>
+                    <li>Replace <code>TAG</code> with your unique 1-3 character BBS tag, e.g <code>[ABC]</code>.</li>
+                    <li>Note: we aren't passing the BBS Alias here, we're passing the node number, which the script will
+                        then extract from the drop file in case we need to parse out special characters, spaces, etc.
+                    </li>
+                </ul>
+
+                <h3>DIRECTLY LAUNCH A DOOR</h3>
+                <p>If you want to launch a door game directly from your BBS, bypassing the gOLD mINE main menu, use a
+                    Door Code from the list on this page. If no door code is passed, the user will land at the gOLD mINE
+                    main menu.</p>
+                <p>Mystic (make sure you are using the most recent release):</p>
+                <ul>
+                    <li>add <code>/term=xtrn=DOORCODE</code> directly after <code>/user</code> sequence (on Mystic)</li>
+                    <li>Replace <code>DOORCODE</code> with a code below that you want to launch directly, e.g. on a
+                        Mystic BBS:</li>
+                </ul>
+                <pre><code>/addr=143.198.58.173 /port=2513 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT</code></pre>
+
+                <h3>Heer's what I use for WWIV on linux - <code>goldmine.sh</code>:</h3>
+                <pre><code>#!/bin/bash
     
     cd doors/goldmine
     
@@ -338,83 +174,88 @@
     else
         rlogin -p 2513 -l "$PREFIX$USER_ALIAS" goldminedoors.com
     fi</code></pre>
-        </section>
+            </section>
 
-        <section id = "library">
-    
-        <h2>GoldMine Game Code List</h2>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>DOOR NAME</th>
-                    <th>GENRE</th>
-                    <th>CODE</th>
-                </tr>
-            </thead>
-            <tbody id="library-table-body">
-                <!-- Dynamic content will be inserted here -->
-            </tbody>
-        </table>
-    
-        <script>
-            // Fetch data from the /library endpoint
-            fetch('https://goldminedoors.com/library')
-                .then(response => response.json())
-                .then(data => {
-                    const tableBody = document.getElementById('library-table-body');
-                    data.forEach(game => {
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
+            <section id="library">
+
+                <h2>GoldMine Game Code List</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DOOR NAME</th>
+                            <th>GENRE</th>
+                            <th>CODE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="library-table-body">
+                        <!-- Dynamic content will be inserted here -->
+                    </tbody>
+                </table>
+
+                <script>
+                    // Fetch data from the /library endpoint
+                    fetch('https://goldminedoors.com/library')
+                        .then(response => response.json())
+                        .then(data => {
+                            const tableBody = document.getElementById('library-table-body');
+                            data.forEach(game => {
+                                const row = document.createElement('tr');
+                                row.innerHTML = `
                             <td>${game.game_name}</td>
                             <td>${game.category}</td>
                             <td>${game.door_code}</td>
                         `;
-                        tableBody.appendChild(row);
-                    });
-                })
-                .catch(error => console.error('Error fetching library data:', error));
-        </script>
-    
-        <h2>Goldmine API</h2>
-        <p>You can access some endpoints to retrieve JSON statistics for:</p>
-        <ul>
-            <li>Top 10 most launched games.</li>
-            <li>Monthly statistics.</li>
-            <li>Yearly statistics.</li>
-            <li>All-time statistics.</li>
-            <li>List all games with details.</li>
-        </ul>
-        <p>Data automatically reloads and refreshes JSON data every 24 hours.</p>
-    
-        <h3>Access the API endpoints:</h3>
-        <ul>
-            <li>Top 10 Games: <a href="https://goldminedoors.com/top10?period=all">https://goldminedoors.com/top10?period=all</a></li>
-            <ul>
-                <li>Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).</li>
-            </ul>
-            <li>Detailed Stats: <a href="https://goldminedoors.com/stats?period=all">https://goldminedoors.com/stats?period=all</a></li>
-            <ul>
-                <li>Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).</li>
-            </ul>
-            <li>Library: <a href="https://goldminedoors.com/library">https://goldminedoors.com/library</a></li>
-        </ul>
-    
-        <h3>API Endpoints</h3>
-    
-        <h4>GET /top10</h4>
-        <p>Retrieve the top 10 most launched games.</p>
-    
-        <h5>Query Parameters:</h5>
-        <ul>
-            <li><strong>period</strong> (required): The time period for the statistics. Valid values are month, year, all, or a specific month (e.g., july) or year (e.g., 2024).</li>
-        </ul>
-    
-        <h5>Response:</h5>
-        <p>200 OK: A JSON object containing the top 10 most launched games.</p>
-        <p>400 Bad Request: If the period parameter is missing or invalid.</p>
-    
-        <pre><code>{
+                                tableBody.appendChild(row);
+                            });
+                        })
+                        .catch(error => console.error('Error fetching library data:', error));
+                </script>
+
+                <h2>Goldmine API</h2>
+                <p>You can access some endpoints to retrieve JSON statistics for:</p>
+                <ul>
+                    <li>Top 10 most launched games.</li>
+                    <li>Monthly statistics.</li>
+                    <li>Yearly statistics.</li>
+                    <li>All-time statistics.</li>
+                    <li>List all games with details.</li>
+                </ul>
+                <p>Data automatically reloads and refreshes JSON data every 24 hours.</p>
+
+                <h3>Access the API endpoints:</h3>
+                <ul>
+                    <li>Top 10 Games: <a
+                            href="https://goldminedoors.com/top10?period=all">https://goldminedoors.com/top10?period=all</a>
+                    </li>
+                    <ul>
+                        <li>Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).</li>
+                    </ul>
+                    <li>Detailed Stats: <a
+                            href="https://goldminedoors.com/stats?period=all">https://goldminedoors.com/stats?period=all</a>
+                    </li>
+                    <ul>
+                        <li>Replace all with month or year or a specific month (e.g., july) or year (e.g., 2024).</li>
+                    </ul>
+                    <li>Library: <a href="https://goldminedoors.com/library">https://goldminedoors.com/library</a></li>
+                </ul>
+
+                <h3>API Endpoints</h3>
+
+                <h4>GET /top10</h4>
+                <p>Retrieve the top 10 most launched games.</p>
+
+                <h5>Query Parameters:</h5>
+                <ul>
+                    <li><strong>period</strong> (required): The time period for the statistics. Valid values are month,
+                        year, all, or a specific month (e.g., july) or year (e.g., 2024).</li>
+                </ul>
+
+                <h5>Response:</h5>
+                <p>200 OK: A JSON object containing the top 10 most launched games.</p>
+                <p>400 Bad Request: If the period parameter is missing or invalid.</p>
+
+                <pre><code>{
       "period": "all",
       "games": [
         {
@@ -426,20 +267,21 @@
         ...
       ]
     }</code></pre>
-    
-        <h4>GET /stats</h4>
-        <p>Retrieve detailed statistics.</p>
-    
-        <h5>Query Parameters:</h5>
-        <ul>
-            <li><strong>period</strong> (required): The time period for the statistics. Valid values are month, year, all, or a specific month (e.g., july) or year (e.g., 2024).</li>
-        </ul>
-    
-        <h5>Response:</h5>
-        <p>200 OK: A JSON object containing detailed statistics.</p>
-        <p>400 Bad Request: If the period parameter is missing or invalid.</p>
-    
-        <pre><code>{
+
+                <h4>GET /stats</h4>
+                <p>Retrieve detailed statistics.</p>
+
+                <h5>Query Parameters:</h5>
+                <ul>
+                    <li><strong>period</strong> (required): The time period for the statistics. Valid values are month,
+                        year, all, or a specific month (e.g., july) or year (e.g., 2024).</li>
+                </ul>
+
+                <h5>Response:</h5>
+                <p>200 OK: A JSON object containing detailed statistics.</p>
+                <p>400 Bad Request: If the period parameter is missing or invalid.</p>
+
+                <pre><code>{
       "month": {
         "january": [
           {
@@ -453,19 +295,19 @@
         ...
       }
     }</code></pre>
-    
-        <h4>GET /library</h4>
-        <p>Retrieve a list of all games with details.</p>
-    
-        <h5>Query Parameters:</h5>
-        <ul>
-            <li><strong>None</strong></li>
-        </ul>
-    
-        <h5>Response:</h5>
-        <p>200 OK: A JSON object containing the list of all games.</p>
-    
-        <pre><code>[
+
+                <h4>GET /library</h4>
+                <p>Retrieve a list of all games with details.</p>
+
+                <h5>Query Parameters:</h5>
+                <ul>
+                    <li><strong>None</strong></li>
+                </ul>
+
+                <h5>Response:</h5>
+                <p>200 OK: A JSON object containing the list of all games.</p>
+
+                <pre><code>[
       {
         "game_name": "Adventurer's Maze II",
         "door_code": "AM2",
@@ -473,12 +315,16 @@
       },
       ...
     ]</code></pre>
-        </section>
-        <section id = "contact">
-    
-        <h2>Contact</h2>
-        <p>Contact <code>j0hnny a1pha</code> on <a href="https://fsxnet.nz/">fsxNet</a> or WWIVNet "gOLD mINE Game Server" sub, or on <a href="https://discord.com/invite/cUp2DtzXjZ">BBS World Discord</a> (alpha_64) for more details or to ask a question.</p>
-        </section>
+            </section>
+            <section id="contact">
+
+                <h2>Contact</h2>
+                <p>Contact <code>j0hnny a1pha</code> on <a href="https://fsxnet.nz/">fsxNet</a> or WWIVNet "gOLD mINE
+                    Game Server" sub, or on <a href="https://discord.com/invite/cUp2DtzXjZ">BBS World Discord</a>
+                    (alpha_64) for more details or to ask a question.</p>
+            </section>
     </container>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
