@@ -120,6 +120,12 @@ body>.container {
     
 }
 
+.return {
+    font-size: 0.75em;
+    margin-top: 40px;
+    margin-bottom: -30px;
+}
+
 /* Images */
 img {
     max-width: 100%;
