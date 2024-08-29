@@ -112,6 +112,43 @@
             display: block;
             margin: 0 auto;
         }
+        @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        margin: 0;
+        box-shadow: none;
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.2em;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
     </style>
 </head>
 <body>
