@@ -102,8 +102,7 @@
             <li>No profanity, please</li>
         </ul>
 
-        <h3>EXAMPLES</h3>
-        <h4>Mystic BBS</h4>
+        <h3>Mystic BBS Example</h3>
         <p>Add gOLD mINE to your menu as <code>IR - Outbound RLOGIN Connection</code></p>
         <pre><code>/addr=143.198.58.173 /port=2513 /user=[TAG]@USER@ /pass=@USER@ /PROMPT</code></pre>
         <ul>
@@ -116,7 +115,7 @@
                 part</li>
         </ul>
 
-        <h4>WWIV BBS</h4>
+        <h3>WWIV BBS Example (Linux)</h3>
         <p>Use Chain Edit to add a gOLD Mine entry. If you want to load the main menu so your users can select a
             game, and not directly launch a specific door with a door code, leave off the door code parameter
             ("WORDLE"):</p>
@@ -142,15 +141,14 @@
         <p>If you want to launch a door game directly from your BBS, bypassing the gOLD mINE main menu, use a
             Door Code from the list on this page. If no door code is passed, the user will land at the gOLD mINE
             main menu.</p>
-        <p>Mystic (make sure you are using the most recent release):</p>
-        <ul>
-            <li>add <code>/term=xtrn=DOORCODE</code> directly after <code>/user</code> sequence (on Mystic)</li>
-            <li>Replace <code>DOORCODE</code> with a code below that you want to launch directly, e.g. on a
-                Mystic BBS:</li>
-        </ul>
+        <h3>Mystic Example</h3>
+    
+        Replace the doorcde with a code below ("/term=xtrn=WORDLE") that you want to launch directly:
+        
         <pre><code>/addr=143.198.58.173 /port=2513 /user=[XYZ]@USER@ /pass=@USER@ /term=xtrn=WORDLE /PROMPT</code></pre>
 
-        <h3>Heer's what I use for WWIV on linux - <code>goldmine.sh</code>:</h3>
+        <h3>WWIV Example (Linux)</h3>
+        <pre><code>goldmine.sh</code></pre>
         <pre><code>#!/bin/bash
     
     cd doors/goldmine
