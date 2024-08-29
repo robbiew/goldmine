@@ -121,9 +121,11 @@ body>.container {
 }
 
 .return {
-    font-size: 0.75em;
+    font-size: 0.85em;
     margin-top: 40px;
     margin-bottom: -30px;
+    text-transform: uppercase;
+   
 }
 
 /* Images */
@@ -143,6 +145,13 @@ img {
 }
 
 /* Headers */
+
+.arrow {
+    font-size: 1.8em;;
+    display: inline-block;
+    color: rgb(223, 61, 182);
+    vertical-align: middle;
+}
 
 .title {
     color: #ffcc00;
