@@ -175,6 +175,26 @@
           <li>No profanity, please</li>
         </ul>
 
+        <h3>Talisman BBS Example</h3>
+        <p>
+          Create a script called "goldmine.lua" in your scripts/ directory:
+        </p>
+        <pre><code>
+          local un = bbs_get_username()
+          bbs_clear_screen()
+          bbs_write_string("Loading gOLD mINE door arcade...")
+          bbs_rlogin_ip4("goldminedoors.com","2513","","[SJ!]"..un,"")
+        </code></pre>
+        <p>
+          Then create a Gold Mine entry in menus/doors.toml:
+        </p>
+        <pre><code>
+          [[menuitem]]
+          command = "RUNSCRIPT"
+          hotkey = "1"
+          data = "goldmine"
+        </code></pre>
+
         <h3>Mystic BBS Example</h3>
         <p>
           Add gOLD mINE to your menu as
