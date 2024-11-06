@@ -180,19 +180,19 @@
           Create a script called "goldmine.lua" in your scripts/ directory:
         </p>
         <pre><code>
-          local un = bbs_get_username()
-          bbs_clear_screen()
-          bbs_write_string("Loading gOLD mINE door arcade...")
-          bbs_rlogin_ip4("goldminedoors.com","2513","","[SJ!]"..un,"")
+local un = bbs_get_username()
+bbs_clear_screen()
+bbs_write_string("Loading gOLD mINE door arcade...")
+bbs_rlogin_ip4("goldminedoors.com","2513","","[SJ!]"..un,"")   -- change "SJ!" to your BBS tag
         </code></pre>
         <p>
           Then create a Gold Mine entry in menus/doors.toml:
         </p>
         <pre><code>
-          [[menuitem]]
-          command = "RUNSCRIPT"
-          hotkey = "1"
-          data = "goldmine"
+[[menuitem]]
+command = "RUNSCRIPT"
+hotkey = "1"
+data = "goldmine"
         </code></pre>
 
         <h3>Mystic BBS Example</h3>
