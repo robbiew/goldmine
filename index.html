@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+v
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -158,6 +158,9 @@
           <li>
             For Ubuntu or other Linux flavors, use <code>'sudo apt install rsh-redone-client'</code> 
           </li>
+          <li>
+            You can also try the experimental <a href="https://github.com/robbiew/goldmine-connect">goldmine-connect</a> program that I wrote for Linux in Go.
+          </li>
         </ul>
 
         <h3>CREATE A BBS TAG</h3>
@@ -179,21 +182,18 @@
         <p>
           Create a script called "goldmine.lua" in your scripts/ directory:
         </p>
-        <pre><code>
-local un = bbs_get_username()
+        <pre><code>local un = bbs_get_username()
 bbs_clear_screen()
 bbs_write_string("Loading gOLD mINE door arcade...")
 bbs_rlogin_ip4("goldminedoors.com","2513","","[SJ!]"..un,"")   -- change "SJ!" to your BBS tag
-        </code></pre>
+</code></pre>
         <p>
           Then create a Gold Mine entry in menus/doors.toml:
         </p>
-        <pre><code>
-[[menuitem]]
+        <pre><code>[[menuitem]]
 command = "RUNSCRIPT"
 hotkey = "1"
-data = "goldmine"
-        </code></pre>
+data = "goldmine"</code></pre>
 
         <h3>Mystic BBS Example</h3>
         <p>
