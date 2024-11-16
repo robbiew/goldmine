@@ -186,8 +186,9 @@
         <pre><code>local un = bbs_get_username()
 bbs_clear_screen()
 bbs_write_string("Loading gOLD mINE door arcade...")
-bbs_rlogin_ip4("goldminedoors.com","2513","","[SJ!]"..un,"")   -- change "SJ!" to your BBS tag
-</code></pre>
+bbs_rlogin_ip4("goldminedoors.com","2513","","[SJ!]"..un,"xtrn="WORDEM")   
+-- change "SJ!" to your BBS tag
+-- "xtrn="WORDEM" is the door code for the game you want to launch</code></pre>
         <p>
           Then create a Gold Mine entry in menus/doors.toml:
         </p>
