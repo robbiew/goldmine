@@ -499,3 +499,68 @@ code {
         page-break-after: avoid;
     }
 }
+
+/* ==========================================================================
+   Loading and Error States
+   ========================================================================== */
+
+.loading {
+    color: #666;
+    font-style: italic;
+    position: relative;
+}
+
+.loading::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 5px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #666;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    color: #d32f2f;
+    font-weight: bold;
+    background-color: #ffebee;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 4px solid #d32f2f;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+table .loading,
+table .error {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+table .loading {
+    background-color: #f9f9f9;
+}
+
+table .error {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+/* Fade in animation for loaded content */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

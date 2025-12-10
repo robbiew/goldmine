@@ -63,18 +63,81 @@
           <code>goldminedoors.com</code>.
         </p>
 
-        <p id="total-game-count">Total Games: Loading...</p>
+        <p id="total-game-count">Total Games: <span class="loading">Loading...</span></p>
 
         <script>
+            // Cache object to store API responses
+            const apiCache = {
+                library: null,
+                top10: null,
+                timestamp: null,
+                isValid: function() {
+                    // Cache is valid for 5 minutes
+                    return this.timestamp && (Date.now() - this.timestamp < 5 * 60 * 1000);
+                }
+            };
+
+            // Enhanced fetch with timeout and caching
+            async function fetchWithCache(url, cacheKey) {
+                // Check cache first
+                if (apiCache.isValid() && apiCache[cacheKey]) {
+                    console.log(`Using cached data for ${cacheKey}`);
+                    return Promise.resolve(apiCache[cacheKey]);
+                }
+
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+
+                try {
+                    const response = await fetch(url, { 
+                        signal: controller.signal,
+                        headers: {
+                            'Cache-Control': 'no-cache'
+                        }
+                    });
+                    clearTimeout(timeoutId);
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    
+                    const data = await response.json();
+                    
+                    // Cache the response
+                    apiCache[cacheKey] = data;
+                    if (!apiCache.timestamp) {
+                        apiCache.timestamp = Date.now();
+                    }
+                    
+                    return data;
+                } catch (error) {
+                    clearTimeout(timeoutId);
+                    if (error.name === 'AbortError') {
+                        throw new Error('Request timed out');
+                    }
+                    throw error;
+                }
+            }
+
             document.addEventListener("DOMContentLoaded", function() {
-                // Fetch data from the /library endpoint
-                fetch('https://goldminedoors.com/library')
-                    .then(response => response.json())
+                // Fetch library data with performance timing
+                const startTime = performance.now();
+                
+                fetchWithCache('https://goldminedoors.com/library', 'library')
                     .then(data => {
-                        const totalGames = data.length; // Count the total number of games
-                        document.getElementById('total-game-count').textContent = `There are currently ${totalGames} door games online.`;
+                        const endTime = performance.now();
+                        console.log(`Library API loaded in ${Math.round(endTime - startTime)}ms`);
+                        
+                        const totalGames = data.length;
+                        document.getElementById('total-game-count').innerHTML = `There are currently <strong>${totalGames}</strong> door games online.`;
+                        
+                        // Also populate the library table if we're on that section
+                        populateLibraryTable(data);
                     })
-                    .catch(error => console.error('Error fetching library data:', error));
+                    .catch(error => {
+                        console.error('Error fetching library data:', error);
+                        document.getElementById('total-game-count').innerHTML = `<span class="error">Unable to load game count (${error.message})</span>`;
+                    });
             });
         </script>
 
@@ -304,29 +367,66 @@ fi</code></pre>
             </tr>
           </thead>
           <tbody id="library-table-body">
-            <!-- Dynamic content will be inserted here -->
+            <tr><td colspan="3" class="loading">Loading game library...</td></tr>
           </tbody>
         </table>
 
         <script>
-          // Fetch data from the /library endpoint
-          fetch('https://goldminedoors.com/library')
-            .then(response => response.json())
-            .then(data => {
-              const tableBody = document.getElementById('library-table-body')
-              data.forEach(game => {
-                const row = document.createElement('tr')
-                row.innerHTML = `
-                            <td>${game.game_name}</td>
-                            <td>${game.category}</td>
-                            <td>${game.door_code}</td>
-                        `
-                tableBody.appendChild(row)
-              })
-            })
-            .catch(error =>
-              console.error('Error fetching library data:', error)
-            )
+          function populateLibraryTable(data) {
+            const tableBody = document.getElementById('library-table-body');
+            if (!tableBody) return;
+            
+            // Clear loading message
+            tableBody.innerHTML = '';
+            
+            if (!data || data.length === 0) {
+              tableBody.innerHTML = '<tr><td colspan="3" class="error">No games available</td></tr>';
+              return;
+            }
+            
+            // Use document fragment for better performance
+            const fragment = document.createDocumentFragment();
+            
+            data.forEach(game => {
+              const row = document.createElement('tr');
+              row.innerHTML = `
+                <td>${game.game_name || 'Unknown'}</td>
+                <td>${game.category || 'Uncategorized'}</td>
+                <td><code>${game.door_code || 'N/A'}</code></td>
+              `;
+              fragment.appendChild(row);
+            });
+            
+            tableBody.appendChild(fragment);
+          }
+          
+          // Load library data when section is visible
+          document.addEventListener('DOMContentLoaded', function() {
+            // Check if library data is already cached
+            if (apiCache.isValid() && apiCache.library) {
+              populateLibraryTable(apiCache.library);
+            } else {
+              // Will be loaded by the main fetch call above
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting && !apiCache.library) {
+                    fetchWithCache('https://goldminedoors.com/library', 'library')
+                      .then(data => populateLibraryTable(data))
+                      .catch(error => {
+                        console.error('Error loading library table:', error);
+                        document.getElementById('library-table-body').innerHTML = 
+                          `<tr><td colspan="3" class="error">Failed to load games: ${error.message}</td></tr>`;
+                      });
+                  }
+                });
+              });
+              
+              const librarySection = document.getElementById('library');
+              if (librarySection) {
+                observer.observe(librarySection);
+              }
+            }
+          });
         </script>
       </section>
       <section id="top10">
@@ -346,32 +446,70 @@ fi</code></pre>
             </tr>
           </thead>
           <tbody id="top10-table-body">
-            <!-- Dynamic content will be inserted here -->
+            <tr><td colspan="4" class="loading">Loading top games...</td></tr>
           </tbody>
         </table>
       </section>
       <script>
+        function populateTop10Table(data) {
+          const tableBody = document.getElementById('top10-table-body');
+          if (!tableBody) return;
+          
+          // Clear loading message
+          tableBody.innerHTML = '';
+          
+          if (!data || !data.games || data.games.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="4" class="error">No top games data available</td></tr>';
+            return;
+          }
+          
+          // Use document fragment for better performance
+          const fragment = document.createDocumentFragment();
+          
+          data.games.forEach((game, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+              <td>${game.game_name || 'Unknown'}</td>
+              <td>${game.category || 'Uncategorized'}</td>
+              <td><code>${game.door_code || 'N/A'}</code></td>
+              <td><strong>${game.launch_count || 0}</strong></td>
+            `;
+            fragment.appendChild(row);
+          });
+          
+          tableBody.appendChild(fragment);
+        }
+        
         document.addEventListener('DOMContentLoaded', function () {
-          // Fetch data from the /top10 endpoint for all time
-          fetch('https://goldminedoors.com/top10?period=all')
-            .then(response => response.json())
-            .then(data => {
-              const tableBody = document.getElementById('top10-table-body')
-              data.games.forEach(game => {
-                const row = document.createElement('tr')
-                row.innerHTML = `
-                                <td>${game.game_name}</td>
-                                <td>${game.category}</td>
-                                <td>${game.door_code}</td>
-                                <td>${game.launch_count}</td>
-                            `
-                tableBody.appendChild(row)
-              })
-            })
-            .catch(error =>
-              console.error('Error fetching top 10 games data:', error)
-            )
-        })
+          // Use intersection observer to load data only when section is visible
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const startTime = performance.now();
+                
+                fetchWithCache('https://goldminedoors.com/top10?period=all', 'top10')
+                  .then(data => {
+                    const endTime = performance.now();
+                    console.log(`Top 10 API loaded in ${Math.round(endTime - startTime)}ms`);
+                    populateTop10Table(data);
+                  })
+                  .catch(error => {
+                    console.error('Error fetching top 10 games data:', error);
+                    document.getElementById('top10-table-body').innerHTML = 
+                      `<tr><td colspan="4" class="error">Failed to load top games: ${error.message}</td></tr>`;
+                  });
+                
+                // Unobserve after loading
+                observer.unobserve(entry.target);
+              }
+            });
+          });
+          
+          const top10Section = document.getElementById('top10');
+          if (top10Section) {
+            observer.observe(top10Section);
+          }
+        });
       </script>
 
       <section id="api">
