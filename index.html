@@ -77,46 +77,121 @@
                 }
             };
 
-            // Enhanced fetch with timeout and caching
-            async function fetchWithCache(url, cacheKey) {
+            // Fallback data in case API is unavailable
+            const fallbackData = {
+                library: [
+                    {game_name: "Adventurer's Maze II", category: "RPGs: Medieval & Fantasy", door_code: "AM2"},
+                    {game_name: "Barren Realms Elite", category: "Strategy & War", door_code: "BRE"},
+                    {game_name: "Trade Wars 2002", category: "Space Trading", door_code: "TW"},
+                    {game_name: "Legend of the Red Dragon", category: "RPGs: Medieval & Fantasy", door_code: "LORD"},
+                    {game_name: "Usurper", category: "RPGs: Medieval & Fantasy", door_code: "USURPER"},
+                    {game_name: "Operation Overkill II", category: "Strategy & War", door_code: "OO2"},
+                    {game_name: "Planets: The Exploration of Space", category: "Space Trading", door_code: "PLANETS"},
+                    {game_name: "Falcon's Eye", category: "RPGs: Medieval & Fantasy", door_code: "FEYE"},
+                    {game_name: "Mutants", category: "RPGs: Post-Apocalyptic", door_code: "MUTANTS"},
+                    {game_name: "Crossroads of the Elements", category: "RPGs: Medieval & Fantasy", door_code: "COTE"},
+                    {game_name: "Wordle", category: "Puzzle & Word Games", door_code: "WORDLE"},
+                    {game_name: "Hangman", category: "Puzzle & Word Games", door_code: "HANG"},
+                    {game_name: "Blackjack", category: "Card & Casino Games", door_code: "BJ"},
+                    {game_name: "Global Wars", category: "Strategy & War", door_code: "GWARS"},
+                    {game_name: "Lunatix", category: "Action & Arcade", door_code: "LNTX"}
+                ],
+                top10: {
+                    period: "all",
+                    games: [
+                        {game_name: "Trade Wars 2002", category: "Space Trading", door_code: "TW", launch_count: 1247},
+                        {game_name: "Legend of the Red Dragon", category: "RPGs: Medieval & Fantasy", door_code: "LORD", launch_count: 892},
+                        {game_name: "Barren Realms Elite", category: "Strategy & War", door_code: "BRE", launch_count: 743},
+                        {game_name: "Operation Overkill II", category: "Strategy & War", door_code: "OO2", launch_count: 567},
+                        {game_name: "Usurper", category: "RPGs: Medieval & Fantasy", door_code: "USURPER", launch_count: 445},
+                        {game_name: "Adventurer's Maze II", category: "RPGs: Medieval & Fantasy", door_code: "AM2", launch_count: 334},
+                        {game_name: "Wordle", category: "Puzzle & Word Games", door_code: "WORDLE", launch_count: 298},
+                        {game_name: "Global Wars", category: "Strategy & War", door_code: "GWARS", launch_count: 276},
+                        {game_name: "Planets: The Exploration of Space", category: "Space Trading", door_code: "PLANETS", launch_count: 221},
+                        {game_name: "Blackjack", category: "Card & Casino Games", door_code: "BJ", launch_count: 189}
+                    ]
+                }
+            };
+
+            // Enhanced fetch with retry logic, timeout, and caching
+            async function fetchWithCache(url, cacheKey, maxRetries = 3) {
                 // Check cache first
                 if (apiCache.isValid() && apiCache[cacheKey]) {
                     console.log(`Using cached data for ${cacheKey}`);
                     return Promise.resolve(apiCache[cacheKey]);
                 }
 
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+                let lastError;
+                
+                for (let attempt = 1; attempt <= maxRetries; attempt++) {
+                    try {
+                        console.log(`Attempting to fetch ${cacheKey} (attempt ${attempt}/${maxRetries})`);
+                        
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
 
-                try {
-                    const response = await fetch(url, { 
-                        signal: controller.signal,
-                        headers: {
-                            'Cache-Control': 'no-cache'
+                        const response = await fetch(url, { 
+                            signal: controller.signal,
+                            mode: 'cors',
+                            headers: {
+                                'Accept': 'application/json',
+                                'Cache-Control': 'no-cache'
+                            }
+                        });
+                        
+                        clearTimeout(timeoutId);
+                        
+                        if (!response.ok) {
+                            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                         }
-                    });
-                    clearTimeout(timeoutId);
-                    
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
+                        
+                        const data = await response.json();
+                        
+                        // Cache the successful response
+                        apiCache[cacheKey] = data;
+                        if (!apiCache.timestamp) {
+                            apiCache.timestamp = Date.now();
+                        }
+                        
+                        console.log(`Successfully fetched ${cacheKey} on attempt ${attempt}`);
+                        return data;
+                        
+                    } catch (error) {
+                        lastError = error;
+                        console.warn(`Attempt ${attempt} failed for ${cacheKey}:`, error.message);
+                        
+                        // Classify error types for better user messaging
+                        if (error.name === 'AbortError') {
+                            lastError = new Error('Connection timeout - server response is too slow');
+                        } else if (error.message.includes('SSL') || error.message.includes('certificate')) {
+                            lastError = new Error('SSL certificate error - server security certificate has issues');
+                        } else if (error.message.includes('CORS') || error.message.includes('blocked')) {
+                            lastError = new Error('Cross-origin request blocked - API security settings prevent browser access');
+                        } else if (error.message.includes('Failed to fetch')) {
+                            lastError = new Error('Server unreachable - check internet connection or server may be down');
+                        }
+                        
+                        // Wait before retrying (exponential backoff)
+                        if (attempt < maxRetries) {
+                            const delay = Math.min(1000 * Math.pow(2, attempt - 1), 5000);
+                            console.log(`Waiting ${delay}ms before retry...`);
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                        }
                     }
-                    
-                    const data = await response.json();
-                    
-                    // Cache the response
-                    apiCache[cacheKey] = data;
-                    if (!apiCache.timestamp) {
-                        apiCache.timestamp = Date.now();
-                    }
-                    
-                    return data;
-                } catch (error) {
-                    clearTimeout(timeoutId);
-                    if (error.name === 'AbortError') {
-                        throw new Error('Request timed out');
-                    }
-                    throw error;
                 }
+                
+                // All retries failed, try fallback data
+                console.warn(`All attempts failed for ${cacheKey}, using fallback data:`, lastError.message);
+                
+                if (fallbackData[cacheKey]) {
+                    // Cache fallback data with shorter expiry
+                    apiCache[cacheKey] = fallbackData[cacheKey];
+                    apiCache.timestamp = Date.now() - (4 * 60 * 1000); // Expire in 1 minute instead of 5
+                    apiCache.usingFallback = true;
+                    return fallbackData[cacheKey];
+                }
+                
+                throw new Error(`Server unavailable: ${lastError.message}`);
             }
 
             document.addEventListener("DOMContentLoaded", function() {
@@ -126,17 +201,31 @@
                 fetchWithCache('https://goldminedoors.com/library', 'library')
                     .then(data => {
                         const endTime = performance.now();
-                        console.log(`Library API loaded in ${Math.round(endTime - startTime)}ms`);
+                        const loadTime = Math.round(endTime - startTime);
+                        console.log(`Library API loaded in ${loadTime}ms`);
                         
                         const totalGames = data.length;
-                        document.getElementById('total-game-count').innerHTML = `There are currently <strong>${totalGames}</strong> door games online.`;
+                        let statusText = `There are currently <strong>${totalGames}</strong> door games online.`;
+                        
+                        if (apiCache.usingFallback) {
+                            statusText += ` <small class="fallback-notice">(Live server temporarily unavailable - showing sample games)</small>`;
+                        }
+                        
+                        document.getElementById('total-game-count').innerHTML = statusText;
                         
                         // Also populate the library table if we're on that section
                         populateLibraryTable(data);
                     })
                     .catch(error => {
                         console.error('Error fetching library data:', error);
-                        document.getElementById('total-game-count').innerHTML = `<span class="error">Unable to load game count (${error.message})</span>`;
+                        const errorElement = document.getElementById('total-game-count');
+                        errorElement.innerHTML = `
+                            <div class="error">
+                                <strong>⚠️ Unable to connect to gOLD mINE server</strong><br>
+                                <small>${error.message}</small><br>
+                                <small>The server may be temporarily down for maintenance. Please try again later.</small>
+                            </div>
+                        `;
                     });
             });
         </script>
