@@ -64,6 +64,7 @@
         </p>
 
         <p id="total-game-count">Total Games: <span class="loading">Loading...</span></p>
+        <button id="refresh-data" style="display: none;" onclick="refreshGameData()">🔄 Refresh Live Data</button>
 
         <script>
             // Cache object to store API responses
@@ -71,9 +72,17 @@
                 library: null,
                 top10: null,
                 timestamp: null,
+                usingFallback: false,
                 isValid: function() {
-                    // Cache is valid for 5 minutes
-                    return this.timestamp && (Date.now() - this.timestamp < 5 * 60 * 1000);
+                    // Cache is valid for 5 minutes, but shorter if using fallback
+                    const maxAge = this.usingFallback ? 1 * 60 * 1000 : 5 * 60 * 1000; // 1min for fallback, 5min for live
+                    return this.timestamp && (Date.now() - this.timestamp < maxAge);
+                },
+                reset: function() {
+                    this.library = null;
+                    this.top10 = null;
+                    this.timestamp = null;
+                    this.usingFallback = false;
                 }
             };
 
@@ -147,13 +156,12 @@
                         
                         const data = await response.json();
                         
-                        // Cache the successful response
+                        // Cache the successful response and clear fallback flag
                         apiCache[cacheKey] = data;
-                        if (!apiCache.timestamp) {
-                            apiCache.timestamp = Date.now();
-                        }
+                        apiCache.timestamp = Date.now();
+                        apiCache.usingFallback = false; // Clear fallback flag on successful fetch
                         
-                        console.log(`Successfully fetched ${cacheKey} on attempt ${attempt}`);
+                        console.log(`Successfully fetched live ${cacheKey} on attempt ${attempt}`);
                         return data;
                         
                     } catch (error) {
@@ -186,16 +194,33 @@
                 if (fallbackData[cacheKey]) {
                     // Cache fallback data with shorter expiry
                     apiCache[cacheKey] = fallbackData[cacheKey];
-                    apiCache.timestamp = Date.now() - (4 * 60 * 1000); // Expire in 1 minute instead of 5
-                    apiCache.usingFallback = true;
+                    apiCache.timestamp = Date.now();
+                    apiCache.usingFallback = true; // Mark as using fallback
+                    console.log(`Using fallback data for ${cacheKey}`);
                     return fallbackData[cacheKey];
                 }
                 
                 throw new Error(`Server unavailable: ${lastError.message}`);
             }
 
-            document.addEventListener("DOMContentLoaded", function() {
-                // Fetch library data with performance timing
+            // Function to refresh data and clear cache
+            function refreshGameData() {
+                console.log('Manually refreshing game data...');
+                apiCache.reset(); // Clear all cached data
+                
+                const refreshBtn = document.getElementById('refresh-data');
+                if (refreshBtn) {
+                    refreshBtn.textContent = '🔄 Refreshing...';
+                    refreshBtn.disabled = true;
+                }
+                
+                document.getElementById('total-game-count').innerHTML = 'Total Games: <span class="loading">Refreshing...</span>';
+                
+                // Force fresh fetch
+                loadGameData();
+            }
+            
+            function loadGameData() {
                 const startTime = performance.now();
                 
                 fetchWithCache('https://goldminedoors.com/library', 'library')
@@ -207,8 +232,20 @@
                         const totalGames = data.length;
                         let statusText = `There are currently <strong>${totalGames}</strong> door games online.`;
                         
+                        const refreshBtn = document.getElementById('refresh-data');
+                        
                         if (apiCache.usingFallback) {
                             statusText += ` <small class="fallback-notice">(Live server temporarily unavailable - showing sample games)</small>`;
+                            if (refreshBtn) {
+                                refreshBtn.style.display = 'inline-block';
+                                refreshBtn.textContent = '🔄 Refresh Live Data';
+                                refreshBtn.disabled = false;
+                            }
+                        } else {
+                            statusText += ` <small style="color: #4caf50; font-weight: bold;">✓ Live data</small>`;
+                            if (refreshBtn) {
+                                refreshBtn.style.display = 'none';
+                            }
                         }
                         
                         document.getElementById('total-game-count').innerHTML = statusText;
@@ -226,7 +263,18 @@
                                 <small>The server may be temporarily down for maintenance. Please try again later.</small>
                             </div>
                         `;
+                        
+                        const refreshBtn = document.getElementById('refresh-data');
+                        if (refreshBtn) {
+                            refreshBtn.style.display = 'inline-block';
+                            refreshBtn.textContent = '🔄 Try Again';
+                            refreshBtn.disabled = false;
+                        }
                     });
+            }
+            
+            document.addEventListener("DOMContentLoaded", function() {
+                loadGameData();
             });
         </script>
 
