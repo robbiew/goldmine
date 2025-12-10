@@ -83,82 +83,83 @@
                 }
             };
 
-            // No fallback data - force live API or show proper errors
-
-            // Enhanced fetch with retry logic, timeout, and caching
-            async function fetchWithCache(url, cacheKey, maxRetries = 3) {
-                // Debug cache state
-                console.log(`fetchWithCache(${cacheKey}): cache valid=${apiCache.isValid()}, has data=${!!apiCache[cacheKey]}`);
+            // CORS proxy fallback URLs
+            const CORS_PROXIES = [
+                '', // Direct access first
+                'https://api.allorigins.win/raw?url=',
+                'https://corsproxy.io/?'
+            ];
+            
+            // Test API connectivity
+            async function testApiConnectivity() {
+                console.log('🔍 Testing API connectivity...');
                 
-                // Check cache first
-                if (apiCache.isValid() && apiCache[cacheKey]) {
-                    console.log(`Using cached data for ${cacheKey}`);
-                    return Promise.resolve(apiCache[cacheKey]);
-                }
-                
-                console.log(`Cache invalid or missing for ${cacheKey}, fetching fresh data...`);
-
-                let lastError;
-                
-                for (let attempt = 1; attempt <= maxRetries; attempt++) {
+                for (let i = 0; i < CORS_PROXIES.length; i++) {
+                    const proxy = CORS_PROXIES[i];
+                    const testUrl = proxy + encodeURIComponent('https://goldminedoors.com/library');
+                    const finalUrl = proxy === '' ? 'https://goldminedoors.com/library' : testUrl;
+                    
+                    console.log(`🧪 Testing ${proxy === '' ? 'direct' : 'proxy'}: ${finalUrl}`);
+                    
                     try {
-                        console.log(`Attempting to fetch ${cacheKey} (attempt ${attempt}/${maxRetries})`);
-                        
-                        const controller = new AbortController();
-                        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
-
-                        const response = await fetch(url, { 
-                            signal: controller.signal,
-                            mode: 'cors',
-                            headers: {
-                                'Accept': 'application/json',
-                                'Cache-Control': 'no-cache'
-                            }
+                        const response = await fetch(finalUrl, {
+                            method: 'GET',
+                            headers: { 'Accept': 'application/json' }
                         });
                         
-                        clearTimeout(timeoutId);
-                        
-                        if (!response.ok) {
-                            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        if (response.ok) {
+                            console.log(`✅ Success with ${proxy === '' ? 'direct access' : 'proxy'}!`);
+                            return proxy;
                         }
-                        
-                        const data = await response.json();
-                        
-                        // Cache the successful response
-                        apiCache[cacheKey] = data;
-                        apiCache.timestamp = Date.now();
-                        
-                        console.log(`✅ Successfully fetched LIVE ${cacheKey} on attempt ${attempt}. Records: ${data.length || (data.games ? data.games.length : 'unknown')}`);
-                        console.log(`Cache state: timestamp=${new Date(apiCache.timestamp).toLocaleTimeString()}`);
-                        return data;
-                        
+                        console.log(`❌ Failed with status: ${response.status}`);
                     } catch (error) {
-                        lastError = error;
-                        console.warn(`Attempt ${attempt} failed for ${cacheKey}:`, error.message);
-                        
-                        // Classify error types for better user messaging
-                        if (error.name === 'AbortError') {
-                            lastError = new Error('Connection timeout - server response is too slow');
-                        } else if (error.message.includes('SSL') || error.message.includes('certificate')) {
-                            lastError = new Error('SSL certificate error - server security certificate has issues');
-                        } else if (error.message.includes('CORS') || error.message.includes('blocked')) {
-                            lastError = new Error('Cross-origin request blocked - API security settings prevent browser access');
-                        } else if (error.message.includes('Failed to fetch')) {
-                            lastError = new Error('Server unreachable - check internet connection or server may be down');
-                        }
-                        
-                        // Wait before retrying (exponential backoff)
-                        if (attempt < maxRetries) {
-                            const delay = Math.min(1000 * Math.pow(2, attempt - 1), 5000);
-                            console.log(`Waiting ${delay}ms before retry...`);
-                            await new Promise(resolve => setTimeout(resolve, delay));
-                        }
+                        console.log(`❌ Failed: ${error.message}`);
                     }
                 }
                 
-                // All retries failed, no fallback data available
-                console.error(`❌ All attempts failed for ${cacheKey}:`, lastError.message);
-                throw new Error(`API unavailable: ${lastError.message}`);
+                throw new Error('All connection methods failed');
+            }
+
+            let workingProxy = null;
+            
+            // Fetch with automatic proxy fallback
+            async function fetchApiData(endpoint) {
+                // Test connectivity if we haven't found a working method yet
+                if (workingProxy === null) {
+                    try {
+                        workingProxy = await testApiConnectivity();
+                        console.log(`🎯 Using ${workingProxy === '' ? 'direct access' : 'proxy'} for future requests`);
+                    } catch (error) {
+                        console.error('❌ No working connection method found:', error.message);
+                        throw new Error('Cannot connect to goldminedoors.com API - all methods failed');
+                    }
+                }
+                
+                const fullUrl = workingProxy === '' ? endpoint : workingProxy + encodeURIComponent(endpoint);
+                console.log(`🔄 Fetching: ${fullUrl}`);
+                
+                try {
+                    const response = await fetch(fullUrl, {
+                        method: 'GET',
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    
+                    console.log(`📡 Response status: ${response.status} ${response.statusText}`);
+                    
+                    if (!response.ok) {
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                    }
+                    
+                    const data = await response.json();
+                    console.log(`✅ Data received:`, data.length ? `${data.length} items` : 'Object with keys:', Object.keys(data));
+                    
+                    return data;
+                } catch (error) {
+                    console.error(`❌ Fetch failed:`, error);
+                    // Reset working proxy so we can try alternatives next time
+                    workingProxy = null;
+                    throw error;
+                }
             }
 
             // Function to refresh data and clear cache
@@ -180,10 +181,9 @@
             
             function loadGameData() {
                 const startTime = performance.now();
+                console.log('🚀 Starting loadGameData...');
                 
-                // Add cache busting parameter to ensure fresh request
-                const cacheBust = `?t=${Date.now()}`;
-                fetchWithCache(`https://goldminedoors.com/library${cacheBust}`, 'library')
+                fetchApiData('https://goldminedoors.com/library')
                     .then(data => {
                         const endTime = performance.now();
                         const loadTime = Math.round(endTime - startTime);
@@ -501,9 +501,8 @@ fi</code></pre>
               // Will be loaded by the main fetch call above
               const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                  if (entry.isIntersecting && !apiCache.library) {
-                    const cacheBust = `?t=${Date.now()}`;
-                    fetchWithCache(`https://goldminedoors.com/library${cacheBust}`, 'library')
+                  if (entry.isIntersecting) {
+                    fetchApiData('https://goldminedoors.com/library')
                       .then(data => populateLibraryTable(data))
                       .catch(error => {
                         console.error('Error loading library table:', error);
@@ -580,8 +579,7 @@ fi</code></pre>
               if (entry.isIntersecting) {
                 const startTime = performance.now();
                 
-                const cacheBust = `&t=${Date.now()}`;
-                fetchWithCache(`https://goldminedoors.com/top10?period=all${cacheBust}`, 'top10')
+                fetchApiData('https://goldminedoors.com/top10?period=all')
                   .then(data => {
                     const endTime = performance.now();
                     console.log(`Top 10 API loaded in ${Math.round(endTime - startTime)}ms`);
