@@ -72,64 +72,27 @@
                 library: null,
                 top10: null,
                 timestamp: null,
-                usingFallback: false,
                 isValid: function() {
-                    // Cache is valid for 5 minutes, but shorter if using fallback
-                    const maxAge = this.usingFallback ? 1 * 60 * 1000 : 5 * 60 * 1000; // 1min for fallback, 5min for live
-                    return this.timestamp && (Date.now() - this.timestamp < maxAge);
+                    // Cache is valid for 5 minutes
+                    return this.timestamp && (Date.now() - this.timestamp < 5 * 60 * 1000);
                 },
                 reset: function() {
                     this.library = null;
                     this.top10 = null;
                     this.timestamp = null;
-                    this.usingFallback = false;
                 }
             };
 
-            // Fallback data in case API is unavailable
-            const fallbackData = {
-                library: [
-                    {game_name: "Adventurer's Maze II", category: "RPGs: Medieval & Fantasy", door_code: "AM2"},
-                    {game_name: "Barren Realms Elite", category: "Strategy & War", door_code: "BRE"},
-                    {game_name: "Trade Wars 2002", category: "Space Trading", door_code: "TW"},
-                    {game_name: "Legend of the Red Dragon", category: "RPGs: Medieval & Fantasy", door_code: "LORD"},
-                    {game_name: "Usurper", category: "RPGs: Medieval & Fantasy", door_code: "USURPER"},
-                    {game_name: "Operation Overkill II", category: "Strategy & War", door_code: "OO2"},
-                    {game_name: "Planets: The Exploration of Space", category: "Space Trading", door_code: "PLANETS"},
-                    {game_name: "Falcon's Eye", category: "RPGs: Medieval & Fantasy", door_code: "FEYE"},
-                    {game_name: "Mutants", category: "RPGs: Post-Apocalyptic", door_code: "MUTANTS"},
-                    {game_name: "Crossroads of the Elements", category: "RPGs: Medieval & Fantasy", door_code: "COTE"},
-                    {game_name: "Wordle", category: "Puzzle & Word Games", door_code: "WORDLE"},
-                    {game_name: "Hangman", category: "Puzzle & Word Games", door_code: "HANG"},
-                    {game_name: "Blackjack", category: "Card & Casino Games", door_code: "BJ"},
-                    {game_name: "Global Wars", category: "Strategy & War", door_code: "GWARS"},
-                    {game_name: "Lunatix", category: "Action & Arcade", door_code: "LNTX"}
-                ],
-                top10: {
-                    period: "all",
-                    games: [
-                        {game_name: "Trade Wars 2002", category: "Space Trading", door_code: "TW", launch_count: 1247},
-                        {game_name: "Legend of the Red Dragon", category: "RPGs: Medieval & Fantasy", door_code: "LORD", launch_count: 892},
-                        {game_name: "Barren Realms Elite", category: "Strategy & War", door_code: "BRE", launch_count: 743},
-                        {game_name: "Operation Overkill II", category: "Strategy & War", door_code: "OO2", launch_count: 567},
-                        {game_name: "Usurper", category: "RPGs: Medieval & Fantasy", door_code: "USURPER", launch_count: 445},
-                        {game_name: "Adventurer's Maze II", category: "RPGs: Medieval & Fantasy", door_code: "AM2", launch_count: 334},
-                        {game_name: "Wordle", category: "Puzzle & Word Games", door_code: "WORDLE", launch_count: 298},
-                        {game_name: "Global Wars", category: "Strategy & War", door_code: "GWARS", launch_count: 276},
-                        {game_name: "Planets: The Exploration of Space", category: "Space Trading", door_code: "PLANETS", launch_count: 221},
-                        {game_name: "Blackjack", category: "Card & Casino Games", door_code: "BJ", launch_count: 189}
-                    ]
-                }
-            };
+            // No fallback data - force live API or show proper errors
 
             // Enhanced fetch with retry logic, timeout, and caching
             async function fetchWithCache(url, cacheKey, maxRetries = 3) {
                 // Debug cache state
-                console.log(`fetchWithCache(${cacheKey}): cache valid=${apiCache.isValid()}, usingFallback=${apiCache.usingFallback}, has data=${!!apiCache[cacheKey]}`);
+                console.log(`fetchWithCache(${cacheKey}): cache valid=${apiCache.isValid()}, has data=${!!apiCache[cacheKey]}`);
                 
                 // Check cache first
                 if (apiCache.isValid() && apiCache[cacheKey]) {
-                    console.log(`Using cached data for ${cacheKey} (fallback: ${apiCache.usingFallback})`);
+                    console.log(`Using cached data for ${cacheKey}`);
                     return Promise.resolve(apiCache[cacheKey]);
                 }
                 
@@ -161,13 +124,12 @@
                         
                         const data = await response.json();
                         
-                        // Cache the successful response and clear fallback flag
+                        // Cache the successful response
                         apiCache[cacheKey] = data;
                         apiCache.timestamp = Date.now();
-                        apiCache.usingFallback = false; // Clear fallback flag on successful fetch
                         
                         console.log(`✅ Successfully fetched LIVE ${cacheKey} on attempt ${attempt}. Records: ${data.length || (data.games ? data.games.length : 'unknown')}`);
-                        console.log(`Cache state: usingFallback=${apiCache.usingFallback}, timestamp=${new Date(apiCache.timestamp).toLocaleTimeString()}`);
+                        console.log(`Cache state: timestamp=${new Date(apiCache.timestamp).toLocaleTimeString()}`);
                         return data;
                         
                     } catch (error) {
@@ -194,20 +156,9 @@
                     }
                 }
                 
-                // All retries failed, try fallback data
-                console.warn(`All attempts failed for ${cacheKey}, using fallback data:`, lastError.message);
-                
-                if (fallbackData[cacheKey]) {
-                    // Cache fallback data with shorter expiry
-                    apiCache[cacheKey] = fallbackData[cacheKey];
-                    apiCache.timestamp = Date.now();
-                    apiCache.usingFallback = true; // Mark as using fallback
-                    console.log(`⚠️ Using FALLBACK data for ${cacheKey}. Records: ${fallbackData[cacheKey].length || (fallbackData[cacheKey].games ? fallbackData[cacheKey].games.length : 'unknown')}`);
-                    console.log(`Cache state: usingFallback=${apiCache.usingFallback}, timestamp=${new Date(apiCache.timestamp).toLocaleTimeString()}`);
-                    return fallbackData[cacheKey];
-                }
-                
-                throw new Error(`Server unavailable: ${lastError.message}`);
+                // All retries failed, no fallback data available
+                console.error(`❌ All attempts failed for ${cacheKey}:`, lastError.message);
+                throw new Error(`API unavailable: ${lastError.message}`);
             }
 
             // Function to refresh data and clear cache
@@ -239,26 +190,14 @@
                         console.log(`Library API loaded in ${loadTime}ms`);
                         
                         const totalGames = data.length;
-                        console.log(`📊 Displaying game count: ${totalGames}, usingFallback: ${apiCache.usingFallback}`);
+                        console.log(`📊 Displaying live game count: ${totalGames}`);
                         
                         let statusText = `There are currently <strong>${totalGames}</strong> door games online.`;
+                        statusText += ` <small style="color: #4caf50; font-weight: bold;">✓ Live data</small>`;
                         
                         const refreshBtn = document.getElementById('refresh-data');
-                        
-                        if (apiCache.usingFallback) {
-                            console.log('🔶 Showing fallback notice');
-                            statusText += ` <small class="fallback-notice">(Live server temporarily unavailable - showing sample games)</small>`;
-                            if (refreshBtn) {
-                                refreshBtn.style.display = 'inline-block';
-                                refreshBtn.textContent = '🔄 Refresh Live Data';
-                                refreshBtn.disabled = false;
-                            }
-                        } else {
-                            console.log('✅ Showing live data notice');
-                            statusText += ` <small style="color: #4caf50; font-weight: bold;">✓ Live data</small>`;
-                            if (refreshBtn) {
-                                refreshBtn.style.display = 'none';
-                            }
+                        if (refreshBtn) {
+                            refreshBtn.style.display = 'none';
                         }
                         
                         document.getElementById('total-game-count').innerHTML = statusText;
