@@ -261,22 +261,10 @@
           new-school BBS software like
           <a href="http://www.mysticbbs.com/">Mystic</a>,
           <a href="http://wiki.synchro.net/">Synchronet</a>,
-          <a href="http://talismanbbs.com">Talisman</a>,
           <a href="http://wwivbbs.org">WWIV</a> or
           <a href="https://enigma-bbs.github.io/">ENiGMA½</a>) you know that
           setting up door game programs can be time consuming and sometimes, a
           headache.
-        </p>
-        <p>
-          In their heyday of the 1980s and early 90s, these door games were
-          designed to run under DOS (or later, Windows 32-bit) and they could be
-          finicky. Hunting down registration keys or cracks can now be daunting
-          (many doors are abandonware these days, with original authors having
-          sadly passed). So, a Door Server takes work out of setup and lets you
-          add LOTS of these games from a central service, almost immediately,
-          running them over an RLOGIN connection that's practically seamless for
-          your users. The other benefit is a potentially larger player base,
-          aggregating them in a centralized manner with other BBSs.
         </p>
       </section>
 
@@ -333,25 +321,6 @@
           <li>Use exactly 3 characters: no more, no less</li>
           <li>No profanity, please</li>
         </ul>
-
-        <h3>Talisman BBS Example</h3>
-        <p>
-          Create a script called "goldmine.lua" in your scripts/ directory:
-        </p>
-        <pre><code>local un = bbs_get_username()
-bbs_clear_screen()
-bbs_write_string("Loading gOLD mINE door arcade...")
-bbs_rlogin_ip4("goldminedoors.com","2513","","[SJ!]"..un,"xtrn="WORDEM")   
--- change "SJ!" to your BBS tag
--- "xtrn="WORDEM" is the door code for the game you want to launch</code></pre>
-        <p>
-          Then create a Gold Mine entry in menus/doors.toml:
-        </p>
-        <pre><code>[[menuitem]]
-command = "RUNSCRIPT"
-hotkey = "1"
-data = "goldmine"</code></pre>
-
         <h3>Mystic BBS Example</h3>
         <p>
           Add gOLD mINE to your menu as
