@@ -124,11 +124,16 @@
 
             // Enhanced fetch with retry logic, timeout, and caching
             async function fetchWithCache(url, cacheKey, maxRetries = 3) {
+                // Debug cache state
+                console.log(`fetchWithCache(${cacheKey}): cache valid=${apiCache.isValid()}, usingFallback=${apiCache.usingFallback}, has data=${!!apiCache[cacheKey]}`);
+                
                 // Check cache first
                 if (apiCache.isValid() && apiCache[cacheKey]) {
-                    console.log(`Using cached data for ${cacheKey}`);
+                    console.log(`Using cached data for ${cacheKey} (fallback: ${apiCache.usingFallback})`);
                     return Promise.resolve(apiCache[cacheKey]);
                 }
+                
+                console.log(`Cache invalid or missing for ${cacheKey}, fetching fresh data...`);
 
                 let lastError;
                 
@@ -161,7 +166,8 @@
                         apiCache.timestamp = Date.now();
                         apiCache.usingFallback = false; // Clear fallback flag on successful fetch
                         
-                        console.log(`Successfully fetched live ${cacheKey} on attempt ${attempt}`);
+                        console.log(`✅ Successfully fetched LIVE ${cacheKey} on attempt ${attempt}. Records: ${data.length || (data.games ? data.games.length : 'unknown')}`);
+                        console.log(`Cache state: usingFallback=${apiCache.usingFallback}, timestamp=${new Date(apiCache.timestamp).toLocaleTimeString()}`);
                         return data;
                         
                     } catch (error) {
@@ -196,7 +202,8 @@
                     apiCache[cacheKey] = fallbackData[cacheKey];
                     apiCache.timestamp = Date.now();
                     apiCache.usingFallback = true; // Mark as using fallback
-                    console.log(`Using fallback data for ${cacheKey}`);
+                    console.log(`⚠️ Using FALLBACK data for ${cacheKey}. Records: ${fallbackData[cacheKey].length || (fallbackData[cacheKey].games ? fallbackData[cacheKey].games.length : 'unknown')}`);
+                    console.log(`Cache state: usingFallback=${apiCache.usingFallback}, timestamp=${new Date(apiCache.timestamp).toLocaleTimeString()}`);
                     return fallbackData[cacheKey];
                 }
                 
@@ -223,18 +230,23 @@
             function loadGameData() {
                 const startTime = performance.now();
                 
-                fetchWithCache('https://goldminedoors.com/library', 'library')
+                // Add cache busting parameter to ensure fresh request
+                const cacheBust = `?t=${Date.now()}`;
+                fetchWithCache(`https://goldminedoors.com/library${cacheBust}`, 'library')
                     .then(data => {
                         const endTime = performance.now();
                         const loadTime = Math.round(endTime - startTime);
                         console.log(`Library API loaded in ${loadTime}ms`);
                         
                         const totalGames = data.length;
+                        console.log(`📊 Displaying game count: ${totalGames}, usingFallback: ${apiCache.usingFallback}`);
+                        
                         let statusText = `There are currently <strong>${totalGames}</strong> door games online.`;
                         
                         const refreshBtn = document.getElementById('refresh-data');
                         
                         if (apiCache.usingFallback) {
+                            console.log('🔶 Showing fallback notice');
                             statusText += ` <small class="fallback-notice">(Live server temporarily unavailable - showing sample games)</small>`;
                             if (refreshBtn) {
                                 refreshBtn.style.display = 'inline-block';
@@ -242,6 +254,7 @@
                                 refreshBtn.disabled = false;
                             }
                         } else {
+                            console.log('✅ Showing live data notice');
                             statusText += ` <small style="color: #4caf50; font-weight: bold;">✓ Live data</small>`;
                             if (refreshBtn) {
                                 refreshBtn.style.display = 'none';
@@ -274,6 +287,9 @@
             }
             
             document.addEventListener("DOMContentLoaded", function() {
+                // Force cache reset on page load to ensure fresh data after SSL fix
+                console.log('Page loaded - forcing fresh API calls');
+                apiCache.reset();
                 loadGameData();
             });
         </script>
@@ -547,7 +563,8 @@ fi</code></pre>
               const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                   if (entry.isIntersecting && !apiCache.library) {
-                    fetchWithCache('https://goldminedoors.com/library', 'library')
+                    const cacheBust = `?t=${Date.now()}`;
+                    fetchWithCache(`https://goldminedoors.com/library${cacheBust}`, 'library')
                       .then(data => populateLibraryTable(data))
                       .catch(error => {
                         console.error('Error loading library table:', error);
@@ -624,7 +641,8 @@ fi</code></pre>
               if (entry.isIntersecting) {
                 const startTime = performance.now();
                 
-                fetchWithCache('https://goldminedoors.com/top10?period=all', 'top10')
+                const cacheBust = `&t=${Date.now()}`;
+                fetchWithCache(`https://goldminedoors.com/top10?period=all${cacheBust}`, 'top10')
                   .then(data => {
                     const endTime = performance.now();
                     console.log(`Top 10 API loaded in ${Math.round(endTime - startTime)}ms`);
